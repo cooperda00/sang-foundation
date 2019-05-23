@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+
+//COLORS
+// $primary: #f7ef6a;
+// $secondary: #93c178;
+// $tertiary: #465c8b;
+
+$primary: #fbf018;
+$secondary: #0644bf;
+$tertiary: #f29829;
+$lightgray: #dfdce3;
+
+//SPACING
+
+//FONT
+$fontStack: "Raleway", sans-serif;
+//Line Height
+
+//MIXINS
+//Flex
+@mixin flex($dir: null, $just: null, $ali: null) {
+  display: flex;
+  @if $dir != null {
+    flex-direction: $dir;
+  }
+  @if $just != null {
+    justify-content: $just;
+  }
+  @if $ali != null {
+    align-items: $ali;
+  }
+}
+
+//Media Queries
+@mixin min-width($threshold) {
+  @media screen and (min-width: $threshold) {
+    @content;
+  }
+}

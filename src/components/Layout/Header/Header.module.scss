@@ -1,0 +1,41 @@
+@import "../../../vars";
+
+.Header {
+  @include flex(row, space-between, center);
+  position: fixed;
+  background: lighten($lightgray, 10%);
+  height: 100px;
+  width: 100%;
+  z-index: 100;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.NavLinksLeft {
+  @include flex(row, space-around, center);
+
+  width: 33.33%;
+}
+
+.MainLogo {
+  height: 100%;
+  width: 33.33%;
+
+  a {
+    @include flex(column, center, center);
+
+    height: 100%;
+
+    img {
+      height: 90%;
+    }
+  }
+}
+
+.NavLinksRight {
+  @include flex(row, space-around, center);
+
+  width: 33.33%;
+}

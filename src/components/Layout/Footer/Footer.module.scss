@@ -1,0 +1,21 @@
+@import "../../../vars";
+
+.Footer {
+  @include flex(row, space-around, center);
+  width: 100%;
+  background: $tertiary;
+  color: white;
+  height: 50px;
+
+  div {
+    width: 15%;
+    @include flex(row, space-around, center);
+  }
+
+  p {
+    a:link,
+    a:visited {
+      color: white;
+    }
+  }
+}
