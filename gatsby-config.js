@@ -14,16 +14,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: "gatsby-source-wordpress",
-      options: {
-        baseUrl: "http://sang-api.test",
-        protocol: "http",
-        hostingWPCOM: false,
-        useACF: false,
-      },
-      verboseOutput: false,
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
   ],
