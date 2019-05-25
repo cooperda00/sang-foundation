@@ -1,0 +1,114 @@
+@import "../../../vars";
+
+.Splash {
+  background-image: linear-gradient(#0644bf88, #0644bf22),
+    url("../../../images/ocean.jpg");
+  background-position: 50% 60%;
+  height: 89.5vh;
+  position: relative;
+  width: 100%;
+
+  .MaskedImage {
+    background-image: linear-gradient(#0644bf22, #0644bf44),
+      url("../../../images/plastic.jpg");
+    background-position: 50% 80%;
+    clip-path: polygon(93% 0, 100% 0, 100% 100%, 38% 100%);
+    display: none;
+    height: 100%;
+    width: 100%;
+
+    @include min-width(768px) {
+      display: block;
+    }
+  }
+
+  .SplashContent {
+    @include flex(column, center, center);
+
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+
+    h1,
+    h2 {
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    @include min-width(768px) {
+      @include flex(column, space-between, flex-start);
+    }
+  }
+}
+
+.SplashLeft {
+  @include flex(column, flex-start, flex-start);
+
+  width: 100%;
+
+  padding: 2rem 0 0 2rem;
+
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  @include min-width(800px) {
+    padding: 3rem 0 0 3rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include min-width(1200px) {
+    padding: 5rem 0 0 5rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.SplashRight {
+  margin-top: 3rem;
+  align-self: flex-end;
+  padding: 0 1rem 4rem 0rem;
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    @include cta-button;
+  }
+
+  @include min-width(800px) {
+    padding: 0 4rem 4rem 0rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include min-width(800px) {
+    padding: 0 3rem 5rem 0rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}

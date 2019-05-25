@@ -37,3 +37,19 @@ $fontStack: "Raleway", sans-serif;
     @content;
   }
 }
+
+//CTA Button
+@mixin cta-button() {
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0px 2px 0px 0px darken($tertiary, 10%);
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.6rem 1.1rem;
+  background: $tertiary;
+
+  &:hover {
+    background: darken($tertiary, 10%);
+  }
+}

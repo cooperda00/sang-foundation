@@ -11,3 +11,9 @@ html,
 body {
   min-height: 100%;
 }
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}

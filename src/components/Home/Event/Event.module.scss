@@ -1,0 +1,37 @@
+@import "../../../vars";
+
+.Event {
+  @include flex(column, center, center);
+
+  border: 3px solid black;
+  margin: 2rem 1rem;
+  min-height: 80vh;
+  padding: 2rem;
+  text-align: center;
+  width: 80%;
+  max-width: 1000px;
+
+  h1 {
+    margin-top: 1rem;
+  }
+
+  p {
+    max-width: 600px;
+    margin-top: 1rem;
+  }
+}
+
+.Flyer {
+  width: 100%;
+  max-width: 500px;
+}
+
+.EventCTA {
+  @include flex(column, flex-start, center);
+  margin-top: 1rem;
+
+  button {
+    @include cta-button();
+    margin-top: 1rem;
+  }
+}
