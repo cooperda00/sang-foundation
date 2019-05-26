@@ -3,7 +3,7 @@
 .Partners {
   @include flex(column, flex-start, center);
   min-height: 50vh;
-  background: linear-gradient(#0644bf88, #0644bf44);
+  background: white;
   width: 100%;
   padding: 3rem 0;
 
@@ -24,24 +24,21 @@
 
 .Partner {
   @include flex(column, space-between, center);
-  height: 480px;
+  height: 300px;
   margin-bottom: 2rem;
   width: 280px;
   padding: 0 2rem;
 
-  img {
-    max-width: 100%;
+  .Image {
+    @include flex(column, center, center);
+    height: 100%;
+    img {
+      max-width: 100%;
+    }
   }
 
   p {
     margin-top: 1rem;
     text-align: center;
-  }
-
-  div {
-    width: 100%;
-    height: 3px;
-    background: $primary;
-    margin-top: 2rem;
   }
 }

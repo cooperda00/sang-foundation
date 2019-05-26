@@ -123,7 +123,7 @@ const ContactPage = () => {
           />
         </div>
 
-        <button>Submit</button>
+        <button className={styles.Submit}>Submit</button>
       </form>
     </Layout>
   )

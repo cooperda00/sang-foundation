@@ -1,9 +1,7 @@
 @import "../../vars";
 
-.Logo {
-  img {
-    width: 200px;
-  }
+.AboutPage {
+  @include flex(column, flex-start, center);
 }
 
 .Profile {
