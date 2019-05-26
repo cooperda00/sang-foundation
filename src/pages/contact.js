@@ -23,24 +23,28 @@ const ContactPage = () => {
 
       <form
         className={styles.ContactForm}
-        onSubmit={e => {
-          e.preventDefault()
-          if (
-            formData.firstName &&
-            formData.firstName &&
-            formData.email &&
-            formData.message
-          ) {
-            console.log(formData)
-          }
-          updateFormData({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phone: "",
-            message: "",
-          })
-        }}
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        action="/success"
+        // onSubmit={e => {
+        //   e.preventDefault()
+        //   if (
+        //     formData.firstName &&
+        //     formData.firstName &&
+        //     formData.email &&
+        //     formData.message
+        //   ) {
+        //     console.log(formData)
+        //   }
+        //   updateFormData({
+        //     firstName: "",
+        //     lastName: "",
+        //     email: "",
+        //     phone: "",
+        //     message: "",
+        //   })
+        // }}
       >
         <div>
           <h1>Contact Us:</h1>
@@ -49,6 +53,7 @@ const ContactPage = () => {
         <div>
           <label htmlFor="firstName">* First Name</label>
           <input
+            name="first-name"
             type="text"
             id="firstName"
             value={formData.firstName}
@@ -65,6 +70,7 @@ const ContactPage = () => {
         <div>
           <label htmlFor="lastName">* Last Name</label>
           <input
+            name="last-name"
             type="text"
             id="lastName"
             value={formData.lastName}
@@ -81,6 +87,7 @@ const ContactPage = () => {
         <div>
           <label htmlFor="email">* Email</label>
           <input
+            name="email"
             type="email"
             id="email"
             value={formData.email}
@@ -97,6 +104,7 @@ const ContactPage = () => {
         <div>
           <label htmlFor="phone">Phone</label>
           <input
+            name="phone"
             type="number"
             id="phone"
             value={formData.phone}
@@ -113,6 +121,7 @@ const ContactPage = () => {
           <label htmlFor="message">* Message</label>
           <textarea
             id="message"
+            name="message"
             value={formData.message}
             onChange={e => {
               updateFormData({
@@ -122,6 +131,9 @@ const ContactPage = () => {
             }}
           />
         </div>
+
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
 
         <button className={styles.Submit}>Submit</button>
       </form>
