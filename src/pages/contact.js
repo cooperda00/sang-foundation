@@ -23,7 +23,8 @@ const ContactPage = () => {
 
       <form
         className={styles.ContactForm}
-        method="post"
+        name="contact"
+        method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         action="/success"
