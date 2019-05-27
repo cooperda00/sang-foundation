@@ -17,7 +17,6 @@ const AboutPage = () => (
     </Helmet>
     <main className={styles.AboutPage}>
       <h1>About Us:</h1>
-
       <Introduction />
       <Logo />
       <Personnel />

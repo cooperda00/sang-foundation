@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 //Sass
 import styles from "./CTA.module.scss"
 //Images
-import bobo from "../../../images/bobo_group_2.jpeg"
+import bobo from "../../../images/bobogroup.jpeg"
 import volunteer from "../../../images/volunteer1.jpeg"
 import protest from "../../../images/protest.jpeg"
 

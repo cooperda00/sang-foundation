@@ -14,7 +14,10 @@ const SuccessPage = () => {
         <title>Sang Foundation: Success</title>
       </Helmet>
       <section className={styles.Success}>
-        <h1>Thanks for contacting us!</h1>
+        <h1>
+          Thanks for getting in touch with us, we will endeavour to get back to
+          you as soon as we can!
+        </h1>
         <h2>
           Proceed <Link to="/">Home</Link>
         </h2>

@@ -1,0 +1,20 @@
+@import "../../vars";
+
+.Success {
+  @include flex(column, flex-start, center);
+
+  height: 100%;
+  margin-top: 3rem;
+  margin: 3rem auto 0 auto;
+  max-width: 480px;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    margin-top: 2rem;
+
+    a {
+      color: $secondary;
+    }
+  }
+}
