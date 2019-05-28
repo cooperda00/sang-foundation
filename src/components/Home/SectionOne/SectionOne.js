@@ -8,7 +8,7 @@ import group from "../../../images/group.jpg"
 import boat from "../../../images/onboat.jpg"
 import bobo from "../../../images/bobo.png"
 
-const SectionOne = () => {
+const SectionOne = props => {
   return (
     <section className={styles.SectionOne}>
       <div className={styles.Intro}>
@@ -38,21 +38,42 @@ const SectionOne = () => {
       </div>
       <br />
       <div className={styles.ImageGrid}>
-        <div>
-          <img src={straws} alt="Say no to plastic straws" />
-        </div>
-        <div>
-          <img src={group} alt="Team Effort" />
-        </div>
-        <div>
-          <img src={boat} alt="No more plastic bottles" />
-        </div>
-        <div>
-          <img src={bobo} alt="Bobo the whale" />
-        </div>
+        {data.map(card => {
+          return (
+            <div
+              onClick={() => {
+                props.setModalImage(card.image)
+                props.toggleModal(true)
+                props.setModalAltText(card.altText)
+              }}
+            >
+              <img src={card.image} alt={card.altText} />
+            </div>
+          )
+        })}
       </div>
     </section>
   )
 }
+
+//Data
+const data = [
+  {
+    image: straws,
+    altText: "Say no to plastic straws",
+  },
+  {
+    image: group,
+    altText: "Team Effort",
+  },
+  {
+    image: boat,
+    altText: "No more plastic bottles",
+  },
+  {
+    image: bobo,
+    altText: "Bobo the whale",
+  },
+]
 
 export default SectionOne

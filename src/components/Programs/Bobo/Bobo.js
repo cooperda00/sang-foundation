@@ -14,12 +14,12 @@ import insideBobo from "../../../images/insidebobo2.jpg"
 const boboGallery = [
   { name: "Bobo the whale", image: bobo },
   { name: "Group shot in front of bobo", image: boboGroup },
-  { name: "Group shot in front of bobo", image: boboGroup2 },
-  { name: "Group shot in front of bobo", image: boboGroup3 },
+  { name: "Students exploring bobo", image: boboGroup2 },
+  { name: "Students very interested in bobo", image: boboGroup3 },
   { name: "A look inside Bobo", image: insideBobo },
 ]
 
-const Bobo = () => {
+const Bobo = props => {
   return (
     <section className={styles.Bobo}>
       <div className={styles.Title}>
@@ -93,8 +93,15 @@ const Bobo = () => {
       <div className={styles.Gallery}>
         {boboGallery.map(image => {
           return (
-            <div>
-              <img src={image.image} alt={image.name} />
+            <div
+              key={image.name}
+              onClick={() => {
+                props.setModalImage(image.image)
+                props.toggleModal(true)
+                props.setModalAltText(image.name)
+              }}
+            >
+              {<img src={image.image} alt={image.name} />}
             </div>
           )
         })}
