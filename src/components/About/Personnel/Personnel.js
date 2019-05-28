@@ -11,11 +11,12 @@ import sandy from "../../../images/sandy.jpg"
 const Personnel = () => {
   return (
     <section className={styles.Personnel}>
-      <h1 className={styles.Title}>Founders:</h1>
+      <h2 className={styles.Title}>Founders:</h2>
+
       <div className={styles.Profile}>
         <img src={mutsumi} alt="Mutsumi Adachi" />
         <div>
-          <h2>Mutsumi Adachi</h2>
+          <h3>Mutsumi Adachi</h3>
           <p>
             Mutsumi is the managing partner of Omroom, an alternative healing
             center promoting holistic health and self-awareness. As an online
@@ -33,7 +34,7 @@ const Personnel = () => {
       <div className={styles.Profile}>
         <img src={caroline} alt="Caroline Link" />
         <div>
-          <h2>Caroline Link</h2>
+          <h3>Caroline Link</h3>
           <p>
             Ms. Caroline Link is the daughter of Harald and Assunta Link. Her
             father is the chairman of B. Grimm, one of Thailand’s oldest
@@ -56,11 +57,11 @@ const Personnel = () => {
           </p>
         </div>
       </div>
-      <h1 className={styles.Title}>Volunteers:</h1>
+      <h2 className={styles.Title}>Volunteers:</h2>
       <div className={styles.Profile}>
         <img src={victoria} alt="Victoria" />
         <div>
-          <h2>Victoria</h2>
+          <h3>Victoria</h3>
           <p>
             I have been trying to live a lifestyle using fewer plastics with
             great success, practicing the 5R’s: Refuse, Rethink, Reduce,
@@ -82,7 +83,7 @@ const Personnel = () => {
       <div className={styles.Profile}>
         <img src={sandy} alt="Sandy" />
         <div>
-          <h2>Sandy</h2>
+          <h3>Sandy</h3>
           <p>
             Likes: basketball, tennis, travel, watching movies, reading, finding
             good food and wine!

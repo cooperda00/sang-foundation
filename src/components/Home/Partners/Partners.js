@@ -23,7 +23,7 @@ const Partners = () => {
             <div className={styles.Image}>
               <img src={bahtByBaht} alt="Baht By Baht" />
             </div>
-            <h4>Baht by Baht</h4>
+            <h2>Baht by Baht</h2>
           </div>
         </a>
 
@@ -36,7 +36,7 @@ const Partners = () => {
             <div className={styles.Image}>
               <img src={ecoBeasts} alt="Eco Beasts" />
             </div>
-            <h4>Eco Beasts</h4>
+            <h2>Eco Beasts</h2>
           </div>
         </a>
         <a
@@ -48,7 +48,7 @@ const Partners = () => {
             <div className={styles.Image}>
               <img src={grinGreen} alt="Grin Green International" />
             </div>
-            <h4>Grin Green International</h4>
+            <h2>Grin Green International</h2>
           </div>
         </a>
 
@@ -61,7 +61,7 @@ const Partners = () => {
             <div className={styles.Image}>
               <img src={preciousPlastic} alt="Precious Plastic" />
             </div>
-            <h4>Precious Plastic</h4>
+            <h2>Precious Plastic</h2>
           </div>
         </a>
 
@@ -74,7 +74,7 @@ const Partners = () => {
             <div className={styles.Image}>
               <img src={trashHero} alt="Trash Hero" />
             </div>
-            <h4>Trash Hero Bangkok</h4>
+            <h2>Trash Hero Bangkok</h2>
           </div>
         </a>
       </div>

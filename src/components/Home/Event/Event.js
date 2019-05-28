@@ -11,6 +11,7 @@ const Event = () => {
       <img src={flyer} alt="World Ocean's Day Event" className={styles.Flyer} />
 
       <h1>World Oceans Day Bangkok 2019</h1>
+
       <p>
         A public awareness family event celebrating World Oceans Day. Hosted by
         Sang Foundation & partners Precious Plastic, Grin Green International,
@@ -24,7 +25,7 @@ const Event = () => {
       <p>Participation Fee: min 100 Baht suggested donation per person</p>
 
       <div className={styles.EventCTA}>
-        <h3>Visit the Facebook event page to learn more</h3>
+        <h2>Visit the Facebook event page to learn more</h2>
         <button>
           <a href="https://www.facebook.com/events/418916045594803/?active_tab=about">
             Learn More

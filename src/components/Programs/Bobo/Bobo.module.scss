@@ -12,12 +12,13 @@
   width: 100%;
 
   h1 {
-    font-size: 2rem;
-    margin-top: 0.5rem;
+    @include font("L");
+    margin-top: 3rem;
   }
 
   img {
     width: 100%;
+    padding: 0 1rem;
   }
 
   @include min-width(768px) {
@@ -25,20 +26,20 @@
 
     h1 {
       align-self: flex-end;
-      margin-top: -3rem;
-      font-size: 2rem;
     }
   }
 
   @include min-width(1200px) {
     h1 {
-      font-size: 3rem;
+      @include font("XL");
+      margin-top: -3rem;
     }
   }
 }
 
 .Facts {
   @include flex(column, flex-start, center);
+
   margin-top: 3rem;
   padding: 0 2rem 3rem 2rem;
   max-width: 700px;
@@ -46,13 +47,14 @@
 
 .Fact {
   h2 {
-    font-size: 1.2rem;
+    @include font("M");
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 
   p {
-    margin-bottom: 1rem;
+    @include font("S");
+    margin-bottom: 3rem;
   }
 }
 

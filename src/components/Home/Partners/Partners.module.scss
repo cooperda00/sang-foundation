@@ -9,7 +9,8 @@
 
   h1 {
     margin-bottom: 3rem;
-    font-size: 2rem;
+    font-size: $fontL;
+    line-height: $lineL;
   }
 }
 
@@ -24,7 +25,7 @@
 
 .Partner {
   @include flex(column, space-between, center);
-  height: 300px;
+  height: 400px;
   margin-bottom: 2rem;
   width: 280px;
   padding: 0 2rem;
@@ -37,8 +38,10 @@
     }
   }
 
-  p {
-    margin-top: 1rem;
+  h2 {
+    font-size: $fontM;
+    line-height: $lineM;
+    margin-top: 3rem;
     text-align: center;
   }
 }

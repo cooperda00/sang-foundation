@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
 
 //COLORS
-// $primary: #f7ef6a;
-// $secondary: #93c178;
-// $tertiary: #465c8b;
-
-$primary: #fbf018;
+$primary: lighten(#fdf01b, 20%);
 $secondary: #0644bf;
 $tertiary: #f29829;
 $lightgray: #dfdce3;
@@ -14,8 +10,17 @@ $lightgray: #dfdce3;
 
 //FONT
 $fontStack: "Raleway", sans-serif;
-//Line Height
+$fontXXL: 5rem;
+$fontXL: 4rem;
+$fontL: 3rem;
+$fontM: 2.5rem;
+$fontS: 1.8rem;
 
+//Line Height
+$lineXL: 6.75rem;
+$lineL: 4.5rem;
+$lineM: 3.75rem;
+$lineS: 2.7rem;
 //MIXINS
 //Flex
 @mixin flex($dir: null, $just: null, $ali: null) {
@@ -45,11 +50,28 @@ $fontStack: "Raleway", sans-serif;
   box-shadow: 0px 2px 0px 0px darken($tertiary, 10%);
   color: white;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: $fontM;
   padding: 0.6rem 1.1rem;
   background: $tertiary;
 
   &:hover {
     background: darken($tertiary, 10%);
+  }
+}
+
+//Font size and height
+@mixin font($size) {
+  @if $size == "S" {
+    font-size: $fontS;
+    line-height: $lineS;
+  } @else if $size == "M" {
+    font-size: $fontM;
+    line-height: $lineM;
+  } @else if $size == "L" {
+    font-size: $fontL;
+    line-height: $lineL;
+  } @else if $size == "XL" {
+    font-size: $fontXL;
+    line-height: $lineXL;
   }
 }

@@ -1,12 +1,52 @@
 @import "../../../vars";
 
 .Introduction {
+  @include flex(column, flex-start, center);
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+  }
+}
+
+.Left {
   margin-top: 3rem;
-  padding: 0 2rem;
   max-width: 600px;
+  padding: 0 2rem;
 
   h2,
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    @include font("M");
+
+    text-align: center;
+  }
+
+  p {
+    @include font("S");
+  }
+}
+
+.Right {
+  margin-top: 3rem;
+  max-width: 600px;
+  padding: 0 2rem;
+
+  img {
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+
+  h2 {
+    @include font("M");
+
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  p {
+    @include font("S");
   }
 }

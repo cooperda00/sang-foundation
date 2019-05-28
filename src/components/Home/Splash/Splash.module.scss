@@ -9,10 +9,11 @@
   width: 100%;
 
   .MaskedImage {
-    background-image: linear-gradient(#0644bf22, #0644bf44),
+    background-image: linear-gradient(#f2982999, #0644bf88),
       url("../../../images/plastic.jpg");
     background-position: 50% 80%;
-    clip-path: polygon(93% 0, 100% 0, 100% 100%, 38% 100%);
+
+    clip-path: circle(51.9% at 91% 74%);
     display: none;
     height: 100%;
     width: 100%;
@@ -50,24 +51,23 @@
   @include flex(column, flex-start, flex-start);
 
   width: 100%;
-
   padding: 2rem 0 0 2rem;
 
   h1 {
-    font-size: 1.6rem;
+    font-size: $fontL;
   }
   h2 {
-    font-size: 1.4rem;
+    font-size: $fontM;
   }
 
   @include min-width(800px) {
     padding: 3rem 0 0 3rem;
 
     h1 {
-      font-size: 2rem;
+      font-size: $fontL;
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: $fontM;
     }
   }
 
@@ -75,10 +75,10 @@
     padding: 5rem 0 0 5rem;
 
     h1 {
-      font-size: 3rem;
+      font-size: $fontXL;
     }
     h2 {
-      font-size: 2rem;
+      font-size: $fontL;
     }
   }
 }
@@ -89,7 +89,7 @@
   padding: 0 1rem 4rem 0rem;
 
   h1 {
-    font-size: 1.4rem;
+    font-size: $fontM;
   }
 
   button {
@@ -100,15 +100,15 @@
     padding: 0 4rem 4rem 0rem;
 
     h1 {
-      font-size: 1.8rem;
+      font-size: $fontL;
     }
   }
 
-  @include min-width(800px) {
+  @include min-width(1200px) {
     padding: 0 3rem 5rem 0rem;
 
     h1 {
-      font-size: 2rem;
+      font-size: $fontXL;
     }
   }
 }

@@ -12,21 +12,19 @@
   width: 100%;
 
   h1 {
-    font-size: 2rem;
+    @include font("L");
   }
 }
 
 .CoreList {
   display: grid;
+  grid-gap: 5rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   justify-items: center;
   margin-bottom: 3rem;
   margin-top: 2rem;
-  // padding: 0 2rem 0 4rem;
   min-height: 80vh;
-  // width: 100vw;
-  grid-gap: 5rem;
 
   li {
     @include flex(column, flex-start, center);
@@ -51,9 +49,10 @@
     }
 
     p {
+      @include font("M");
+
       color: white;
-      margin-top: 1rem;
-      font-size: 1.4rem;
+      margin-top: 3rem;
       max-width: 320px;
     }
   }
