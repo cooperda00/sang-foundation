@@ -65,11 +65,5 @@
 
   @include min-width(1000px) {
     width: 100%;
-
-    div {
-      img {
-        max-width: 350px;
-      }
-    }
   }
 }

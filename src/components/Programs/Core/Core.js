@@ -21,7 +21,12 @@ const Core = props => {
                 onClick={() => {
                   props.setModalImage(card.image)
                   props.toggleModal(true)
-                  props.setModalAltText(card.altText)
+
+                  const dataClone = [...data].filter(
+                    item => item.altText != card.altText
+                  )
+                  const newArray = [card, ...dataClone]
+                  props.setModalImage(newArray)
                 }}
               >
                 <img src={card.image} alt={card.altText} />

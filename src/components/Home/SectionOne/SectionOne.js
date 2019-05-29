@@ -37,15 +37,21 @@ const SectionOne = props => {
         </p>
       </div>
       <br />
+
       <div className={styles.ImageGrid}>
         {data.map(card => {
           return (
             <div
               onClick={() => {
-                props.setModalImage(card.image)
+                const dataClone = [...data].filter(
+                  item => item.altText != card.altText
+                )
+                const newArray = [card, ...dataClone]
+                props.setModalImage(newArray)
                 props.toggleModal(true)
                 props.setModalAltText(card.altText)
               }}
+              key={card.altText}
             >
               <img src={card.image} alt={card.altText} />
             </div>
