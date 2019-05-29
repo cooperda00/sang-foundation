@@ -3,11 +3,11 @@ import React from "react"
 //Sass
 import styles from "./Partners.module.scss"
 //Images
-import bahtByBaht from "../../../images/bahtbybaht.png"
-import ecoBeasts from "../../../images/ecobeasts.png"
-import grinGreen from "../../../images/gringreen.png"
-import preciousPlastic from "../../../images/preciousplastic.png"
-import trashHero from "../../../images/trashhero.png"
+import bahtByBaht from "../../../images/bahtbybaht-compressor.png"
+import ecoBeasts from "../../../images/ecobeasts-compressor.png"
+import grinGreen from "../../../images/gringreen-compressor.png"
+import preciousPlastic from "../../../images/preciousplastic-compressor.png"
+import trashHero from "../../../images/trashhero-compressor.png"
 
 const Partners = () => {
   return (

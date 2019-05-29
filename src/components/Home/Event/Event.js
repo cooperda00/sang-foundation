@@ -3,7 +3,7 @@ import React from "react"
 //Sass
 import styles from "./Event.module.scss"
 //Images
-import flyer from "../../../images/WODflyer.jpg"
+import flyer from "../../../images/WODflyer-compressor.jpg"
 
 const Event = () => {
   return (

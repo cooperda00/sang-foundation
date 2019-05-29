@@ -3,10 +3,10 @@ import React from "react"
 //Sass
 import styles from "./Personnel.module.scss"
 //Images
-import mutsumi from "../../../images/mutsumi.png"
-import caroline from "../../../images/caroline.png"
-import victoria from "../../../images/victoria.jpg"
-import sandy from "../../../images/sandy.jpg"
+import mutsumi from "../../../images/mutsumi-compressor.png"
+import caroline from "../../../images/caroline-compressor.png"
+import victoria from "../../../images/victoria-compressor.jpg"
+import sandy from "../../../images/sandy-compressor.jpg"
 
 const Personnel = () => {
   return (

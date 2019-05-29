@@ -3,10 +3,10 @@ import React from "react"
 //Sass
 import styles from "./Core.module.scss"
 //Images
-import group from "../../../images/group.jpg"
-import mall from "../../../images/shoppingmall.jpg"
-import beachCleanup from "../../../images/beachcleanup.jpg"
-import onStage from "../../../images/onstage.jpg"
+import group from "../../../images/group-compressor.jpg"
+import mall from "../../../images/shoppingmall-compressor.jpg"
+import beachCleanup from "../../../images/beachcleanup-compressor.jpg"
+import onStage from "../../../images/onstage-compressor.jpg"
 
 const Core = props => {
   return (
@@ -23,7 +23,7 @@ const Core = props => {
                   props.toggleModal(true)
 
                   const dataClone = [...data].filter(
-                    item => item.altText != card.altText
+                    item => item.altText !== card.altText
                   )
                   const newArray = [card, ...dataClone]
                   props.setModalImage(newArray)

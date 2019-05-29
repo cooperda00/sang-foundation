@@ -3,7 +3,7 @@ import React from "react"
 //Sass
 import styles from "./Introduction.module.scss"
 //Images
-import logo from "../../../images/logo-old.png"
+import logo from "../../../images/logo-old-compressor.png"
 
 const Introduction = () => {
   return (

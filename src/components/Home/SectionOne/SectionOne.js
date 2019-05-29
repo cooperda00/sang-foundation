@@ -3,10 +3,10 @@ import React from "react"
 //Sass
 import styles from "./SectionOne.module.scss"
 //Images
-import straws from "../../../images/nostraws.jpg"
-import group from "../../../images/group.jpg"
-import boat from "../../../images/onboat.jpg"
-import bobo from "../../../images/bobo.png"
+import straws from "../../../images/nostraws-compressor.jpg"
+import group from "../../../images/group-compressor.jpg"
+import boat from "../../../images/onboat-compressor.jpg"
+import bobo from "../../../images/bobo-compressor.png"
 
 const SectionOne = props => {
   return (
@@ -44,7 +44,7 @@ const SectionOne = props => {
             <div
               onClick={() => {
                 const dataClone = [...data].filter(
-                  item => item.altText != card.altText
+                  item => item.altText !== card.altText
                 )
                 const newArray = [card, ...dataClone]
                 props.setModalImage(newArray)

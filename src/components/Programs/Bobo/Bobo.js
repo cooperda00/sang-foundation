@@ -3,12 +3,12 @@ import React from "react"
 //Sass
 import styles from "./Bobo.module.scss"
 //Images
-import cartoon from "../../../images/whalevector.png"
+import cartoon from "../../../images/whalevector-compressor.png"
 //Bobo
-import bobo from "../../../images/bobo.png"
-import boboGroup from "../../../images/bobogroup.jpeg"
-import boboGroup2 from "../../../images/schoolproject.jpeg"
-import boboGroup3 from "../../../images/insidebobo.jpeg"
+import bobo from "../../../images/bobo-compressor.png"
+import boboGroup from "../../../images/bobogroup-compressor.jpeg"
+import boboGroup2 from "../../../images/schoolproject-compressor.jpeg"
+import boboGroup3 from "../../../images/insidebobo-compressor.jpeg"
 import insideBobo from "../../../images/insidebobo2.jpg"
 
 const boboGallery = [
@@ -101,7 +101,7 @@ const Bobo = props => {
                 props.setModalAltText(image.name)
 
                 const dataClone = [...boboGallery].filter(
-                  item => item.name != image.name
+                  item => item.name !== image.name
                 )
                 const newArray = [image, ...dataClone].map(item => {
                   return {

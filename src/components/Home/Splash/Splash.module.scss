@@ -2,7 +2,7 @@
 
 .Splash {
   background-image: linear-gradient(#0644bf88, #f2982999),
-    url("../../../images/ocean.jpg");
+    url("../../../images/ocean-compressor.jpg");
   background-position: 50% 60%;
   height: 89.5vh;
   position: relative;
@@ -10,7 +10,7 @@
 
   .MaskedImage {
     background-image: linear-gradient(#f2982999, #0644bf88),
-      url("../../../images/plastic.jpg");
+      url("../../../images/plastic-compressor.jpg");
     background-position: 50% 80%;
 
     clip-path: circle(51.9% at 91% 74%);
