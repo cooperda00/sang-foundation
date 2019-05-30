@@ -3,6 +3,7 @@
 .Event {
   @include flex(column, center, center);
 
+  background: white;
   border: 3px solid black;
   margin: 2rem 1rem;
   max-width: 1000px;
@@ -12,16 +13,23 @@
   width: 80%;
 
   h1 {
-    font-size: $fontL;
-    line-height: $lineL;
+    @include font("M");
     margin-top: 3rem;
+    text-align: center;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
   }
 
   p {
+    @include font("S");
     align-self: flex-start;
-    font-size: $fontM;
-    line-height: $lineM;
     margin-top: 3rem;
+
+    @include min-width(1000px) {
+      @include font("M");
+    }
   }
 }
 
@@ -35,7 +43,12 @@
   margin-top: 3rem;
 
   h2 {
-    font-size: $fontM;
+    @include font("S");
+    text-align: center;
+
+    @include min-width(1000px) {
+      @include font("M");
+    }
   }
 
   button {

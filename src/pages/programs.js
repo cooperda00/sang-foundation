@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 //Components
 import Layout from "../components/Layout/Layout"
 import Bobo from "../components/Programs/Bobo/Bobo"
-import CTA from "../components/Programs/CTA/CTA"
+import CTA from "../components/Layout/CTA/CTA"
 import Core from "../components/Programs/Core/Core"
 import Modal from "../components/Layout/Modal/Modal"
 //Sass
@@ -30,13 +30,15 @@ const ProgramsPage = () => {
       )}
 
       <main className={styles.Programs}>
-        <Core
+        <Bobo
           setModalImage={setModalImage}
           toggleModal={toggleModal}
           setModalAltText={setModalAltText}
         />
-        <CTA />
-        <Bobo
+
+        <CTA cards={["contact", "volunteer"]} />
+
+        <Core
           setModalImage={setModalImage}
           toggleModal={toggleModal}
           setModalAltText={setModalAltText}

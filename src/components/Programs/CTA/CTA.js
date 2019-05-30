@@ -4,8 +4,8 @@ import { Link } from "gatsby"
 //Sass
 import styles from "./CTA.module.scss"
 //Images
-import bobo from "../../../images/bobo.png"
-import protest from "../../../images/protest2.jpg"
+import bobo from "../../../images/bobo-compressor.png"
+import protest from "../../../images/protest2-compressor.jpg"
 const CTA = () => {
   return (
     <section className={styles.CTA}>

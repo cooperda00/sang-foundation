@@ -18,7 +18,7 @@ const AboutPage = () => (
       <h1>About Us:</h1>
       <Introduction />
       <Personnel />
-      <CTA />
+      {/* <CTA /> */}
     </main>
   </Layout>
 )

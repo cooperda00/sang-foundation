@@ -8,10 +8,10 @@ import Header from "./Header/Header"
 
 const Layout = ({ children }) => {
   return (
-    <main className={styles.Layout}>
+    <div className={styles.Layout}>
       <Header />
       <div className={styles.Container}>{children}</div>
-    </main>
+    </div>
   )
 }
 

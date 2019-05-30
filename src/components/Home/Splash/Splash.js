@@ -5,7 +5,7 @@ import styles from "./Splash.module.scss"
 
 const Splash = () => {
   return (
-    <div className={styles.Splash}>
+    <section className={styles.Splash}>
       <div className={styles.SplashContent}>
         <div className={styles.SplashLeft}>
           <h1>Welcome to the Sang Foundation</h1>
@@ -21,7 +21,7 @@ const Splash = () => {
         </div>
       </div>
       <div className={styles.MaskedImage} />
-    </div>
+    </section>
   )
 }
 

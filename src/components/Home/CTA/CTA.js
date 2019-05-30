@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 //Sass
 import styles from "./CTA.module.scss"
 //Images
-import bobo from "../../../images/bobogroup.jpeg"
-import volunteer from "../../../images/volunteer1.jpeg"
-import protest from "../../../images/protest.jpeg"
+import bobo from "../../../images/bobogroup-compressor.jpeg"
+import volunteer from "../../../images/volunteer1-compressor.jpeg"
+import protest from "../../../images/protest-compressor.jpeg"
 
 const CTA = () => {
   return (

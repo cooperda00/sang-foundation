@@ -3,10 +3,10 @@ import React from "react"
 //Sass
 import styles from "./SectionOne.module.scss"
 //Images
-import straws from "../../../images/nostraws-compressor.jpg"
 import group from "../../../images/group-compressor.jpg"
-import boat from "../../../images/onboat-compressor.jpg"
 import bobo from "../../../images/bobo-compressor.png"
+import youth from "../../../images/youth-compressor.jpg"
+import youth2 from "../../../images/youth2-compressor.jpeg"
 
 const SectionOne = props => {
   return (
@@ -65,16 +65,16 @@ const SectionOne = props => {
 //Data
 const data = [
   {
-    image: straws,
-    altText: "Say no to plastic straws",
+    image: youth,
+    altText: "Students holding signs",
   },
   {
     image: group,
     altText: "Team Effort",
   },
   {
-    image: boat,
-    altText: "No more plastic bottles",
+    image: youth2,
+    altText: "Students participating in a workshop activity",
   },
   {
     image: bobo,

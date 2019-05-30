@@ -5,6 +5,7 @@
   min-height: 100vh;
   padding-top: 3rem;
   width: 100%;
+  background: white;
 }
 
 .Title {
@@ -92,10 +93,14 @@
 
 .Gallery {
   @include flex(row, space-around, center);
+
   flex-wrap: wrap;
-  background: $primary;
-  min-width: 100%;
+  // min-width: 100%;
   padding: 3rem 0;
+
+  border: 3px solid black;
+  max-width: 1200px;
+  margin: 0 3rem 3rem 3rem;
 
   div {
     box-sizing: content-box;

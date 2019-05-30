@@ -2,13 +2,13 @@
 import React, { useState } from "react"
 import { Helmet } from "react-helmet"
 //Components
-import Layout from "../components/Layout/Layout"
-import Splash from "../components/Home/Splash/Splash"
-import SectionOne from "../components/Home/SectionOne/SectionOne"
-import CTA from "../components/Home/CTA/CTA"
+import CTA from "../components/Layout/CTA/CTA"
 import Event from "../components/Home/Event/Event"
-import Partners from "../components/Home/Partners/Partners"
+import Layout from "../components/Layout/Layout"
 import Modal from "../components/Layout/Modal/Modal"
+import Partners from "../components/Home/Partners/Partners"
+import SectionOne from "../components/Home/SectionOne/SectionOne"
+import Splash from "../components/Home/Splash/Splash"
 //Sass
 import styles from "./styles/IndexPage.module.scss"
 
@@ -21,6 +21,10 @@ const IndexPage = () => {
     <Layout>
       <Helmet>
         <title>Sang Foundation : Home</title>
+        <meta
+          name="description"
+          content="Welcome to the Sang Foundation. Join us in the fight against plastic waste and go plastic free!"
+        />
       </Helmet>
 
       {showModal && (
@@ -38,8 +42,13 @@ const IndexPage = () => {
           toggleModal={toggleModal}
           setModalAltText={setModalAltText}
         />
-        <CTA />
+
+        <CTA cards={["about", "contact"]} />
+
         <Event />
+
+        <CTA cards={["donate", "volunteer"]} />
+
         <Partners />
       </main>
     </Layout>

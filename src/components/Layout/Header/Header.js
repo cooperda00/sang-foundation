@@ -4,7 +4,7 @@ import React, { useState } from "react"
 //Sass
 import styles from "./Header.module.scss"
 //Images
-import logo from "../../../images/logo-old.png"
+import logo from "../../../images/logo-old-compressor.png"
 //Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"

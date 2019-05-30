@@ -3,43 +3,47 @@
 .CoreProgram {
   @include flex(column, flex-start, center);
 
-  background-image: linear-gradient(#0644bfaa, #f29829aa),
-    url("../../../images/beach.jpg");
-  background-position: center;
-  background-size: cover;
-  color: white;
   min-height: 90vh;
   width: 100%;
+  background: white;
+  padding: 3rem;
 
   h1 {
-    @include font("L");
+    @include font("XL");
+
+    align-self: flex-start;
+    margin-left: 3rem;
   }
 }
 
 .CoreList {
   display: grid;
-  grid-gap: 5rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-areas:
+    "One"
+    "Two"
+    "Three"
+    "Four";
   justify-items: center;
   margin-bottom: 3rem;
   margin-top: 2rem;
   min-height: 80vh;
+  width: 90%;
 
   li {
-    @include flex(column, flex-start, center);
     list-style: none;
-    color: black;
+    width: 100%;
 
     div {
       @include flex(column, flex-start, center);
-      margin-top: 1rem;
+
+      margin-top: 4rem;
 
       img {
-        border-radius: 2px;
+        border-radius: 5px;
         width: 320px;
         height: 200px;
         object-fit: cover;
+        box-shadow: 1px 1px 1px 1px $lightgray;
 
         @include min-width(1200px) {
           width: 500px;
@@ -49,31 +53,73 @@
     }
 
     p {
-      @include font("M");
-
-      color: white;
-      margin-top: 3rem;
-      max-width: 320px;
+      @include font("S");
+      @include flex(column, center, center);
+      max-width: 500px;
+      text-align: justify;
+      margin-top: 2rem;
     }
-  }
 
-  @include min-width(800px) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @include min-width(1200px) {
-    li {
+    @include min-width(1000px) {
       p {
-        max-width: 500px;
+        @include font("M");
+      }
+
+      p::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: $tertiary;
+        margin-top: 4rem;
       }
     }
   }
 }
 
-.Item2 {
+.One {
+  @include flex(column, flex-start, center);
+  grid-area: One;
+
+  @include min-width(1000px) {
+    @include flex(row, space-around, center);
+    div {
+      width: 40%;
+    }
+  }
+}
+
+.Two {
+  @include flex(column, flex-start, center);
+  grid-area: Two;
+
   div {
     img {
       object-position: 0% 25%;
     }
+  }
+
+  @include min-width(1000px) {
+    @include flex(row-reverse, space-around, center);
+  }
+}
+
+.Three {
+  @include flex(column, flex-start, center);
+
+  grid-area: Three;
+
+  @include min-width(1000px) {
+    @include flex(row, space-around, center);
+  }
+}
+
+.Four {
+  @include flex(column, flex-start, center);
+
+  grid-area: Four;
+
+  @include min-width(1000px) {
+    @include flex(row-reverse, space-around, center);
   }
 }

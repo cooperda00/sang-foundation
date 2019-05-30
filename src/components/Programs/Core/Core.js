@@ -11,12 +11,11 @@ import onStage from "../../../images/onstage-compressor.jpg"
 const Core = props => {
   return (
     <section className={styles.CoreProgram}>
-      <h1>Our Programs</h1>
-
+      <h1>Our Core Programs</h1>
       <ul className={styles.CoreList}>
         {data.map(card => {
           return (
-            <li className={card.class && card.class} key={card.altText}>
+            <li className={card.class} key={card.altText}>
               <div
                 onClick={() => {
                   props.setModalImage(card.image)
@@ -47,25 +46,28 @@ const data = [
     altText: "A group of people at a workshop",
     copy:
       "We create curriculums for schools to follow to raise awareness. These curriculums are split into pre-school, ages 6-12, ages 12-18 and university level.",
+    class: `${styles.One}`,
   },
   {
     image: mall,
     altText: "Working with pubic places",
     copy:
       "We organize community activities with shopping malls and other public places.",
-    class: `${styles.Item2}`,
+    class: `${styles.Two}`,
   },
   {
     image: beachCleanup,
     altText: "Organising a beach cleanup",
     copy:
       "We organize beach clean-ups with village committees and local school students.",
+    class: `${styles.Three}`,
   },
   {
     image: onStage,
     altText: "A group of students presenting onstage",
     copy:
       " We organize events in cultural centers to encourage companies and government establishments to go plastic free.",
+    class: `${styles.Four}`,
   },
 ]
 

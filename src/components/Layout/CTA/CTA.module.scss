@@ -1,0 +1,46 @@
+@import "../../../vars";
+
+.CTA {
+  @include flex(row, space-around, center);
+
+  flex-wrap: wrap;
+  min-height: 50vh;
+  padding: 3rem;
+  width: 100%;
+
+  div {
+    @include flex(column, flex-start, center);
+
+    background: lighten($secondary, 40%);
+    border-radius: 5px;
+    border: 1px solid $lightgray;
+    box-shadow: 1px 1px 1px 1px $lightgray;
+    height: 300px;
+    margin: 3rem;
+    width: 300px;
+
+    button {
+      @include cta-button();
+
+      margin-top: 1rem;
+      width: 160px;
+    }
+
+    img {
+      border-radius: 2px;
+      height: 180px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    h3 {
+      font-size: $fontS;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    @include min-width(1000px) {
+      margin-top: 0;
+    }
+  }
+}

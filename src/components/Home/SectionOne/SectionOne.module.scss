@@ -3,6 +3,7 @@
 .SectionOne {
   @include flex(column, center, center);
 
+  background: white;
   border: 3px solid black;
   margin: 2rem 1rem;
   max-width: 1000px;
@@ -18,14 +19,21 @@
   min-height: 100%;
 
   h3 {
-    font-size: $fontL;
-    line-height: $lineM;
+    @include font("M");
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
   }
 
   p {
+    @include font("S");
+
     margin-top: 3rem;
-    font-size: $fontM;
-    line-height: $lineM;
+
+    @include min-width(1000px) {
+      @include font("M");
+    }
   }
 
   ul {
