@@ -1,10 +1,11 @@
 //Modules
 import React, { useState } from "react"
 import { Helmet } from "react-helmet"
+import Fade from "react-reveal"
 //Components
 import Layout from "../components/Layout/Layout"
 import Bobo from "../components/Programs/Bobo/Bobo"
-import CTA from "../components/Layout/CTA/CTA"
+// import CTA from "../components/Layout/CTA/CTA"
 import Core from "../components/Programs/Core/Core"
 import Modal from "../components/Layout/Modal/Modal"
 //Sass
@@ -28,22 +29,22 @@ const ProgramsPage = () => {
           modalAltText={modalAltText}
         />
       )}
+      <Fade duration={1000}>
+        <main className={styles.Programs}>
+          <Core
+            setModalImage={setModalImage}
+            toggleModal={toggleModal}
+            setModalAltText={setModalAltText}
+          />
+          <Bobo
+            setModalImage={setModalImage}
+            toggleModal={toggleModal}
+            setModalAltText={setModalAltText}
+          />
 
-      <main className={styles.Programs}>
-        <Bobo
-          setModalImage={setModalImage}
-          toggleModal={toggleModal}
-          setModalAltText={setModalAltText}
-        />
-
-        <CTA cards={["contact", "volunteer"]} />
-
-        <Core
-          setModalImage={setModalImage}
-          toggleModal={toggleModal}
-          setModalAltText={setModalAltText}
-        />
-      </main>
+          {/* <CTA cards={["contact", "volunteer"]} /> */}
+        </main>
+      </Fade>
     </Layout>
   )
 }

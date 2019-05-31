@@ -26,7 +26,9 @@
     padding: 0 20%;
 
     h1 {
-      align-self: flex-end;
+      align-self: flex-start;
+      margin-left: -5rem;
+      margin-top: -5rem;
     }
   }
 
@@ -57,9 +59,6 @@
     @include font("S");
     margin-bottom: 3rem;
   }
-}
-
-.Fact1 {
 }
 
 .Fact2 {
@@ -95,10 +94,9 @@
   @include flex(row, space-around, center);
 
   flex-wrap: wrap;
-  // min-width: 100%;
   padding: 3rem 0;
-
-  border: 3px solid black;
+  border: 3px solid $darkgray;
+  width: 80%;
   max-width: 1200px;
   margin: 0 3rem 3rem 3rem;
 
@@ -112,6 +110,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px 1px $lightgray;
     }
   }
 }

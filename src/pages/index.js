@@ -1,6 +1,7 @@
 //Modules
 import React, { useState } from "react"
 import { Helmet } from "react-helmet"
+import Fade from "react-reveal"
 //Components
 import CTA from "../components/Layout/CTA/CTA"
 import Event from "../components/Home/Event/Event"
@@ -34,23 +35,21 @@ const IndexPage = () => {
           modalAltText={modalAltText}
         />
       )}
+      <Fade duration={1000}>
+        <main className={styles.Home}>
+          <Splash />
+          <Event />
 
-      <main className={styles.Home}>
-        <Splash />
-        <SectionOne
-          setModalImage={setModalImage}
-          toggleModal={toggleModal}
-          setModalAltText={setModalAltText}
-        />
+          <SectionOne
+            setModalImage={setModalImage}
+            toggleModal={toggleModal}
+            setModalAltText={setModalAltText}
+          />
+          <CTA cards={["donate", "volunteer", "about", "contact"]} />
 
-        <CTA cards={["about", "contact"]} />
-
-        <Event />
-
-        <CTA cards={["donate", "volunteer"]} />
-
-        <Partners />
-      </main>
+          <Partners />
+        </main>
+      </Fade>
     </Layout>
   )
 }

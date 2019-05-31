@@ -1,7 +1,7 @@
 @import "../../../vars";
 
 .CTA {
-  @include flex(row, space-around, center);
+  @include flex(row, center, center);
 
   flex-wrap: wrap;
   min-height: 50vh;
@@ -9,7 +9,7 @@
   width: 100%;
 
   div {
-    @include flex(column, flex-start, center);
+    @include flex(column, space-between, center);
 
     background: lighten($secondary, 40%);
     border-radius: 5px;
@@ -22,7 +22,7 @@
     button {
       @include cta-button();
 
-      margin-top: 1rem;
+      margin-bottom: 1rem;
       width: 160px;
     }
 

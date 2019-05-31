@@ -64,10 +64,10 @@
     padding: 3rem 0 0 3rem;
 
     h1 {
-      font-size: $fontL;
+      font-size: $fontXL;
     }
     h2 {
-      font-size: $fontM;
+      font-size: $fontL;
     }
   }
 
@@ -75,10 +75,11 @@
     padding: 5rem 0 0 5rem;
 
     h1 {
-      font-size: $fontXL;
+      font-size: $fontXXL;
     }
     h2 {
-      font-size: $fontL;
+      margin-left: 7rem;
+      font-size: $fontXL;
     }
   }
 }

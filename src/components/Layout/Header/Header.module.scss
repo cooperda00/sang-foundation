@@ -5,9 +5,12 @@
 
   background: white;
   height: 100px;
-  position: fixed;
+  // position: fixed;
+  margin-bottom: -100px;
   width: 100%;
   z-index: 100;
+
+  box-shadow: 1px 1px 0px 1px $lightgray;
 
   a {
     color: $darkgray;
@@ -58,11 +61,14 @@
 .NavLinks {
   @include flex(column, flex-start, center);
 
-  background: lighten($lightgray, 10%);
+  background: white;
   padding: 1rem;
   position: fixed;
   right: 0;
   top: 100px;
+  border-right: 1px solid $lightgray;
+  border-left: 1px solid $lightgray;
+  border-bottom: 1px solid $lightgray;
 
   a {
     color: #36454f;

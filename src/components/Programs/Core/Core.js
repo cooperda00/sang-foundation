@@ -1,5 +1,6 @@
 //Modules
 import React from "react"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./Core.module.scss"
 //Images
@@ -11,26 +12,30 @@ import onStage from "../../../images/onstage-compressor.jpg"
 const Core = props => {
   return (
     <section className={styles.CoreProgram}>
-      <h1>Our Core Programs</h1>
+      {/* <h1>Our Core Programs</h1> */}
       <ul className={styles.CoreList}>
         {data.map(card => {
           return (
             <li className={card.class} key={card.altText}>
-              <div
-                onClick={() => {
-                  props.setModalImage(card.image)
-                  props.toggleModal(true)
+              <Fade left>
+                <div
+                  onClick={() => {
+                    props.setModalImage(card.image)
+                    props.toggleModal(true)
 
-                  const dataClone = [...data].filter(
-                    item => item.altText !== card.altText
-                  )
-                  const newArray = [card, ...dataClone]
-                  props.setModalImage(newArray)
-                }}
-              >
-                <img src={card.image} alt={card.altText} />
-              </div>
-              <p>{card.copy}</p>
+                    const dataClone = [...data].filter(
+                      item => item.altText !== card.altText
+                    )
+                    const newArray = [card, ...dataClone]
+                    props.setModalImage(newArray)
+                  }}
+                >
+                  <img src={card.image} alt={card.altText} />
+                </div>
+              </Fade>
+              <Fade right>
+                <p>{card.copy}</p>
+              </Fade>
             </li>
           )
         })}

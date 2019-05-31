@@ -2,11 +2,8 @@
 
 .AboutPage {
   @include flex(column, flex-start, center);
-  overflow-x: hidden;
 
-  h1 {
-    @include font("L");
-  }
+  overflow-x: hidden;
 }
 
 .Profile {

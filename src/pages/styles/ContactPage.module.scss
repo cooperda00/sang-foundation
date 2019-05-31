@@ -13,7 +13,7 @@
 
     padding: 0 2rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
 
     label {
       align-self: flex-start;
@@ -24,9 +24,16 @@
 
     input {
       margin-bottom: 1rem;
-      max-width: 350px;
       width: 100%;
       height: $fontXL;
+    }
+
+    .Title {
+      @include font("XL");
+      text-align: center;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+      align-self: flex-start;
     }
 
     h1 {
@@ -37,10 +44,23 @@
 
     textarea {
       margin-bottom: 1rem;
-      max-width: 350px;
+      max-width: 500px;
       width: 100%;
       min-height: 320px;
       resize: vertical;
+
+      @include min-width(1000px) {
+        max-width: 500px;
+      }
+    }
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+    margin-top: 5rem;
+
+    .Right {
+      margin-top: 13rem;
     }
   }
 }
