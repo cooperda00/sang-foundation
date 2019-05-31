@@ -8,14 +8,17 @@ const Splash = () => {
   return (
     <section className={styles.Splash}>
       <div className={styles.SplashContent}>
-        <div className={styles.SplashLeft}>
-          <Fade delay={500}>
-            <h1>Welcome to the Sang Foundation</h1>
-          </Fade>
-          <Fade delay={1500}>
-            <h2>Join the Fight Against Single-Use Plastics</h2>
-          </Fade>
-        </div>
+        {/* Remove from static pre-render to fix animation issue */}
+        {typeof window === "undefined" ? (
+          <div className={styles.SplashLeft}>
+            <Fade delay={500}>
+              <h1>Welcome to the Sang Foundation</h1>
+            </Fade>
+            <Fade delay={1500}>
+              <h2>Join the Fight Against Single-Use Plastics</h2>
+            </Fade>
+          </div>
+        ) : null}
 
         <Fade delay={2500}>
           <div className={styles.SplashRight}>
