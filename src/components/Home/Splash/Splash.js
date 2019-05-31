@@ -10,12 +10,13 @@ const Splash = () => {
   useEffect(() => {
     setTimeout(() => {
       setReady(true)
-    }, 2000)
+    }, 1000)
   }, [])
 
   return (
     <section className={styles.Splash}>
       <div className={styles.SplashContent}>
+        {/* Uses setTimeout to give gatsby time to load the JS */}
         {ready && (
           <div className={styles.SplashLeft}>
             <Fade delay={500}>
