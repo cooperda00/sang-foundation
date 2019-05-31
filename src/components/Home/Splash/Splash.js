@@ -22,14 +22,14 @@ const Splash = () => {
             <Fade delay={500}>
               <h1>Welcome to the Sang Foundation</h1>
             </Fade>
-            <Fade delay={1500}>
+            <Fade delay={1000}>
               <h2>Join the Fight Against Single-Use Plastics</h2>
             </Fade>
           </div>
         )}
 
         {ready && (
-          <Fade delay={2500}>
+          <Fade delay={1500}>
             <div className={styles.SplashRight}>
               <h1>Help Us Keep Thailand's Oceans Pristine</h1>
               <a href="https://forms.gle/RwXXjtwhkYSy4tWg8">
