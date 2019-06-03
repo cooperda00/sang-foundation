@@ -16,29 +16,25 @@ const Splash = () => {
   return (
     <section className={styles.Splash}>
       <div className={styles.SplashContent}>
-        {/* Uses setTimeout to give gatsby time to load the JS */}
-        {ready && (
-          <div className={styles.SplashLeft}>
-            <Fade delay={500}>
-              <h1>Welcome to the Sang Foundation</h1>
-            </Fade>
-            <Fade delay={1000}>
-              <h2>Join the Fight Against Single-Use Plastics</h2>
-            </Fade>
-          </div>
-        )}
+        <div className={styles.SplashLeft}>
+          <h1>Welcome to the Sang Foundation</h1>
 
-        {ready && (
-          <Fade delay={1500}>
-            <div className={styles.SplashRight}>
+          <h2>Join the Fight Against Single-Use Plastics</h2>
+        </div>
+
+        {/* Uses setTimeout to give gatsby time to load the JS */}
+
+        <div className={styles.SplashRight}>
+          {ready && (
+            <Fade delay={500}>
               <h1>Help Us Keep Thailand's Oceans Pristine</h1>
               <a href="https://forms.gle/RwXXjtwhkYSy4tWg8">
                 {" "}
                 <button>Volunteer</button>
               </a>
-            </div>
-          </Fade>
-        )}
+            </Fade>
+          )}
+        </div>
       </div>
       <div className={styles.MaskedImage} />
     </section>

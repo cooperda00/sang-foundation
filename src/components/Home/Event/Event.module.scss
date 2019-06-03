@@ -24,12 +24,18 @@
 
   p {
     @include font("S");
+
     align-self: flex-start;
     margin-top: 3rem;
+    width: 100%;
 
     @include min-width(1000px) {
       @include font("M");
     }
+  }
+
+  .Underline::after {
+    @include underline();
   }
 }
 

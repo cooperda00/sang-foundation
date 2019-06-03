@@ -4,6 +4,7 @@
   padding: 3rem 2rem;
   width: 80vw;
   height: 100%;
+  background: white;
 
   h2 {
     @include font("L");
@@ -49,6 +50,10 @@
       @include font("S");
       margin-bottom: 3rem;
     }
+
+    p:last-child::after {
+      @include underline();
+    }
   }
 
   @include min-width(1000px) {
@@ -71,4 +76,16 @@
       }
     }
   }
+}
+
+.Shift {
+  object-position: 50% 10%;
+}
+
+.ShiftV {
+  object-position: 50% 40%;
+}
+
+.ShiftS {
+  object-position: 50% 60%;
 }

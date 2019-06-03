@@ -1,13 +1,12 @@
 //Modules
 import React, { useState } from "react"
-import { Helmet } from "react-helmet"
 import Fade from "react-reveal"
 //Components
 import Layout from "../components/Layout/Layout"
 import Bobo from "../components/Programs/Bobo/Bobo"
-// import CTA from "../components/Layout/CTA/CTA"
 import Core from "../components/Programs/Core/Core"
 import Modal from "../components/Layout/Modal/Modal"
+import SEO from "../components/SEO/SEO"
 //Sass
 import styles from "./styles/ProgramsPage.module.scss"
 
@@ -18,9 +17,13 @@ const ProgramsPage = () => {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Sang Foundation: Our Programs</title>
-      </Helmet>
+      <SEO
+        title="Sang Foundation: Our Programs"
+        description={
+          "Welcome to the Sang Foundation. Get information on what kind of programs we run at the Sang Foundation"
+        }
+        keywords={"plastic, environment, waste, ocean, protect, bobo"}
+      />
 
       {showModal && (
         <Modal
@@ -41,8 +44,6 @@ const ProgramsPage = () => {
             toggleModal={toggleModal}
             setModalAltText={setModalAltText}
           />
-
-          {/* <CTA cards={["contact", "volunteer"]} /> */}
         </main>
       </Fade>
     </Layout>

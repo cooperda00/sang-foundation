@@ -9,11 +9,12 @@
   width: 100%;
 
   .MaskedImage {
-    background-image: linear-gradient(#f2982977, #0644bfbb),
+    background-image: linear-gradient(#0644bfbb, #f2982977, #0644bfbb),
       url("../../../images/plastic-compressor.jpg");
-    background-position: 50% 80%;
+    background-position: 50% 95%;
 
     clip-path: circle(51.9% at 91% 74%);
+    // clip-path: circle(50% at 76% 47%);
     display: none;
     height: 100%;
     width: 100%;
@@ -88,6 +89,7 @@
   margin-top: 3rem;
   align-self: flex-end;
   padding: 0 1rem 4rem 0rem;
+  height: 156px;
 
   h1 {
     font-size: $fontM;

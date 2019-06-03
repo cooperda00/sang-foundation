@@ -1,5 +1,6 @@
 //Modules
 import React, { useState, useEffect, useRef } from "react"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./Modal.module.scss"
 //Icons
@@ -59,34 +60,36 @@ const Modal = props => {
         }
       }}
     >
-      <div className={styles.Content}>
-        <button
-          className={styles.CloseModal}
-          onClick={() => {
-            props.toggleModal(false)
-          }}
-        >
-          X
-        </button>
+      <Fade duration={500}>
+        <div className={styles.Content}>
+          <button
+            className={styles.CloseModal}
+            onClick={() => {
+              props.toggleModal(false)
+            }}
+          >
+            X
+          </button>
 
-        <img src={selectedImage.image} alt={selectedImage.altText} />
+          <img src={selectedImage.image} alt={selectedImage.altText} />
 
-        <p className={styles.Description}>{selectedImage.altText}</p>
+          <p className={styles.Description}>{selectedImage.altText}</p>
 
-        <button
-          onClick={handleDecrement}
-          className={`${styles.Arrow} ${styles.ArrowLeft}`}
-        >
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
+          <button
+            onClick={handleDecrement}
+            className={`${styles.Arrow} ${styles.ArrowLeft}`}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
 
-        <button
-          onClick={handleIncrement}
-          className={`${styles.Arrow} ${styles.ArrowRight}`}
-        >
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-      </div>
+          <button
+            onClick={handleIncrement}
+            className={`${styles.Arrow} ${styles.ArrowRight}`}
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
+      </Fade>
     </div>
   )
 }

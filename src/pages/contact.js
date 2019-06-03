@@ -1,18 +1,22 @@
 //Modules
 import React from "react"
-import { Helmet } from "react-helmet"
 import Fade from "react-reveal"
 //Components
 import Layout from "../components/Layout/Layout"
+import SEO from "../components/SEO/SEO"
 //Sass
 import styles from "./styles/ContactPage.module.scss"
 
 const ContactPage = () => {
   return (
     <Layout>
-      <Helmet>
-        <title>Sang Foundation : Contact Us</title>
-      </Helmet>
+      <SEO
+        title="Sang Foundation : Contact Us"
+        description={
+          "Welcome to the Sang Foundation. Get in touch with us directly here."
+        }
+        keywords={"plastic, environment, waste, ocean, protect, contact"}
+      />
       <Fade duration={1000}>
         <form
           className={styles.ContactForm}

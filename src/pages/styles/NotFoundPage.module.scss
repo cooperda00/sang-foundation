@@ -1,18 +1,16 @@
-@import "../../vars";
+@import "./../../vars";
 
-.Success {
+.NotFound {
   @include flex(column, center, center);
-
   min-height: calc(100vh - 100px);
 
   h1 {
-    @include font("XL");
-
+    font-size: $fontXL;
     margin-bottom: 3rem;
   }
 
   p {
-    @include font("L");
+    font-size: $fontL;
 
     a {
       color: dodgerblue;

@@ -1,6 +1,7 @@
 //Modules
 import { Link } from "gatsby"
 import React, { useState } from "react"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./Header.module.scss"
 //Images
@@ -53,12 +54,14 @@ const Header = () => {
         <FontAwesomeIcon icon={faBars} />
       </button>
 
-      <div className={navLinks}>
-        <Link to="/">Home</Link>
-        <Link to="/programs">Our Programs</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
+      <Fade right when={menu} duration={300}>
+        <div className={navLinks}>
+          <Link to="/">Home</Link>
+          <Link to="/programs">Our Programs</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+      </Fade>
     </header>
   )
 }

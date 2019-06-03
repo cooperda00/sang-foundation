@@ -4,7 +4,7 @@
   @include flex(column, flex-start, center);
   min-height: 50vh;
   background: white;
-  width: 100%;
+  width: 100vw;
   padding: 3rem 0;
 
   h1 {
@@ -15,7 +15,7 @@
 }
 
 .PartnerContainer {
-  @include flex(column, flex-start, center);
+  @include flex(column, flex-start, space-around);
 
   @include min-width(600px) {
     @include flex(row, space-around);
@@ -25,17 +25,21 @@
 
 .Partner {
   @include flex(column, space-between, center);
-  height: 400px;
+
+  height: 385px;
   margin-bottom: 2rem;
   width: 280px;
   padding: 0 2rem;
+  margin: 3rem 3rem;
 
-  .Image {
+  .ImageContainer {
     @include flex(column, center, center);
     height: 100%;
-    img {
-      max-width: 100%;
-    }
+  }
+
+  .Img {
+    @include flex(column, center, center);
+    height: 100%;
   }
 
   h2 {

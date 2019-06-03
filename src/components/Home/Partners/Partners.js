@@ -1,85 +1,178 @@
 //Modules
 import React from "react"
+import Fade from "react-reveal/Fade"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 //Sass
 import styles from "./Partners.module.scss"
-//Images
-import bahtByBaht from "../../../images/bahtbybaht-compressor.png"
-import ecoBeasts from "../../../images/ecobeasts-compressor.png"
-import grinGreen from "../../../images/gringreen-compressor.png"
-import preciousPlastic from "../../../images/preciousplastic-compressor.png"
-import trashHero from "../../../images/trashhero-compressor.png"
 
 const Partners = () => {
+  const data = useStaticQuery(query)
+
+  const bahtByBaht = data.bahtByBaht.edges[0].node.childImageSharp.fixed
+  const ecoBeasts = data.ecoBeasts.edges[0].node.childImageSharp.fixed
+  const grinGreen = data.grinGreen.edges[0].node.childImageSharp.fixed
+  const preciousPlastic =
+    data.preciousPlastic.edges[0].node.childImageSharp.fixed
+  const trashHero = data.trashHero.edges[0].node.childImageSharp.fixed
+
   return (
-    <section className={styles.Partners}>
-      <h1>Our Partners</h1>
-      <div className={styles.PartnerContainer}>
-        <a
-          href="https://www.bahtbybaht.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className={styles.Partner}>
-            <div className={styles.Image}>
-              <img src={bahtByBaht} alt="Baht By Baht" />
-            </div>
-            <h2>Baht by Baht</h2>
-          </div>
-        </a>
+    <Fade>
+      <section className={styles.Partners}>
+        <h1>Our Partners</h1>
+        <div className={styles.PartnerContainer}>
+          <a
+            href="https://www.bahtbybaht.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.Partner}>
+              <Img
+                fixed={bahtByBaht}
+                alt="Baht By Baht"
+                className={styles.Img}
+              />
 
-        <a
-          href="https://ecobeastsbkk.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className={styles.Partner}>
-            <div className={styles.Image}>
-              <img src={ecoBeasts} alt="Eco Beasts" />
+              <h2>Baht by Baht</h2>
             </div>
-            <h2>Eco Beasts</h2>
-          </div>
-        </a>
-        <a
-          href="https://gringreen.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className={styles.Partner}>
-            <div className={styles.Image}>
-              <img src={grinGreen} alt="Grin Green International" />
-            </div>
-            <h2>Grin Green International</h2>
-          </div>
-        </a>
+          </a>
 
-        <a
-          href="https://preciousplastic.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className={styles.Partner}>
-            <div className={styles.Image}>
-              <img src={preciousPlastic} alt="Precious Plastic" />
+          <a
+            href="https://ecobeastsbkk.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.Partner}>
+              <div className={styles.ImageContainer}>
+                <Img
+                  fixed={ecoBeasts}
+                  alt="Eco Beasts"
+                  className={styles.Img}
+                />
+              </div>
+              <h2>Eco Beasts</h2>
             </div>
-            <h2>Precious Plastic</h2>
-          </div>
-        </a>
+          </a>
 
-        <a
-          href=" https://trashhero.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className={styles.Partner}>
-            <div className={styles.Image}>
-              <img src={trashHero} alt="Trash Hero" />
+          <a
+            href="https://gringreen.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.Partner}>
+              <Img
+                fixed={grinGreen}
+                alt="Grin Green International"
+                className={styles.Img}
+              />
+              <h2>Grin Green International</h2>
             </div>
-            <h2>Trash Hero Bangkok</h2>
-          </div>
-        </a>
-      </div>
-    </section>
+          </a>
+
+          <a
+            href="https://preciousplastic.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.Partner}>
+              <Img
+                fixed={preciousPlastic}
+                alt="Precious Plastic"
+                className={styles.Img}
+              />
+              <h2>Precious Plastic</h2>
+            </div>
+          </a>
+
+          <a
+            href=" https://trashhero.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.Partner}>
+              <Img fixed={trashHero} alt="Trash Hero" className={styles.Img} />
+
+              <h2>Trash Hero Bangkok</h2>
+            </div>
+          </a>
+        </div>
+      </section>
+    </Fade>
   )
 }
+
+const query = graphql`
+  {
+    bahtByBaht: allFile(
+      filter: { relativePath: { eq: "bahtbybaht-compressor.png" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 280) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+
+    ecoBeasts: allFile(
+      filter: { relativePath: { eq: "ecobeasts-compressor.png" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 280) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+
+    grinGreen: allFile(
+      filter: { relativePath: { eq: "gringreen-compressor.png" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 280) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+
+    preciousPlastic: allFile(
+      filter: { relativePath: { eq: "preciousplastic-compressor.png" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 280) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+
+    trashHero: allFile(
+      filter: { relativePath: { eq: "trashhero-compressor.png" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 280) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Partners

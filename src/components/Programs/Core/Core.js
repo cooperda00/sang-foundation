@@ -12,12 +12,12 @@ import onStage from "../../../images/onstage-compressor.jpg"
 const Core = props => {
   return (
     <section className={styles.CoreProgram}>
-      {/* <h1>Our Core Programs</h1> */}
+      <h1>Our Core Programs</h1>
       <ul className={styles.CoreList}>
         {data.map(card => {
           return (
-            <li className={card.class} key={card.altText}>
-              <Fade left>
+            <Fade top>
+              <li className={card.class} key={card.altText}>
                 <div
                   onClick={() => {
                     props.setModalImage(card.image)
@@ -32,11 +32,10 @@ const Core = props => {
                 >
                   <img src={card.image} alt={card.altText} />
                 </div>
-              </Fade>
-              <Fade right>
+
                 <p>{card.copy}</p>
-              </Fade>
-            </li>
+              </li>
+            </Fade>
           )
         })}
       </ul>

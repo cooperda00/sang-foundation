@@ -8,7 +8,7 @@
   padding: 3rem;
   width: 100%;
 
-  div {
+  .Card {
     @include flex(column, space-between, center);
 
     background: lighten($secondary, 40%);
@@ -26,8 +26,9 @@
       width: 160px;
     }
 
-    img {
-      border-radius: 2px;
+    .Img {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
       height: 180px;
       object-fit: cover;
       width: 100%;

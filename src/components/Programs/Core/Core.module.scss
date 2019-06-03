@@ -4,15 +4,18 @@
   @include flex(column, flex-start, center);
 
   min-height: 90vh;
-  width: 100%;
+  width: 100vw;
   background: white;
   padding: 3rem;
 
   h1 {
     @include font("XL");
+    text-align: center;
 
-    align-self: flex-start;
-    margin-left: 3rem;
+    @include min-width(1200px) {
+      align-self: flex-start;
+      margin-left: 6rem;
+    }
   }
 }
 
@@ -27,7 +30,7 @@
   margin-bottom: 3rem;
   margin-top: 2rem;
   min-height: 80vh;
-  width: 90%;
+  width: 100%;
 
   li {
     list-style: none;
@@ -66,12 +69,7 @@
       }
 
       p::after {
-        content: "";
-        display: block;
-        height: 2px;
-        width: 100%;
-        background: $tertiary;
-        margin-top: 4rem;
+        @include underline();
       }
     }
   }
