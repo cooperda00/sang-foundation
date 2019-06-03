@@ -1,6 +1,6 @@
 //Modules
 import React from "react"
-import Fade from "react-reveal/fade"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./Personnel.module.scss"
 // Images
