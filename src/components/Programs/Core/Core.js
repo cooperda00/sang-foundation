@@ -16,7 +16,7 @@ const Core = props => {
       <ul className={styles.CoreList}>
         {data.map(card => {
           return (
-            <Fade top>
+            <Fade>
               <li className={card.class} key={card.altText}>
                 <div
                   onClick={() => {

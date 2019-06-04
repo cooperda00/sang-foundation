@@ -12,11 +12,25 @@ const CTA = ({ cards }) => {
   const bobo = data.bobo.edges[0].node.childImageSharp.fluid
   const youth = data.youth.edges[0].node.childImageSharp.fluid
   const volunteer = data.volunteer.edges[0].node.childImageSharp.fluid
-  const logo = data.logo.edges[0].node.childImageSharp.fluid
+  const beach = data.beach.edges[0].node.childImageSharp.fluid
 
   return (
     <Fade left cascade duration={700}>
       <section className={styles.CTA}>
+        {cards.includes("donate") && (
+          <div className={styles.Card}>
+            <Img
+              fluid={youth}
+              alt="Students holding signs"
+              className={styles.Img}
+            />
+            <h3>Support us in our continuing fight</h3>
+            <button>
+              <Link to="/donate">Donate</Link>
+            </button>
+          </div>
+        )}
+
         {cards.includes("contact") && (
           <div className={styles.Card}>
             <Img fluid={bobo} alt="Mini Bobo" className={styles.Img} />
@@ -29,7 +43,11 @@ const CTA = ({ cards }) => {
 
         {cards.includes("about") && (
           <div className={styles.Card}>
-            <Img fluid={logo} alt="Our Logo" className={styles.Img} />
+            <Img
+              fluid={beach}
+              alt="Volunteers at the beach cleanup"
+              className={styles.Img}
+            />
             <h3>Want to learn a bit more about who we are?</h3>
             <button>
               <Link to="/about">About</Link>
@@ -52,26 +70,6 @@ const CTA = ({ cards }) => {
                 rel="noopener noreferrer"
               >
                 Join Us
-              </a>
-            </button>
-          </div>
-        )}
-
-        {cards.includes("donate") && (
-          <div className={styles.Card}>
-            <Img
-              fluid={youth}
-              alt="Students holding signs"
-              className={styles.Img}
-            />
-            <h3>Support us in our continuing fight</h3>
-            <button>
-              <a
-                href="https://www.paypal.com/webapps/shoppingcart?flowlogging_id=bb19fa2a41a21&mfid=1558582688970_bb19fa2a41a21#/checkout/openButton"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Donate
               </a>
             </button>
           </div>
@@ -108,7 +106,9 @@ const query = graphql`
       }
     }
 
-    logo: allFile(filter: { relativePath: { eq: "logo-old-compressor.png" } }) {
+    beach: allFile(
+      filter: { relativePath: { eq: "volunteersbeach-compressor.jpg" } }
+    ) {
       edges {
         node {
           childImageSharp {

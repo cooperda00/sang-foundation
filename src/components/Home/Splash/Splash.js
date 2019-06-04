@@ -1,6 +1,7 @@
 //Modules
 import React, { useState, useEffect } from "react"
 import Fade from "react-reveal/Fade"
+import { Link } from "gatsby"
 //Sass
 import styles from "./Splash.module.scss"
 
@@ -27,11 +28,10 @@ const Splash = () => {
         <div className={styles.SplashRight}>
           {ready && (
             <Fade delay={500}>
-              <h1>Help Us Keep Thailand's Oceans Pristine</h1>
-              <a href="https://forms.gle/RwXXjtwhkYSy4tWg8">
-                {" "}
-                <button>Volunteer</button>
-              </a>
+              <h1>Help Us Prevent Climate Disaster</h1>
+              <Link to="/donate">
+                <button>Donate</button>
+              </Link>
             </Fade>
           )}
         </div>

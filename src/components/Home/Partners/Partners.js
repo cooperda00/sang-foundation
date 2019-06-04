@@ -117,9 +117,7 @@ const query = graphql`
       }
     }
 
-    ecoBeasts: allFile(
-      filter: { relativePath: { eq: "ecobeasts-compressor.png" } }
-    ) {
+    ecoBeasts: allFile(filter: { relativePath: { eq: "ecobeasts.jpg" } }) {
       edges {
         node {
           childImageSharp {
