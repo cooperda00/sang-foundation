@@ -1,53 +1,62 @@
 @import "../../vars";
 
+.ContactContainer {
+  @include flex(column, flex-start, center);
+
+  background: white;
+  margin: 3rem auto;
+  width: 80%;
+  min-height: calc(100vh - 100px);
+  border: 3px solid $darkgray;
+}
+
+.Title {
+  @include font("XL");
+
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
 .ContactForm {
   @include flex(column, center, center);
 
   height: 100%;
-  min-height: 80vh;
   padding-bottom: 3rem;
   width: 100%;
 
   div {
     @include flex(column, flex-start, center);
 
+    max-width: 500px;
     padding: 0 2rem;
     width: 100%;
-    max-width: 500px;
 
     label {
       align-self: flex-start;
-      margin-bottom: 0.5rem;
       font-size: $fontM;
       line-height: $lineM;
+      margin-bottom: 0.5rem;
     }
 
     input {
+      height: $fontXL;
       margin-bottom: 1rem;
       width: 100%;
-      height: $fontXL;
-    }
-
-    .Title {
-      @include font("XL");
-      text-align: center;
-      margin-bottom: 3rem;
-      margin-top: 3rem;
-      align-self: flex-start;
     }
 
     h1 {
-      margin-bottom: 1rem;
       font-size: $fontL;
       line-height: $lineL;
+      margin-bottom: 1rem;
     }
 
     textarea {
       margin-bottom: 1rem;
       max-width: 500px;
-      width: 100%;
       min-height: 320px;
       resize: vertical;
+      width: 100%;
 
       @include min-width(1000px) {
         max-width: 500px;
@@ -57,11 +66,8 @@
 
   @include min-width(1000px) {
     @include flex(row, center, flex-start);
-    margin-top: 5rem;
 
-    .Right {
-      margin-top: 13rem;
-    }
+    margin-top: 5rem;
   }
 }
 

@@ -5,8 +5,7 @@
 
   background: white;
   border: 3px solid $darkgray;
-  margin: 2rem 1rem;
-  max-width: 1200px;
+  margin: 5rem 1rem;
   min-height: 80vh;
   padding: 3rem;
   text-align: left;
@@ -25,9 +24,9 @@
   p {
     @include font("S");
 
-    align-self: flex-start;
     margin-top: 3rem;
     width: 100%;
+    max-width: 1200px;
 
     @include min-width(1000px) {
       @include font("M");

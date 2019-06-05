@@ -2,7 +2,6 @@
 
 .Partners {
   @include flex(column, flex-start, center);
-  min-height: 50vh;
   background: white;
   width: 100vw;
   padding: 3rem 0;
@@ -26,9 +25,9 @@
 .Partner {
   @include flex(column, space-between, center);
 
-  height: 385px;
+  height: 400px;
   margin-bottom: 2rem;
-  width: 280px;
+  width: 300px;
   padding: 0 2rem;
   margin: 3rem 3rem;
 

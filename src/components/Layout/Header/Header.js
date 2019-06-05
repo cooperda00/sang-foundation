@@ -20,12 +20,12 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <div className={styles.NavLinksLeft}>
-        <Link activeStyle={{ fontWeight: "bold" }} to="/">
-          Home
+        <Link activeStyle={{ fontWeight: "bold" }} to="/programs">
+          Programs
         </Link>
 
-        <Link activeStyle={{ fontWeight: "bold" }} to="/programs">
-          Our Programs
+        <Link activeStyle={{ fontWeight: "bold" }} to="/about">
+          About
         </Link>
       </div>
 
@@ -36,12 +36,16 @@ const Header = () => {
       </div>
 
       <div className={styles.NavLinksRight}>
-        <Link activeStyle={{ fontWeight: "bold" }} to="/about">
-          About Us
-        </Link>
-
         <Link to="/contact" activeStyle={{ fontWeight: "bold" }}>
           Contact
+        </Link>
+
+        <Link
+          to="/donate"
+          activeStyle={{ fontWeight: "bold" }}
+          className={styles.Donate}
+        >
+          Donate
         </Link>
       </div>
 
@@ -60,6 +64,9 @@ const Header = () => {
           <Link to="/programs">Our Programs</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/donate" className={styles.DonateMini}>
+            Donate
+          </Link>
         </div>
       </Fade>
     </header>

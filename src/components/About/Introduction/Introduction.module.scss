@@ -1,12 +1,29 @@
 @import "../../../vars";
 
+.Title {
+  @include font("XL");
+
+  background: white;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  text-align: center;
+  width: 80%;
+  border-left: 3px solid $darkgray;
+  border-right: 3px solid $darkgray;
+  border-top: 3px solid $darkgray;
+}
+
 .Introduction {
   @include flex(column, flex-start, center);
 
-  padding: 3rem 2rem;
+  padding: 0 2rem 3rem 2rem;
   padding-bottom: 5rem;
-  width: 80vw;
+  width: 80%;
   background: white;
+  border-left: 3px solid $darkgray;
+  border-right: 3px solid $darkgray;
+  border-bottom: 3px solid $darkgray;
+  margin-bottom: 3rem;
 
   @include min-width(1000px) {
     @include flex(row, center, center);
@@ -14,16 +31,11 @@
 }
 
 .Left {
-  @include flex(column, flex-start, flex-start);
+  @include flex(column, flex-start, center);
 
   margin-top: 3rem;
   max-width: 900px;
   padding: 0 2rem;
-
-  h1 {
-    @include font("XL");
-    margin-bottom: 3rem;
-  }
 
   h2,
   p {
@@ -32,6 +44,7 @@
 
   h2 {
     @include font("M");
+
     text-align: left;
   }
 

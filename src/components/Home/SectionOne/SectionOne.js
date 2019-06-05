@@ -8,6 +8,8 @@ import group from "../../../images/group-compressor.jpg"
 import bobo from "../../../images/bobo-compressor.png"
 import youth from "../../../images/youth-compressor.jpg"
 import youth2 from "../../../images/youth2-compressor.jpeg"
+import bins from "../../../images/cleanup2-compressor.jpg"
+import cleanup from "../../../images/cleanup1-compressor.jpg"
 
 const SectionOne = props => {
   return (
@@ -73,8 +75,16 @@ const data = [
     altText: "Students holding signs",
   },
   {
+    image: bins,
+    altText: "Recycling station at the beach",
+  },
+  {
+    image: cleanup,
+    altText: "Kids participating in a beach cleanup",
+  },
+  {
     image: group,
-    altText: "Team Effort",
+    altText: "Group photo at a workshop",
   },
   {
     image: youth2,

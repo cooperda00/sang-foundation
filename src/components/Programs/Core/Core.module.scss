@@ -3,19 +3,16 @@
 .CoreProgram {
   @include flex(column, flex-start, center);
 
-  min-height: 90vh;
-  width: 100vw;
   background: white;
+  margin: 3rem 1rem;
+  min-height: calc(100vh - 100px);
   padding: 3rem;
+  width: 80%;
+  border: 3px solid $darkgray;
 
   h1 {
     @include font("XL");
     text-align: center;
-
-    @include min-width(1200px) {
-      align-self: flex-start;
-      margin-left: 6rem;
-    }
   }
 }
 
@@ -48,7 +45,7 @@
         object-fit: cover;
         box-shadow: 1px 1px 1px 1px $lightgray;
 
-        @include min-width(1200px) {
+        @include min-width(1400px) {
           width: 500px;
           height: 340px;
         }
@@ -58,14 +55,15 @@
     p {
       @include font("S");
       @include flex(column, center, center);
-      max-width: 500px;
-      text-align: justify;
+      max-width: 320px;
+      text-align: left;
       margin-top: 2rem;
     }
 
-    @include min-width(1000px) {
+    @include min-width(1150px) {
       p {
         @include font("M");
+        max-width: 500px;
       }
 
       p::after {

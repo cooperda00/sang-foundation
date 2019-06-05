@@ -11,18 +11,17 @@
   .Card {
     @include flex(column, space-between, center);
 
-    background: lighten($secondary, 40%);
+    background: white;
     border-radius: 5px;
-    border: 1px solid $lightgray;
-    box-shadow: 1px 1px 1px 1px $lightgray;
-    height: 300px;
+    box-shadow: 1px 1px 1px 1px lighten($darkgray, 40%);
+    height: 350px;
     margin: 3rem;
     width: 300px;
 
     button {
       @include cta-button();
 
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       width: 160px;
     }
 
@@ -35,7 +34,7 @@
     }
 
     h3 {
-      font-size: $fontS;
+      font-size: $fontM;
       margin-top: 1rem;
       text-align: center;
     }

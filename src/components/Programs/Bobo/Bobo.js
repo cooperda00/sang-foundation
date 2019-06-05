@@ -22,8 +22,10 @@ const boboGallery = [
 
 const Bobo = props => {
   const data = useStaticQuery(query)
+
   const boboCartoon = data.bobo.edges[0].node.childImageSharp.fluid
-  console.log(boboCartoon)
+  const whaleImage = data.whale.childImageSharp.fluid
+
   return (
     <section className={styles.Bobo}>
       <Fade>
@@ -138,6 +140,16 @@ const Bobo = props => {
           })}
         </div>
       </Fade>
+
+      <Fade>
+        <div className={styles.WhaleImage}>
+          <Img
+            fluid={whaleImage}
+            alt={"A real life whale"}
+            className={styles.WhaleImageJpg}
+          />
+        </div>
+      </Fade>
     </section>
   )
 }
@@ -152,6 +164,14 @@ const query = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+      }
+    }
+
+    whale: file(relativePath: { eq: "bigwhale2-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200, maxHeight: 600) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

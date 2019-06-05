@@ -24,7 +24,7 @@ const CTA = ({ cards }) => {
               alt="Students holding signs"
               className={styles.Img}
             />
-            <h3>Support us in our continuing fight</h3>
+            <h3>Support our continuing fight</h3>
             <button>
               <Link to="/donate">Donate</Link>
             </button>
@@ -34,7 +34,7 @@ const CTA = ({ cards }) => {
         {cards.includes("contact") && (
           <div className={styles.Card}>
             <Img fluid={bobo} alt="Mini Bobo" className={styles.Img} />
-            <h3>Want to get in touch with us directly?</h3>
+            <h3>Get in touch with us</h3>
             <button>
               <Link to="/contact">Contact</Link>
             </button>
@@ -48,7 +48,7 @@ const CTA = ({ cards }) => {
               alt="Volunteers at the beach cleanup"
               className={styles.Img}
             />
-            <h3>Want to learn a bit more about who we are?</h3>
+            <h3>Learn more about us</h3>
             <button>
               <Link to="/about">About</Link>
             </button>
@@ -62,7 +62,7 @@ const CTA = ({ cards }) => {
               alt="Some of our volunteers"
               className={styles.Img}
             />
-            <h3>Help us out by becoming a volunteer</h3>
+            <h3>Become a volunteer</h3>
             <button>
               <a
                 href="https://forms.gle/RwXXjtwhkYSy4tWg8"

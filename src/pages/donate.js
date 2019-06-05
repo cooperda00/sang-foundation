@@ -1,82 +1,206 @@
 //Modules
 import React from "react"
+import Img from "gatsby-image"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./styles/DonatePage.module.scss"
+//Components
+import Layout from "../components/Layout/Layout"
 
-const DonatePage = () => {
+const DonatePage = ({ data }) => {
+  const seal = data.seal.childImageSharp.fluid
+  console.log(data)
+  const grinGreen = data.grinGreen.childImageSharp.fixed
+  const ecoBeasts = data.ecoBeasts.childImageSharp.fixed
+  const trashHero = data.trashHero.childImageSharp.fixed
+  const preciousPlastic = data.preciousPlastic.childImageSharp.fixed
+
   return (
-    <section className={styles.DonateDetails}>
-      <div>
-        <h1>Donate Here</h1>
-        <p>Accn 016-2-97347-9</p>
-        <p>Name: Sang Foundation</p>
-        <p>Bank: Kasikorn Bank</p>
-        <p>Swift Code: KASITHBK</p>
-        <p>Tax Redemption ID: 0-9930-00372-79-4</p>
-      </div>
+    <Layout>
+      <Fade>
+        <section className={styles.Donate}>
+          <h1 className={styles.Title}>Donate Here</h1>
 
-      <div>
-        <h1>Donation Copy</h1>
-        <p>
-          Sang foundation is a Thai government registered and certified non
-          profit organization. We have tax ID which issues by minister of
-          finance for tax redemption.
-        </p>
-        <p>
-          A suggested donation of 100 - 500 Baht will go towards sponsoring and
-          supporting the following organisations:
-        </p>
-        <div>
-          <h2>Grin Green International</h2>
-          <p>
-            A student centered social enterprise. We organize Beach clean up and
-            social events in different public places. Sang Foundation research
-            manufacturing sources, funds their merchandise, handing financial
-            part of the transactions plus organize together all activities as a
-            group.
-          </p>
-        </div>
+          <div className={styles.DonateImage}>
+            <Img
+              fluid={seal}
+              alt="A distressed seal tangled in ocean plastic"
+              className={styles.Img}
+            />
+          </div>
 
-        <div>
-          <h2>Precious plastic </h2>
-          <p>
-            For the moment PP shredders machines to recreate merchandise from
-            plastic caps. In the future we like to reduce the cost of the
-            machine, produce more precious plastic machines for each schools to
-            produce more articles . In the future we like to produce an
-            injection machine to produce more Recycled merchandise to help local
-            communities to Recycle their own plastic waste and turn them into
-            merchandise to generate income. Sang Foundation helps to organize
-            event and taking actions with PP to get into schools & communities
-            together.
-          </p>
-        </div>
+          <div className={styles.Details}>
+            <div>
+              <p>
+                <strong>Account:</strong>
+              </p>
+              <p>016-2-97347-9</p>
+            </div>
 
-        <div>
-          <h2>Eco Beasts</h2>
-          <p>
-            Sang Foundation is creating a school curriculum together with Eco
-            Beast to define how to build a Waste Free school with children and
-            their parents. Plus bring in specialist in this domain to help us
-            for information and statistics, learning from other countries
-            sustainable educational activities. The funds will go to creat an
-            educational curriculum for all schools, staring from international
-            schools in Thailand to go Waste Free.
-          </p>
-        </div>
+            <div>
+              <p>
+                <strong>Name:</strong>
+              </p>
+              <p>Sang Foundation</p>
+            </div>
 
-        <div>
-          <h2>Trash Hero Thailand </h2>
-          <p>
-            Together we organize different Clean up events, link with government
-            municipalities & other parties to reduce & use recycled materials.
-            Link with other Sistainable projects such as growing mangroves,
-            planting trees.... organize students events... etc
-          </p>
-        </div>
-      </div>
-    </section>
+            <div>
+              <p>
+                <strong>Bank:</strong>
+              </p>
+              <p>Kasikorn</p>
+            </div>
+
+            <div>
+              <p>
+                <strong> Bank Swift Code:</strong>
+              </p>
+              <p>KASITHBK</p>
+            </div>
+
+            <div>
+              <p>
+                <strong>Tax Redemption ID:</strong>
+              </p>
+              <p>0-9930-00372-79-4</p>
+            </div>
+          </div>
+
+          <div className={styles.Copy}>
+            <div className={styles.Intro}>
+              <h2>How your money will help</h2>
+              <p>
+                The Sang Foundation is a Thai government registered and
+                certified non profit organization. We have a tax ID issued by
+                the minister of finance for tax redemption. A suggested donation
+                of <strong>฿100 - 500</strong> will go towards sponsoring and
+                supporting the following organisations:
+              </p>
+            </div>
+
+            <div className={styles.Organisations}>
+              <div className={styles.Organisation}>
+                <div className={styles.Left}>
+                  <Img fixed={grinGreen} />
+                </div>
+
+                <div className={styles.Right}>
+                  <h3>Grin Green International</h3>
+                  <p>
+                    A student centered social enterprise. We organize beach
+                    cleanups and social events in different public places. The
+                    Sang Foundation funds their merchandise, handles the
+                    financial part of their transactions as well as organizes
+                    all activities with them together as a group.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.Organisation}>
+                <div className={styles.Left}>
+                  <Img fixed={preciousPlastic} />
+                </div>
+                <div className={styles.Right}>
+                  <h3>Precious plastic </h3>
+                  <p>
+                    Precious Plastic create machines that turn waste plastic
+                    into usable items. In the future we would like to reduce the
+                    cost of these machine and produce more machines for schools
+                    to use. We would also like to build an injection machine to
+                    help local communities recycle their own plastic waste and
+                    generate income by selling the created merchandise. The Sang
+                    Foundation helps to organize events and direct action with
+                    Precious Plastic to bring schools and communities together.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.Organisation}>
+                <div className={styles.Left}>
+                  <Img fixed={ecoBeasts} />
+                </div>
+                <div className={styles.Right}>
+                  <h3>Eco Beasts</h3>
+                  <p>
+                    The Sang Foundation is creating a school curriculum together
+                    with Eco Beast to define how to build waste-free schools
+                    with children and their parents. We also want to bring in
+                    specialists in this domain to help us with information and
+                    statistics, learning from other countries sustainable
+                    educational activities. The funds will go to creating this
+                    curriculum for all schools, staring with international
+                    schools in Thailand.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.Organisation}>
+                <div className={styles.Left}>
+                  <Img fixed={trashHero} />
+                </div>
+                <div className={styles.Right}>
+                  <h3>Trash Hero Thailand </h3>
+                  <p>
+                    Together we organize different cleanup events, connect with
+                    government municipalities and other parties to reduce waste
+                    and use recycled materials. We also connect with other
+                    sustainability projects such as growing mangroves, planting
+                    trees and organizing student-led events.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Fade>
+    </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    seal: file(relativePath: { eq: "seal-compressor.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    ecoBeasts: file(relativePath: { eq: "ecobeasts.jpg" }) {
+      childImageSharp {
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    grinGreen: file(relativePath: { eq: "gringreen-compressor.png" }) {
+      childImageSharp {
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    preciousPlastic: file(
+      relativePath: { eq: "preciousplastic-compressor.png" }
+    ) {
+      childImageSharp {
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    trashHero: file(relativePath: { eq: "trashhero-compressor.png" }) {
+      childImageSharp {
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 export default DonatePage
