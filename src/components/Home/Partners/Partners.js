@@ -15,6 +15,7 @@ const Partners = () => {
   const preciousPlastic =
     data.preciousPlastic.edges[0].node.childImageSharp.fixed
   const trashHero = data.trashHero.edges[0].node.childImageSharp.fixed
+  const BBBPB = data.bangkokByeBye.edges[0].node.childImageSharp.fixed
 
   return (
     <Fade>
@@ -95,6 +96,22 @@ const Partners = () => {
               <h2>Trash Hero Bangkok</h2>
             </div>
           </a>
+
+          <a
+            href="http://www.byebyeplasticbags.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.Partner}>
+              <Img
+                fixed={BBBPB}
+                alt="Bangkok Bye Bye Plastic Bags"
+                className={styles.Img}
+              />
+
+              <h2>Bangkok Bye Bye Plastic Bags</h2>
+            </div>
+          </a>
         </div>
       </section>
     </Fade>
@@ -159,6 +176,19 @@ const query = graphql`
 
     trashHero: allFile(
       filter: { relativePath: { eq: "trashhero-compressor.png" } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(width: 280) {
+              ...GatsbyImageSharpFixed_tracedSVG
+            }
+          }
+        }
+      }
+    }
+    bangkokByeBye: allFile(
+      filter: { relativePath: { eq: "bangkokbyebye.jpg" } }
     ) {
       edges {
         node {

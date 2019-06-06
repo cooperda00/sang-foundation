@@ -20,6 +20,11 @@
     @include flex(row, space-around);
     flex-wrap: wrap;
   }
+
+  a {
+    @include flex(column, flex-start, center);
+    flex: 0 0 33.333333%;
+  }
 }
 
 .Partner {
