@@ -18,7 +18,7 @@ const Header = () => {
     : `${styles.NavLinks} ${styles.Hidden}`
 
   return (
-    <header className={styles.Header}>
+    <header className={styles.Header} id="top">
       <div className={styles.NavLinksLeft}>
         <Link activeStyle={{ fontWeight: "bold" }} to="/programs">
           Programs

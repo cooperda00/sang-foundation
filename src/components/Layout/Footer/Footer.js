@@ -40,7 +40,7 @@ const Footer = () => {
 
       <ul className={styles.NavMob}>
         <li>
-          <Link to="/">Home</Link>
+          <a href="#top">Top</a>
         </li>
       </ul>
 
