@@ -2,20 +2,75 @@
 
 .Footer {
   @include flex(row, space-around, center);
-  width: 100%;
-  background: $tertiary;
-  color: white;
-  height: 50px;
 
-  div {
-    width: 15%;
-    @include flex(row, space-around, center);
-  }
+  background: $tertiary;
+  height: 50px;
+  width: 100%;
 
   p {
+    color: white;
+
     a:link,
     a:visited {
-      color: white;
+      color: lighten($secondary, 10%);
     }
+  }
+}
+
+.Icon {
+  @include font("L");
+
+  color: rgb(66, 103, 178);
+  margin-left: 2rem;
+  a {
+    transition: 0.5s;
+  }
+  a:hover {
+    color: white;
+  }
+}
+
+.Nav {
+  @include font("M");
+
+  width: 50%;
+  display: none;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: white;
+  }
+
+  @include min-width(1000px) {
+    @include flex(row, space-between);
+  }
+}
+
+.NavMob {
+  @include font("M");
+  @include flex(row, center, center);
+  width: 50%;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: white;
+  }
+
+  @include min-width(1000px) {
+    display: none;
+  }
+}
+
+.SelfPlug {
+  @include font("XS");
+
+  @include min-width(1000px) {
+    @include font("S");
   }
 }

@@ -110,7 +110,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }
@@ -122,7 +122,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }
@@ -136,7 +136,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }
@@ -150,7 +150,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }
@@ -164,7 +164,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }

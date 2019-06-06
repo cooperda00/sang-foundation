@@ -161,7 +161,7 @@ const query = graphql`
         node {
           childImageSharp {
             fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -171,7 +171,7 @@ const query = graphql`
     whale: file(relativePath: { eq: "bigwhale2-compressor.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200, maxHeight: 600) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

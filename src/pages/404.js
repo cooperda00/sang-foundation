@@ -10,7 +10,7 @@ import styles from "./styles/NotFoundPage.module.scss"
 const NotFoundPage = () => (
   <Layout>
     <SEO
-      title="Sang Foundation: 404"
+      title="Sang Foundation: Page Not Found"
       description={
         "Welcome to the Sang Foundation. Join us in the fight against plastic waste and go plastic free!"
       }

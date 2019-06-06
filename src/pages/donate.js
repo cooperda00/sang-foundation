@@ -2,14 +2,15 @@
 import React from "react"
 import Img from "gatsby-image"
 import Fade from "react-reveal/Fade"
+import { graphql } from "gatsby"
 //Sass
 import styles from "./styles/DonatePage.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
+import SEO from "../components/SEO/SEO"
 
 const DonatePage = ({ data }) => {
   const seal = data.seal.childImageSharp.fluid
-  console.log(data)
   const grinGreen = data.grinGreen.childImageSharp.fixed
   const ecoBeasts = data.ecoBeasts.childImageSharp.fixed
   const trashHero = data.trashHero.childImageSharp.fixed
@@ -17,9 +18,16 @@ const DonatePage = ({ data }) => {
 
   return (
     <Layout>
+      <SEO
+        title="Sang Foundation: Donate"
+        description={
+          "Welcome to the Sang Foundation. Donate now and help us in the fight against plastic waste and go plastic free! "
+        }
+        keywords={"plastic, environment, waste, ocean, protect, bobo, donate"}
+      />
       <Fade>
         <section className={styles.Donate}>
-          <h1 className={styles.Title}>Donate Here</h1>
+          <h1 className={styles.Title}>Donate</h1>
 
           <div className={styles.DonateImage}>
             <Img
@@ -81,7 +89,7 @@ const DonatePage = ({ data }) => {
             <div className={styles.Organisations}>
               <div className={styles.Organisation}>
                 <div className={styles.Left}>
-                  <Img fixed={grinGreen} />
+                  <Img fixed={grinGreen} alt="Grin Green Logo" />
                 </div>
 
                 <div className={styles.Right}>
@@ -98,7 +106,7 @@ const DonatePage = ({ data }) => {
 
               <div className={styles.Organisation}>
                 <div className={styles.Left}>
-                  <Img fixed={preciousPlastic} />
+                  <Img fixed={preciousPlastic} alt="Precious Plastic Logo" />
                 </div>
                 <div className={styles.Right}>
                   <h3>Precious plastic </h3>
@@ -117,7 +125,7 @@ const DonatePage = ({ data }) => {
 
               <div className={styles.Organisation}>
                 <div className={styles.Left}>
-                  <Img fixed={ecoBeasts} />
+                  <Img fixed={ecoBeasts} alt="Eco Beasts" />
                 </div>
                 <div className={styles.Right}>
                   <h3>Eco Beasts</h3>
@@ -136,7 +144,7 @@ const DonatePage = ({ data }) => {
 
               <div className={styles.Organisation}>
                 <div className={styles.Left}>
-                  <Img fixed={trashHero} />
+                  <Img fixed={trashHero} alt="Trash Hero Logo" />
                 </div>
                 <div className={styles.Right}>
                   <h3>Trash Hero Thailand </h3>
@@ -162,7 +170,7 @@ export const query = graphql`
     seal: file(relativePath: { eq: "seal-compressor.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
@@ -170,7 +178,7 @@ export const query = graphql`
     ecoBeasts: file(relativePath: { eq: "ecobeasts.jpg" }) {
       childImageSharp {
         fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
@@ -178,7 +186,7 @@ export const query = graphql`
     grinGreen: file(relativePath: { eq: "gringreen-compressor.png" }) {
       childImageSharp {
         fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
@@ -188,7 +196,7 @@ export const query = graphql`
     ) {
       childImageSharp {
         fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
@@ -196,7 +204,7 @@ export const query = graphql`
     trashHero: file(relativePath: { eq: "trashhero-compressor.png" }) {
       childImageSharp {
         fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
