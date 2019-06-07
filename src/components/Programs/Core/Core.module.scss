@@ -42,14 +42,15 @@
       img {
         border-radius: 5px;
         box-shadow: 1px 1px 1px 1px $lightgray;
+        cursor: pointer;
         max-height: 200px;
         max-width: 320px;
         object-fit: cover;
         width: 100%;
 
         @include min-width(1400px) {
-          height: 340px;
-          width: 500px;
+          max-height: 300px;
+          max-width: 480px;
         }
       }
     }

@@ -46,40 +46,53 @@ const DonatePage = ({ data }) => {
             />
           </div>
 
-          <div className={styles.Details}>
-            <div>
-              <p>
-                <strong>Account:</strong>
-              </p>
-              <p>016-2-97347-9</p>
+          <div className={styles.DetailsAddress}>
+            <div className={styles.Details}>
+              <div>
+                <p>
+                  <strong>Account:</strong>
+                </p>
+                <p>016-2-97347-9</p>
+              </div>
+
+              <div>
+                <p>
+                  <strong>Name:</strong>
+                </p>
+                <p>Sang Foundation</p>
+              </div>
+
+              <div>
+                <p>
+                  <strong>Bank:</strong>
+                </p>
+                <p>Kasikorn</p>
+              </div>
+
+              <div>
+                <p>
+                  <strong> Bank Swift Code:</strong>
+                </p>
+                <p>KASITHBK</p>
+              </div>
+
+              <div>
+                <p>
+                  <strong>Tax Redemption ID:</strong>
+                </p>
+                <p>0-9930-00372-79-4</p>
+              </div>
             </div>
 
-            <div>
+            <div className={styles.Address}>
               <p>
-                <strong>Name:</strong>
+                <strong>Official Address</strong>
               </p>
-              <p>Sang Foundation</p>
-            </div>
-
-            <div>
-              <p>
-                <strong>Bank:</strong>
-              </p>
-              <p>Kasikorn</p>
-            </div>
-
-            <div>
-              <p>
-                <strong> Bank Swift Code:</strong>
-              </p>
-              <p>KASITHBK</p>
-            </div>
-
-            <div>
-              <p>
-                <strong>Tax Redemption ID:</strong>
-              </p>
-              <p>0-9930-00372-79-4</p>
+              <p>909 JC Tower</p>
+              <p>Thonglor Soi 25</p>
+              <p>Khlong Toei Nua</p>
+              <p>Wattana 10110</p>
+              <p>Bangkok</p>
             </div>
           </div>
 
@@ -140,10 +153,10 @@ const DonatePage = ({ data }) => {
                   <h3>Eco Beasts</h3>
                   <p>
                     The Sang Foundation is creating a school curriculum together
-                    with Eco Beast to define how to build waste-free schools
+                    with Eco Beasts to define how to build waste-free schools
                     with children and their parents. We also want to bring in
                     specialists in this domain to help us with information and
-                    statistics, learning from other countries sustainable
+                    statistics, learning from other countries' sustainable
                     educational activities. The funds will go to creating this
                     curriculum for all schools, staring with international
                     schools in Thailand.

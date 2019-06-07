@@ -3,11 +3,11 @@
 .Donate {
   @include flex(column, flex-start, center);
 
-  width: 80%;
   background: white;
+  border: 3px solid $darkgray;
   margin: 3rem auto;
   min-height: calc(100vh - 100px);
-  border: 3px solid $darkgray;
+  width: 80%;
 }
 
 .Title {
@@ -19,17 +19,28 @@
 
 .DonateImage {
   @include flex(column, flex-start, center);
-  width: 100%;
-  padding: 0 2rem;
+
   margin: 8rem 0 3rem 0;
-  position: relative;
   max-width: 1000px;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
 
   .Img {
-    width: 100%;
-    max-width: 1000px;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px $lightgray;
+    max-width: 1000px;
+    width: 100%;
+  }
+}
+
+.DetailsAddress {
+  @include flex(column, center, center);
+
+  width: 80%;
+
+  @include min-width(1200px) {
+    @include flex(row, center, flex-start);
   }
 }
 
@@ -38,8 +49,7 @@
   @include font("S");
 
   padding: 0 2rem;
-  width: 100%;
-  margin: 3rem 0;
+  margin: 3rem;
 
   div {
     @include flex(column, flex-start, center);
@@ -47,6 +57,21 @@
     p:last-child {
       margin-bottom: 1rem;
     }
+  }
+
+  @include min-width(1000px) {
+    @include font("M");
+  }
+}
+
+.Address {
+  @include font("S");
+
+  margin: 3rem;
+  padding: 0 2rem;
+
+  p:first-child {
+    margin-bottom: 1rem;
   }
 
   @include min-width(1000px) {
@@ -85,9 +110,9 @@
 .Organisation {
   @include flex(column, flex-start, center);
 
-  width: 100%;
-  max-width: 1000px;
   margin-bottom: 3rem;
+  max-width: 1000px;
+  width: 100%;
 
   .Left {
     margin-bottom: 2rem;
@@ -103,17 +128,17 @@
     @include flex(row, flex-start, center);
 
     .Left {
-      margin-right: 5rem;
       margin-bottom: 0rem;
+      margin-right: 5rem;
     }
   }
 }
 
 .BubbleContainer {
-  position: absolute;
-  left: 50px;
-  top: -100px;
   display: none;
+  left: 50px;
+  position: absolute;
+  top: -100px;
 
   @include min-width(1200px) {
     display: block;
@@ -129,10 +154,10 @@
   }
 
   p {
-    position: absolute;
     font-size: 4rem;
-    z-index: 400;
-    top: 95px;
     left: 40px;
+    position: absolute;
+    top: 95px;
+    z-index: 400;
   }
 }
