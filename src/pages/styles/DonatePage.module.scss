@@ -21,7 +21,9 @@
   @include flex(column, flex-start, center);
   width: 100%;
   padding: 0 2rem;
-  margin: 3rem 0;
+  margin: 8rem 0 3rem 0;
+  position: relative;
+  max-width: 1000px;
 
   .Img {
     width: 100%;
@@ -104,5 +106,33 @@
       margin-right: 5rem;
       margin-bottom: 0rem;
     }
+  }
+}
+
+.BubbleContainer {
+  position: absolute;
+  left: 50px;
+  top: -100px;
+  display: none;
+
+  @include min-width(1200px) {
+    display: block;
+  }
+}
+
+.Bubble {
+  position: relative;
+  z-index: 300;
+
+  img {
+    height: 300px;
+  }
+
+  p {
+    position: absolute;
+    font-size: 4rem;
+    z-index: 400;
+    top: 95px;
+    left: 40px;
   }
 }

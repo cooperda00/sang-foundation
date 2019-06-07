@@ -28,16 +28,14 @@ const Bobo = props => {
 
   return (
     <section className={styles.Bobo}>
-      <Fade>
-        <div className={styles.Title}>
-          <Img
-            fluid={boboCartoon}
-            alt={"Bobo The Whale"}
-            className={styles.Img}
-          />
-          <h1>Bobo The Whale</h1>
-        </div>
-      </Fade>
+      <div className={styles.Title}>
+        <Img
+          fluid={boboCartoon}
+          alt={"Bobo The Whale"}
+          className={styles.Img}
+        />
+        <h1>Bobo The Whale</h1>
+      </div>
 
       <div className={styles.Facts}>
         <Fade>

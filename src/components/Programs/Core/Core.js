@@ -1,6 +1,5 @@
 //Modules
 import React from "react"
-import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./Core.module.scss"
 //Images
@@ -16,26 +15,24 @@ const Core = props => {
       <ul className={styles.CoreList}>
         {data.map(card => {
           return (
-            <Fade>
-              <li className={card.class} key={card.altText}>
-                <div
-                  onClick={() => {
-                    props.setModalImage(card.image)
-                    props.toggleModal(true)
+            <li className={card.class} key={card.altText}>
+              <div
+                onClick={() => {
+                  props.setModalImage(card.image)
+                  props.toggleModal(true)
 
-                    const dataClone = [...data].filter(
-                      item => item.altText !== card.altText
-                    )
-                    const newArray = [card, ...dataClone]
-                    props.setModalImage(newArray)
-                  }}
-                >
-                  <img src={card.image} alt={card.altText} />
-                </div>
+                  const dataClone = [...data].filter(
+                    item => item.altText !== card.altText
+                  )
+                  const newArray = [card, ...dataClone]
+                  props.setModalImage(newArray)
+                }}
+              >
+                <img src={card.image} alt={card.altText} />
+              </div>
 
-                <p>{card.copy}</p>
-              </li>
-            </Fade>
+              <p>{card.copy}</p>
+            </li>
           )
         })}
       </ul>

@@ -34,12 +34,11 @@
     width: 100%;
     margin-bottom: 3rem;
 
-    img {
+    .Portrait {
       max-width: 300px;
       max-height: 300px;
       width: 100%;
       border-radius: 50%;
-      object-fit: cover;
       margin-bottom: 1rem;
     }
 
@@ -60,7 +59,7 @@
   }
 
   @include min-width(1000px) {
-    @include flex(row, space-between, flex-start);
+    @include flex(row, space-between, center);
 
     .ImageName {
       width: 40%;
@@ -79,16 +78,4 @@
       }
     }
   }
-}
-
-.Shift {
-  object-position: 50% 10%;
-}
-
-.ShiftV {
-  object-position: 50% 40%;
-}
-
-.ShiftS {
-  object-position: 50% 60%;
 }

@@ -1,15 +1,23 @@
 //Modules
 import React from "react"
 import Fade from "react-reveal/Fade"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 //Sass
 import styles from "./Personnel.module.scss"
 // Images
-import mutsumi from "../../../images/mutsumi-compressor.png"
-import caroline from "../../../images/caroline-compressor.png"
-import victoria from "../../../images/victoria-compressor.jpg"
-import sandy from "../../../images/sandy-compressor.jpg"
+// import mutsumi from "../../../images/mutsumi-compressor.png"
+// import caroline from "../../../images/caroline-compressor.png"
+// import victoria from "../../../images/victoria-compressor.jpg"
+// import sandy from "../../../images/sandy-compressor.jpg"
 
 const Personnel = () => {
+  const data = useStaticQuery(query)
+  const mutsumi = data.mutsumi.childImageSharp.fluid
+  const caroline = data.caroline.childImageSharp.fluid
+  const victoria = data.victoria.childImageSharp.fluid
+  const sandy = data.sandy.childImageSharp.fluid
+
   return (
     <section className={styles.Personnel}>
       <h2>Founders:</h2>
@@ -18,10 +26,11 @@ const Personnel = () => {
         <Fade>
           <div className={styles.Profile}>
             <div className={styles.ImageName}>
-              <img
-                src={mutsumi}
+              <Img
+                fluid={mutsumi}
                 alt="Mutsumi Adachi"
-                className={styles.Shift}
+                className={styles.Portrait}
+                imgStyle={{ objectPosition: "50% 10%" }}
               />
               <h3>Mutsumi Adachi</h3>
             </div>
@@ -46,10 +55,11 @@ const Personnel = () => {
         <Fade>
           <div className={styles.Profile}>
             <div className={styles.ImageName}>
-              <img
-                src={caroline}
+              <Img
+                fluid={caroline}
                 alt="Caroline Link"
-                className={styles.Shift}
+                className={styles.Portrait}
+                imgStyle={{ objectPosition: "50% 10%" }}
               />
               <h3>Caroline Link</h3>
             </div>
@@ -86,7 +96,12 @@ const Personnel = () => {
       <Fade>
         <div className={styles.Profile}>
           <div className={styles.ImageName}>
-            <img src={victoria} alt="Victoria" className={styles.ShiftV} />
+            <Img
+              fluid={victoria}
+              alt="Victoria"
+              className={styles.Portrait}
+              imgStyle={{ objectPosition: "50% 40%" }}
+            />
             <h3>Victoria</h3>
           </div>
 
@@ -114,7 +129,12 @@ const Personnel = () => {
       <Fade>
         <div className={styles.Profile}>
           <div className={styles.ImageName}>
-            <img src={sandy} alt="Sandy" className={styles.ShiftS} />
+            <Img
+              fluid={sandy}
+              alt="Sandy"
+              className={styles.Portrait}
+              imgStyle={{ objectPosition: " 50% 60%" }}
+            />
             <h3>Sandy</h3>
           </div>
 
@@ -130,5 +150,38 @@ const Personnel = () => {
     </section>
   )
 }
+
+const query = graphql`
+  {
+    mutsumi: file(relativePath: { eq: "mutsumi-compressor.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    caroline: file(relativePath: { eq: "caroline-compressor.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    victoria: file(relativePath: { eq: "victoria-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    sandy: file(relativePath: { eq: "sandy-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
 export default Personnel

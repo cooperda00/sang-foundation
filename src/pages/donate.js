@@ -8,6 +8,8 @@ import styles from "./styles/DonatePage.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
+//Images
+import bubble from "../images/speechbubble.png"
 
 const DonatePage = ({ data }) => {
   const seal = data.seal.childImageSharp.fluid
@@ -30,6 +32,13 @@ const DonatePage = ({ data }) => {
           <h1 className={styles.Title}>Donate</h1>
 
           <div className={styles.DonateImage}>
+            <div className={styles.BubbleContainer}>
+              <div className={styles.Bubble}>
+                <img src={bubble} alt="Speech Bubble" />
+                <p>Thank You!</p>
+              </div>
+            </div>
+
             <Img
               fluid={seal}
               alt="A distressed seal tangled in ocean plastic"
