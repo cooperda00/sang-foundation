@@ -12,6 +12,7 @@ const Personnel = () => {
   const caroline = data.caroline.childImageSharp.fluid
   const victoria = data.victoria.childImageSharp.fluid
   const sandy = data.sandy.childImageSharp.fluid
+  const missy = data.missy.childImageSharp.fluid
 
   return (
     <section className={styles.Personnel}>
@@ -142,6 +143,35 @@ const Personnel = () => {
           </div>
         </div>
       </Fade>
+
+      <Fade>
+        <div className={styles.Profile}>
+          <div className={styles.ImageName}>
+            <Img
+              fluid={missy}
+              alt="Missy Sturgis"
+              className={styles.Portrait}
+            />
+            <h3>Missy</h3>
+          </div>
+
+          <div className={styles.Copy}>
+            <p>
+              Missy is an American mom of an 8 year old boy, and having a
+              passion for the oceans and animals she was shocked at the extreme
+              and offensive overuse of plastics in this country and went looking
+              to find groups to join to fight it. And quickly found Mutsumi and
+              Sang Foundation.
+            </p>
+            <p>
+              She has lived in Thailand since early 2018 and has lived abroad in
+              various countries since 2003, volunteering for three other NGOs
+              during those years. Missy currently works as a freelance
+              editor/marketing consultant.
+            </p>
+          </div>
+        </div>
+      </Fade>
     </section>
   )
 }
@@ -170,6 +200,13 @@ const query = graphql`
       }
     }
     sandy: file(relativePath: { eq: "sandy-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    missy: file(relativePath: { eq: "missy.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid_tracedSVG
