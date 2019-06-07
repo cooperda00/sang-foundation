@@ -15,6 +15,8 @@ const Footer = () => {
           href="https://www.facebook.com/Seang2Change/"
           target="_blank"
           rel="noopener noreferrer"
+          name="Our Facebook Page"
+          aria-label="Go to our Facebook page"
         >
           <FontAwesomeIcon icon={faFacebookSquare} />
         </a>

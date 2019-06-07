@@ -46,8 +46,9 @@ const Event = () => {
               href="https://www.facebook.com/events/418916045594803/?active_tab=about"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Go to our event page"
             >
-              Learn More
+              Our Event Page
             </a>
           </button>
         </div>

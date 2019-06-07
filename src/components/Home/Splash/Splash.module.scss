@@ -95,6 +95,8 @@
 
   button {
     @include cta-button;
+    padding: 1rem 3rem;
+    font-weight: 500;
   }
 
   @include min-width(800px) {

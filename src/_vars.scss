@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap");
 
 //COLORS
 $primary: #fdf01b;
@@ -50,7 +50,7 @@ $lineS: 2.7rem;
   border-radius: 2px;
   border: none;
   box-shadow: 0px 2px 0px 0px darken($tertiary, 10%);
-  color: white;
+  color: #1f1f1f;
   cursor: pointer;
   font-size: $fontM;
   padding: 0.6rem 1.1rem;

@@ -8,11 +8,12 @@
   width: 100%;
 
   p {
-    color: white;
+    color: #1f1f1f;
 
     a:link,
     a:visited {
-      color: lighten($secondary, 10%);
+      color: #071d50;
+      text-decoration: underline;
     }
   }
 }
@@ -42,7 +43,7 @@
   }
 
   a {
-    color: white;
+    color: #1f1f1f;
   }
 
   @include min-width(1000px) {
