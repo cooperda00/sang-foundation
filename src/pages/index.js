@@ -38,6 +38,7 @@ const IndexPage = () => {
       <Fade duration={1000}>
         <main className={styles.Home}>
           <Splash />
+
           <Event />
 
           <SectionOne

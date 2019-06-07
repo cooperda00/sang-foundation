@@ -116,19 +116,21 @@ const Bobo = props => {
               <div
                 key={image.name}
                 onClick={() => {
-                  // props.setModalImage(image.image)
                   props.toggleModal(true)
+
                   props.setModalAltText(image.name)
 
                   const dataClone = [...boboGallery].filter(
                     item => item.name !== image.name
                   )
+
                   const newArray = [image, ...dataClone].map(item => {
                     return {
                       image: item.image,
                       altText: item.name,
                     }
                   })
+
                   props.setModalImage(newArray)
                 }}
               >
@@ -175,6 +177,5 @@ const query = graphql`
     }
   }
 `
-//  filter: { relativePath: { eq: "whalevector-compressor.png" } }
 
 export default Bobo

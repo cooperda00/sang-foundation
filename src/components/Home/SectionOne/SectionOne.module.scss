@@ -15,8 +15,8 @@
 .Intro {
   @include flex(column, flex-start, center);
 
-  min-height: 100%;
   max-width: 1200px;
+  min-height: 100%;
 
   h3 {
     @include font("M");
@@ -60,17 +60,18 @@
 
   div {
     @include flex(row, center, center);
+
     height: 100%;
     width: 100%;
 
     img {
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px 1px $lightgray;
       cursor: pointer;
       height: 100%;
       max-width: 500px;
       object-fit: cover;
       width: 100%;
-      border-radius: 5px;
-      box-shadow: 1px 1px 1px 1px $lightgray;
     }
   }
 

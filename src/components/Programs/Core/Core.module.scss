@@ -4,14 +4,15 @@
   @include flex(column, flex-start, center);
 
   background: white;
+  border: 3px solid $darkgray;
   margin: 3rem 1rem;
   min-height: calc(100vh - 100px);
   padding: 3rem;
   width: 80%;
-  border: 3px solid $darkgray;
 
   h1 {
     @include font("XL");
+
     text-align: center;
   }
 }
@@ -40,15 +41,15 @@
 
       img {
         border-radius: 5px;
-        max-width: 320px;
-        max-height: 200px;
-        width: 100%;
-        object-fit: cover;
         box-shadow: 1px 1px 1px 1px $lightgray;
+        max-height: 200px;
+        max-width: 320px;
+        object-fit: cover;
+        width: 100%;
 
         @include min-width(1400px) {
-          width: 500px;
           height: 340px;
+          width: 500px;
         }
       }
     }
@@ -56,14 +57,16 @@
     p {
       @include font("S");
       @include flex(column, center, center);
+
+      margin-top: 2rem;
       max-width: 320px;
       text-align: left;
-      margin-top: 2rem;
     }
 
     @include min-width(1150px) {
       p {
         @include font("M");
+
         max-width: 500px;
       }
 

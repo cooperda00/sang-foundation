@@ -3,22 +3,16 @@
 .Splash {
   background-image: linear-gradient(#0644bf88, #f2982999),
     url("../../../images/ocean-compressor.jpg");
-  // background-image: linear-gradient(#0644bf88, #0644bf22),
-  //   url("../../../images/boboandbaby.jpg");
   background-position: 50% 60%;
   height: calc(100vh - 100px);
   position: relative;
   width: 100%;
 
   .MaskedImage {
-    // background-image: linear-gradient(#0644bfbb, #f2982977, #0644bfbb),
-    //   url("../../../images/plastic-compressor.jpg");
     background-image: linear-gradient(#0644bfbb, #f2982955, #0644bfbb),
       url("../../../images/oceanplastic2-compressor.jpg");
     background-position: 20% 55%;
-    // background-size: 100% 100%;
     clip-path: circle(55% at 91% 74%);
-    // clip-path: circle(50% at 76% 47%);
     display: none;
     height: 100%;
     width: 100%;
@@ -90,10 +84,10 @@
 }
 
 .SplashRight {
-  margin-top: 3rem;
   align-self: flex-end;
-  padding: 0 1rem 4rem 0rem;
   height: 156px;
+  margin-top: 3rem;
+  padding: 0 1rem 4rem 0rem;
 
   h1 {
     font-size: $fontM;

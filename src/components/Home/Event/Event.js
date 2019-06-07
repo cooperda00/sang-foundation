@@ -28,11 +28,13 @@ const Event = () => {
           by Sang Foundation & partners Precious Plastic, Grin Green
           International, Eco Beasts and Trash Hero.
         </p>
+
         <p>
           Featuring educational presentations, workshops, demos, documentary
           viewings, music, dancers, children's activites, food and beverages and
           a raffle!
         </p>
+
         <p className={styles.Underline}>
           Participation Fee: min 100 Baht suggested donation per person
         </p>

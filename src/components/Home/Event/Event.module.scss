@@ -13,6 +13,7 @@
 
   h1 {
     @include font("M");
+
     margin-top: 3rem;
     text-align: center;
 
@@ -25,8 +26,8 @@
     @include font("S");
 
     margin-top: 3rem;
-    width: 100%;
     max-width: 1200px;
+    width: 100%;
 
     @include min-width(1000px) {
       @include font("M");
@@ -49,6 +50,7 @@
 
   h2 {
     @include font("S");
+
     text-align: center;
 
     @include min-width(1000px) {

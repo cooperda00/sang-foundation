@@ -32,6 +32,7 @@ const ProgramsPage = () => {
           modalAltText={modalAltText}
         />
       )}
+
       <Fade duration={1000}>
         <main className={styles.Programs}>
           <Core

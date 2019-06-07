@@ -2,14 +2,15 @@
 
 .Partners {
   @include flex(column, flex-start, center);
+
   background: white;
-  width: 100vw;
   padding: 3rem 0;
+  width: 100vw;
 
   h1 {
-    margin-bottom: 3rem;
     font-size: $fontL;
     line-height: $lineL;
+    margin-bottom: 3rem;
   }
 }
 
@@ -18,11 +19,13 @@
 
   @include min-width(600px) {
     @include flex(row, space-around);
+
     flex-wrap: wrap;
   }
 
   a {
     @include flex(column, flex-start, center);
+
     flex: 0 0 33.333333%;
   }
 }
@@ -32,17 +35,19 @@
 
   height: 400px;
   margin-bottom: 2rem;
-  width: 300px;
-  padding: 0 2rem;
   margin: 3rem 3rem;
+  padding: 0 2rem;
+  width: 300px;
 
   .ImageContainer {
     @include flex(column, center, center);
+
     height: 100%;
   }
 
   .Img {
     @include flex(column, center, center);
+
     height: 100%;
   }
 
