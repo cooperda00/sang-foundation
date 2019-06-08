@@ -152,14 +152,11 @@ const DonatePage = ({ data }) => {
                 <div className={styles.Right}>
                   <h3>Eco Beasts</h3>
                   <p>
-                    The Sang Foundation is creating a school curriculum together
-                    with Eco Beasts to define how to build waste-free schools
-                    with children and their parents. We also want to bring in
-                    specialists in this domain to help us with information and
-                    statistics, learning from other countries' sustainable
-                    educational activities. The funds will go to creating this
-                    curriculum for all schools, staring with international
-                    schools in Thailand.
+                    We collaborate to develop meaningful resources and implement
+                    educational programs in schools and the wider Bangkok
+                    community. We also want to bring in specialists to help us
+                    with information and statistics, learning from other
+                    countries' sustainable educational activities.
                   </p>
                 </div>
               </div>

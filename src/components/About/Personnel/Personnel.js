@@ -151,6 +151,7 @@ const Personnel = () => {
               fluid={missy}
               alt="Missy Sturgis"
               className={styles.Portrait}
+              imgStyle={{ objectPosition: " 70% 60%" }}
             />
             <h3>Missy</h3>
           </div>
@@ -206,7 +207,7 @@ const query = graphql`
         }
       }
     }
-    missy: file(relativePath: { eq: "missy.jpg" }) {
+    missy: file(relativePath: { eq: "missy2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid_tracedSVG
