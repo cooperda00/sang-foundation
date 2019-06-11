@@ -27,6 +27,10 @@ const Header = () => {
         <Link activeStyle={{ fontWeight: "bold" }} to="/about">
           About
         </Link>
+
+        <Link activeStyle={{ fontWeight: "bold" }} to="/gallery">
+          Gallery
+        </Link>
       </div>
 
       <div className={styles.MainLogo}>
@@ -64,6 +68,7 @@ const Header = () => {
           <Link to="/programs">Our Programs</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/gallery">Gallery</Link>
           <Link to="/donate" className={styles.DonateMini}>
             Donate
           </Link>

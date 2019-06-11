@@ -21,12 +21,12 @@
 .NavLinksLeft {
   @include flex(row, space-around, center);
 
-  width: 33.33%;
+  width: 40%;
 }
 
 .MainLogo {
   height: 100%;
-  width: 33.33%;
+  margin-left: 5rem;
 
   a {
     @include flex(column, center, center);
@@ -37,12 +37,16 @@
       height: 90%;
     }
   }
+
+  @include min-width(650px) {
+    margin-left: 0;
+  }
 }
 
 .NavLinksRight {
   @include flex(row, space-around, center);
 
-  width: 33.33%;
+  width: 40%;
 }
 
 .HamburgerMenu {

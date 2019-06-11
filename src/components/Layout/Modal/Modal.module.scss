@@ -3,13 +3,13 @@
 .Modal {
   @include flex(column, center, center);
 
-  background: rgba(0, 0, 0, 0.6);
-  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  height: 130vh;
   position: fixed;
   width: 100vw;
   z-index: 100;
-  margin-top: -100px;
-  padding-top: 100px;
+  margin-top: -300px;
+  padding-top: 150px;
 }
 
 .Content {
@@ -18,15 +18,25 @@
   background: white;
   margin-top: -5rem;
   position: relative;
-
-  img {
-    max-height: 70vh;
-    max-width: 100%;
-    padding: 1rem;
-  }
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 5px;
 
   button {
     z-index: 100;
+  }
+}
+
+.ImageContainer {
+  width: 80%;
+  max-width: 1500px;
+  padding: 5rem;
+
+  .Image {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px $lightgray;
   }
 }
 
@@ -45,7 +55,8 @@
 .Description {
   @include font("M");
 
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
+  text-transform: capitalize;
 }
 
 .Arrow {

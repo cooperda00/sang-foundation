@@ -1,17 +1,41 @@
 //Modules
 import React from "react"
 import Fade from "react-reveal/Fade"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 //Sass
 import styles from "./SectionOne.module.scss"
-//Images
-import group from "../../../images/group-compressor.jpg"
-import bobo from "../../../images/bobo-compressor.png"
-import youth from "../../../images/youth-compressor.jpg"
-import youth2 from "../../../images/youth2-compressor.jpeg"
-import bins from "../../../images/cleanup2-compressor.jpg"
-import cleanup from "../../../images/cleanup1-compressor.jpg"
 
 const SectionOne = props => {
+  const imageData = useStaticQuery(query)
+
+  const data = [
+    {
+      image: imageData.youth.childImageSharp.fluid,
+      altText: "Students holding signs",
+    },
+    {
+      image: imageData.bins.childImageSharp.fluid,
+      altText: "Recycling station at the beach",
+    },
+    {
+      image: imageData.cleanup.childImageSharp.fluid,
+      altText: "Kids participating in a beach cleanup",
+    },
+    {
+      image: imageData.group.childImageSharp.fluid,
+      altText: "Group photo at a workshop",
+    },
+    {
+      image: imageData.youth2.childImageSharp.fluid,
+      altText: "Students participating in a workshop activity",
+    },
+    {
+      image: imageData.bobo.childImageSharp.fluid,
+      altText: "Bobo the whale",
+    },
+  ]
+
   return (
     <section className={styles.SectionOne}>
       <Fade>
@@ -58,7 +82,11 @@ const SectionOne = props => {
                 }}
                 key={card.altText}
               >
-                <img src={card.image} alt={card.altText} />
+                <Img
+                  fluid={card.image}
+                  alt={card.altText}
+                  className={styles.Image}
+                />
               </div>
             )
           })}
@@ -68,32 +96,51 @@ const SectionOne = props => {
   )
 }
 
-//Data
-const data = [
+const query = graphql`
   {
-    image: youth,
-    altText: "Students holding signs",
-  },
-  {
-    image: bins,
-    altText: "Recycling station at the beach",
-  },
-  {
-    image: cleanup,
-    altText: "Kids participating in a beach cleanup",
-  },
-  {
-    image: group,
-    altText: "Group photo at a workshop",
-  },
-  {
-    image: youth2,
-    altText: "Students participating in a workshop activity",
-  },
-  {
-    image: bobo,
-    altText: "Bobo the whale",
-  },
-]
+    youth: file(relativePath: { eq: "youth-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    bins: file(relativePath: { eq: "cleanup2-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    cleanup: file(relativePath: { eq: "cleanup1-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    group: file(relativePath: { eq: "group-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    youth2: file(relativePath: { eq: "youth2-compressor.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    bobo: file(relativePath: { eq: "bobo-compressor.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
 export default SectionOne

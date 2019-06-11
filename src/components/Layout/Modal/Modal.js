@@ -1,6 +1,7 @@
 //Modules
 import React, { useState, useEffect, useRef } from "react"
 import Fade from "react-reveal/Fade"
+import Img from "gatsby-image"
 //Sass
 import styles from "./Modal.module.scss"
 //Icons
@@ -23,7 +24,6 @@ const Modal = props => {
 
   const handleDecrement = () => {
     if (currentIndex === 0) {
-      console.log("att the bottom")
       updateSelectedImage(props.modalImage[props.modalImage.length - 1])
       setCurrentIndex(props.modalImage.length - 1)
     } else {
@@ -42,13 +42,14 @@ const Modal = props => {
     }
   }
 
+  console.log(selectedImage)
+
   return (
     <div
       className={styles.Modal}
       ref={modalRef}
       tabIndex="0"
       onKeyDown={e => {
-        console.log(e.keyCode)
         if (e.keyCode === 39) {
           handleIncrement()
         }
@@ -71,7 +72,16 @@ const Modal = props => {
             X
           </button>
 
-          <img src={selectedImage.image} alt={selectedImage.altText} />
+          {selectedImage.image && (
+            <div className={styles.ImageContainer}>
+              <Img
+                fluid={selectedImage.image}
+                alt={selectedImage.altText}
+                className={styles.Image}
+              />
+            </div>
+          )}
+          {/* <img src={selectedImage.image} alt={selectedImage.altText} /> */}
 
           <p className={styles.Description}>{selectedImage.altText}</p>
 

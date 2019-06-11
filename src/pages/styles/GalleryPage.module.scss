@@ -1,0 +1,8 @@
+@import "../../vars";
+
+.GalleryPage {
+  @include flex(column, flex-start, center);
+
+  width: 100%;
+  min-height: calc(100vh - 100px);
+}

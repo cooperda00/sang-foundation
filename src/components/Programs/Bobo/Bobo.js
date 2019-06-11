@@ -12,19 +12,31 @@ import boboGroup2 from "../../../images/schoolproject-compressor.jpeg"
 import boboGroup3 from "../../../images/insidebobo-compressor.jpeg"
 import insideBobo from "../../../images/insidebobo2.jpg"
 
-const boboGallery = [
-  { name: "Bobo the whale", image: bobo },
-  { name: "Group shot in front of bobo", image: boboGroup },
-  { name: "Students exploring bobo", image: boboGroup2 },
-  { name: "Students very interested in bobo", image: boboGroup3 },
-  { name: "A look inside Bobo", image: insideBobo },
-]
-
 const Bobo = props => {
   const data = useStaticQuery(query)
 
   const boboCartoon = data.bobo.edges[0].node.childImageSharp.fluid
   const whaleImage = data.whale.childImageSharp.fluid
+
+  const boboGallery = [
+    { name: "Bobo the whale", image: data.bobo2.childImageSharp.fluid },
+    {
+      name: "Group shot in front of bobo",
+      image: data.boboGroup.childImageSharp.fluid,
+    },
+    {
+      name: "Students exploring bobo",
+      image: data.boboGroup2.childImageSharp.fluid,
+    },
+    {
+      name: "Students very interested in bobo",
+      image: data.boboGroup3.childImageSharp.fluid,
+    },
+    {
+      name: "A look inside Bobo",
+      image: data.insideBobo.childImageSharp.fluid,
+    },
+  ]
 
   return (
     <section className={styles.Bobo}>
@@ -134,7 +146,13 @@ const Bobo = props => {
                   props.setModalImage(newArray)
                 }}
               >
-                {<img src={image.image} alt={image.name} />}
+                {
+                  <Img
+                    fluid={image.image}
+                    alt={image.name}
+                    className={styles.Image}
+                  />
+                }
               </div>
             )
           })}
@@ -171,6 +189,42 @@ const query = graphql`
     whale: file(relativePath: { eq: "bigwhale2-compressor.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200, maxHeight: 600) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+
+    bobo2: file(relativePath: { eq: "bobo-compressor.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    boboGroup: file(relativePath: { eq: "bobogroup-compressor.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    boboGroup2: file(relativePath: { eq: "schoolproject-compressor.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    boboGroup3: file(relativePath: { eq: "insidebobo-compressor.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    insideBobo: file(relativePath: { eq: "insidebobo2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }

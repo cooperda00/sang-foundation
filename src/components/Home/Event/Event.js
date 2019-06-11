@@ -1,7 +1,7 @@
 //Modules
 import React from "react"
 import Fade from "react-reveal/Fade"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 //Sass
 import styles from "./Event.module.scss"
@@ -21,35 +21,30 @@ const Event = () => {
           className={styles.Flyer}
         />
 
-        <h1>World Oceans Day Bangkok 2019</h1>
+        <h1>World Oceans Day June 8th 2019</h1>
 
         <p>
           A public awareness family event celebrating World Oceans Day. Hosted
           by Sang Foundation & partners Precious Plastic, Grin Green
-          International, Eco Beasts and Trash Hero.
+          International, Eco Beasts, Trash Hero, Baht By Baht and Bye Bye
+          Plastic Bags.
         </p>
 
         <p>
-          Featuring educational presentations, workshops, demos, documentary
+          We featured educational presentations, workshops, demos, documentary
           viewings, music, dancers, children's activites, food and beverages and
           a raffle!
         </p>
 
         <p className={styles.Underline}>
-          Participation Fee: min 100 Baht suggested donation per person
+          Our event was a roaring success! Stay tuned for information about
+          upcoming events.
         </p>
 
         <div className={styles.EventCTA}>
-          <h2>Visit the Facebook event page to learn more</h2>
+          <h2>Visit the Gallery to see what we got up to</h2>
           <button>
-            <a
-              href="https://www.facebook.com/events/418916045594803/?active_tab=about"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Go to our event page"
-            >
-              Our Event Page
-            </a>
+            <Link to="/gallery">Gallery</Link>
           </button>
         </div>
       </section>

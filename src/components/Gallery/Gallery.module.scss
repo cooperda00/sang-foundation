@@ -1,0 +1,52 @@
+@import "../../vars";
+
+.Gallery {
+  @include flex(column, flex-start, center);
+
+  background: white;
+  border: 3px solid $darkgray;
+  height: 100%;
+  margin: 3rem 0;
+  padding: 3rem 2rem;
+  width: 80%;
+}
+
+.Title {
+  @include font("XL");
+
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.GalleryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  grid-gap: 3rem;
+  width: 100%;
+
+  @include min-width(1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include min-width(1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include min-width(1500px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.Card {
+  width: 100%;
+  max-width: 500px;
+}
+
+.Image {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px $lightgray;
+}

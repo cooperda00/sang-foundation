@@ -38,8 +38,9 @@
       @include flex(column, flex-start, center);
 
       margin-top: 4rem;
+      width: 100%;
 
-      img {
+      .Image {
         border-radius: 5px;
         box-shadow: 1px 1px 1px 1px $lightgray;
         cursor: pointer;
@@ -52,6 +53,10 @@
           max-height: 300px;
           max-width: 480px;
         }
+      }
+
+      @include min-width(1000px) {
+        width: 50%;
       }
     }
 
@@ -84,21 +89,12 @@
 
   @include min-width(1000px) {
     @include flex(row, space-around, center);
-    div {
-      width: 40%;
-    }
   }
 }
 
 .Two {
   @include flex(column, flex-start, center);
   grid-area: Two;
-
-  div {
-    img {
-      object-position: 0% 25%;
-    }
-  }
 
   @include min-width(1000px) {
     @include flex(row-reverse, space-around, center);
