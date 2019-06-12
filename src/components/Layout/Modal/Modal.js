@@ -42,8 +42,6 @@ const Modal = props => {
     }
   }
 
-  console.log(selectedImage)
-
   return (
     <div
       className={styles.Modal}
@@ -81,7 +79,6 @@ const Modal = props => {
               />
             </div>
           )}
-          {/* <img src={selectedImage.image} alt={selectedImage.altText} /> */}
 
           <p className={styles.Description}>{selectedImage.altText}</p>
 

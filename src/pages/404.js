@@ -1,6 +1,7 @@
 //Modules
 import React from "react"
 import { Link } from "gatsby"
+import Fade from "react-reveal/Fade"
 //Componets
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
@@ -16,13 +17,15 @@ const NotFoundPage = () => (
       }
       keywords={"plastic, environment, waste, ocean, protect, bobo"}
     />
-    <section className={styles.NotFound}>
-      <h1>Ooops, Page Not Found</h1>
-      <p>
-        You might have made a mistake, head <Link to="/">Home</Link> and try
-        again.
-      </p>
-    </section>
+    <Fade>
+      <main className={styles.NotFound}>
+        <h1>Ooops, Page Not Found</h1>
+        <p>
+          You might have made a mistake, head <Link to="/">Home</Link> and try
+          again.
+        </p>
+      </main>
+    </Fade>
   </Layout>
 )
 

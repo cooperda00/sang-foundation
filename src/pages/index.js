@@ -1,6 +1,6 @@
 //Modules
 import React, { useState } from "react"
-import Fade from "react-reveal"
+import Fade from "react-reveal/Fade"
 //Components
 import CTA from "../components/Layout/CTA/CTA"
 import Event from "../components/Home/Event/Event"
@@ -35,7 +35,8 @@ const IndexPage = () => {
           modalAltText={modalAltText}
         />
       )}
-      <Fade duration={1000}>
+
+      <Fade>
         <main className={styles.Home}>
           <Splash />
 

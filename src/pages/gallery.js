@@ -1,5 +1,6 @@
 //Modules
 import React, { useState } from "react"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./styles/GalleryPage.module.scss"
 //Components
@@ -30,14 +31,15 @@ const GalleryPage = () => {
           modalAltText={modalAltText}
         />
       )}
-
-      <main className={styles.GalleryPage}>
-        <Gallery
-          setModalImage={setModalImage}
-          toggleModal={toggleModal}
-          setModalAltText={setModalAltText}
-        />
-      </main>
+      <Fade>
+        <main className={styles.GalleryPage}>
+          <Gallery
+            setModalImage={setModalImage}
+            toggleModal={toggleModal}
+            setModalAltText={setModalAltText}
+          />
+        </main>
+      </Fade>
     </Layout>
   )
 }

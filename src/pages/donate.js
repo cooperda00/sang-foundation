@@ -1,8 +1,8 @@
 //Modules
 import React from "react"
 import Img from "gatsby-image"
-import Fade from "react-reveal/Fade"
 import { graphql } from "gatsby"
+import Fade from "react-reveal/Fade"
 //Sass
 import styles from "./styles/DonatePage.module.scss"
 //Components
@@ -28,7 +28,7 @@ const DonatePage = ({ data }) => {
         keywords={"plastic, environment, waste, ocean, protect, bobo, donate"}
       />
       <Fade>
-        <section className={styles.Donate}>
+        <main className={styles.Donate}>
           <h1 className={styles.Title}>Donate</h1>
 
           <div className={styles.DonateImage}>
@@ -178,7 +178,7 @@ const DonatePage = ({ data }) => {
               </div>
             </div>
           </div>
-        </section>
+        </main>
       </Fade>
     </Layout>
   )

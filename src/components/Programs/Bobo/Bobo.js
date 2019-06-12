@@ -5,12 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 //Sass
 import styles from "./Bobo.module.scss"
-//Bobo Gallery
-import bobo from "../../../images/bobo-compressor.png"
-import boboGroup from "../../../images/bobogroup-compressor.jpeg"
-import boboGroup2 from "../../../images/schoolproject-compressor.jpeg"
-import boboGroup3 from "../../../images/insidebobo-compressor.jpeg"
-import insideBobo from "../../../images/insidebobo2.jpg"
 
 const Bobo = props => {
   const data = useStaticQuery(query)

@@ -5,23 +5,22 @@
 
   background: rgba(0, 0, 0, 0.7);
   height: 200vh;
+  margin-top: -100px;
   position: fixed;
   width: 100vw;
   z-index: 100;
-  margin-top: -100px;
-  // padding-top: 150px;
 }
 
 .Content {
   @include flex(column, center, center);
 
   background: white;
+  border-radius: 5px;
   margin-top: -5rem;
+  margin-top: 30vh;
+  max-width: 1100px;
   position: relative;
   width: 100%;
-  max-width: 1100px;
-  border-radius: 5px;
-  margin-top: 30vh;
 
   button {
     z-index: 100;
@@ -37,15 +36,15 @@
 }
 
 .ImageContainer {
-  width: 100%;
   max-width: 1500px;
   padding: 2rem;
+  width: 100%;
 
   .Image {
-    width: 100%;
-    object-fit: contain;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px $lightgray;
+    object-fit: contain;
+    width: 100%;
   }
 }
 
@@ -53,6 +52,7 @@
   background: rgba(255, 255, 255, 0.2);
   border: none;
   color: black;
+  cursor: pointer;
   font-size: $fontXL;
   font-weight: 700;
   padding: 5px;
@@ -65,14 +65,15 @@
   @include font("M");
 
   padding-bottom: 3rem;
-  text-transform: capitalize;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .Arrow {
   background: rgba(255, 255, 255, 0.2);
   border: none;
   color: black;
+  cursor: pointer;
   font-size: $fontXL;
   font-weight: 700;
   padding: 5px;

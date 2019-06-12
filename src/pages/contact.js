@@ -17,7 +17,7 @@ const ContactPage = () => {
         }
         keywords={"plastic, environment, waste, ocean, protect, contact"}
       />
-      <Fade duration={1000}>
+      <Fade>
         <section className={styles.ContactContainer}>
           <h1 className={styles.Title}>Contact Us:</h1>
           <form

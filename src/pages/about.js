@@ -1,6 +1,6 @@
 //Modules
 import React from "react"
-import Fade from "react-reveal"
+import Fade from "react-reveal/Fade"
 //Components
 import Layout from "../components/Layout/Layout"
 import Introduction from "../components/About/Introduction/Introduction"
@@ -21,7 +21,7 @@ const AboutPage = () => (
       }
     />
 
-    <Fade duration={1000}>
+    <Fade>
       <main className={styles.AboutPage}>
         <Introduction />
         <Personnel />
