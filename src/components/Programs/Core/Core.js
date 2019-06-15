@@ -10,17 +10,17 @@ const Core = props => {
 
   const data = [
     {
-      image: input.group.childImageSharp.fluid,
-      altText: "A group of people at a workshop",
+      image: input.bobo.childImageSharp.fluid,
+      altText: "bobo the whale at the WOD event",
       copy:
-        "We create curriculums for schools to follow to raise awareness. These curriculums are split into pre-school, ages 6-12, ages 12-18 and university level.",
+        "We have a program with our mascot Bobo The Whale who tours schools around Bangkok promoting environmental awareness and education for a period of time.",
       class: `${styles.One}`,
     },
     {
       image: input.mall.childImageSharp.fluid,
-      altText: "Working with pubic places",
+      altText: "Stalls at our recent WOD event",
       copy:
-        "We organize community activities with shopping malls and other public places.",
+        "We bring attention of our Earth's issues by raising awareness at events like school fairs and farmer's markets.",
       class: `${styles.Two}`,
     },
     {
@@ -34,7 +34,7 @@ const Core = props => {
       image: input.onStage.childImageSharp.fluid,
       altText: "A group of students presenting onstage",
       copy:
-        " We organize events in cultural centers to encourage companies and government establishments to go plastic free.",
+        "We help organize rallies and protests to encourage companies and schools to go plastic-free and also to appeal to the government to ban single-use plastics immediately.",
       class: `${styles.Four}`,
     },
   ]
@@ -77,13 +77,6 @@ const Core = props => {
 
 const query = graphql`
   {
-    group: file(relativePath: { eq: "group-compressor.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
     mall: file(
       relativePath: { eq: "WODgallery/a birds eye view of some stalls.jpg" }
     ) {
@@ -101,6 +94,13 @@ const query = graphql`
       }
     }
     onStage: file(relativePath: { eq: "onstage-compressor.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    bobo: file(relativePath: { eq: "WODgallery/bobo the whale.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid_tracedSVG
