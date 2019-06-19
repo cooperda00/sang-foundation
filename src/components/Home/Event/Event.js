@@ -32,14 +32,27 @@ const Event = () => {
 
         <p>
           We featured educational presentations, workshops, demos, documentary
-          viewings, music, dancers, children's activites, food and beverages and
-          a raffle!
+          viewings, music, dancers, children's activities, food and beverages
+          and a raffle!
         </p>
 
         <p className={styles.Underline}>
           Our event was a roaring success! Stay tuned for information about
           upcoming events.
         </p>
+
+        <div className={styles.VideoContainer}>
+          <div className={styles.Video}>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/EQTswS4rgNk"
+              frameborder="0"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        </div>
 
         <div className={styles.EventCTA}>
           <h2>Visit the Gallery to see what we got up to</h2>
