@@ -22,9 +22,7 @@ const IndexPage = () => {
     <Layout>
       <SEO
         title="Sang Foundation : Home"
-        description={
-          "Welcome to the Sang Foundation. Join us in the fight against plastic waste and go plastic free!"
-        }
+        description="Welcome to the Sang Foundation. Join us in the fight against plastic waste and go plastic free!"
         keywords={"plastic, environment, waste, ocean, protect"}
       />
 

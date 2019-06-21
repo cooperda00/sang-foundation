@@ -14,20 +14,12 @@ const SEO = props => {
   return (
     <Helmet
       title={props.title}
-      meta={[
-        {
-          name: "description",
-          content: props.description,
-        },
-        {
-          name: "keywords",
-          content: props.keywords,
-        },
-      ]}
       link={[
         { rel: "icon", type: "image/png", sizes: "16x16", href: `${logo}` },
       ]}
     >
+      <meta name="keywords" content={props.keywords} />
+      <meta name="description" content={props.description} />
       <meta name="image" content={image} />
       {/* TWITTER */}
       <meta name="twitter:card" content="summary_large_image" />
