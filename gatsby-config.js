@@ -3,6 +3,8 @@ module.exports = {
     title: `Sang Foundation`,
     description: `Striving to reduce plastic waste`,
     author: `danielcooper.io`,
+    siteUrl: "https://sangfoundation.org",
+    image: "/bobologo.jpg",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -23,5 +25,7 @@ module.exports = {
         lang: "en",
       },
     },
+    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-robots-txt",
   ],
 }
