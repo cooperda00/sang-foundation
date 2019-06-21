@@ -50,6 +50,7 @@ const Event = () => {
               frameborder="0"
               allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
+              title="World Oceans Day Event Video"
             />
           </div>
         </div>
