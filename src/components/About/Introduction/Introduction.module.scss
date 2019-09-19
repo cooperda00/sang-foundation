@@ -7,10 +7,16 @@
   margin-top: 3rem;
   padding-top: 3rem;
   text-align: center;
-  width: 80%;
+
   border-left: 3px solid $darkgray;
   border-right: 3px solid $darkgray;
   border-top: 3px solid $darkgray;
+
+  width: 98%;
+
+  @include min-width(768px) {
+    width: 80%;
+  }
 }
 
 .Introduction {
@@ -18,12 +24,18 @@
 
   padding: 0 2rem 3rem 2rem;
   padding-bottom: 5rem;
-  width: 80%;
+
   background: white;
   border-left: 3px solid $darkgray;
   border-right: 3px solid $darkgray;
   border-bottom: 3px solid $darkgray;
   margin-bottom: 3rem;
+
+  width: 98%;
+
+  @include min-width(768px) {
+    width: 80%;
+  }
 
   @include min-width(1000px) {
     @include flex(row, center, center);

@@ -30,6 +30,26 @@ const Bobo = props => {
       name: "A look inside Bobo",
       image: data.insideBobo.childImageSharp.fluid,
     },
+    {
+      name: "Kids in front of Bobo",
+      image: data.boboSept1.childImageSharp.fluid,
+    },
+    {
+      name: "Kids in front of Bobo",
+      image: data.boboSept2.childImageSharp.fluid,
+    },
+    {
+      name: "A woman in a trash dress in front of Bobo",
+      image: data.boboSept3.childImageSharp.fluid,
+    },
+    {
+      name: "Bobo student artwork",
+      image: data.boboSept4.childImageSharp.fluid,
+    },
+    {
+      name: "A look at Bobo from behind",
+      image: data.boboSept5.childImageSharp.fluid,
+    },
   ]
 
   return (
@@ -217,6 +237,46 @@ const query = graphql`
       }
     }
     insideBobo: file(relativePath: { eq: "insidebobo2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+
+    boboSept1: file(relativePath: { eq: "boboSept1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+
+    boboSept2: file(relativePath: { eq: "boboSept2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+
+    boboSept3: file(relativePath: { eq: "boboSept3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+
+    boboSept4: file(relativePath: { eq: "boboSept4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+
+    boboSept5: file(relativePath: { eq: "boboSept5.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid_tracedSVG

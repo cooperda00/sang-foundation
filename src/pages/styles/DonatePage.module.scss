@@ -7,7 +7,11 @@
   border: 3px solid $darkgray;
   margin: 3rem auto;
   min-height: calc(100vh - 100px);
-  width: 80%;
+  width: 98%;
+
+  @include min-width(768px) {
+    width: 80%;
+  }
 }
 
 .Title {

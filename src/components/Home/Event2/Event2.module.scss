@@ -1,0 +1,38 @@
+@import "../../../vars";
+
+.Event2 {
+  @include flex(column, center, center);
+
+  background: white;
+  border: 3px solid $darkgray;
+  margin: 5rem 1rem;
+  min-height: 80vh;
+  padding: 3rem;
+  text-align: left;
+  width: 98%;
+
+  @include min-width(768px) {
+    width: 80%;
+  }
+
+  h1 {
+    @include font("M");
+
+    margin: 3rem 0;
+    text-align: center;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
+  }
+}
+
+.ImageContainer {
+  width: 80%;
+  max-width: 60rem;
+  margin-bottom: 2rem;
+}
+
+.Flyer {
+  width: 100%;
+}

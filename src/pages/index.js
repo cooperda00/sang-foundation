@@ -4,6 +4,7 @@ import Fade from "react-reveal/Fade"
 //Components
 import CTA from "../components/Layout/CTA/CTA"
 import Event from "../components/Home/Event/Event"
+import Event2 from "../components/Home/Event2/Event2"
 import Layout from "../components/Layout/Layout"
 import Modal from "../components/Layout/Modal/Modal"
 import Partners from "../components/Home/Partners/Partners"
@@ -37,6 +38,8 @@ const IndexPage = () => {
       <Fade>
         <main className={styles.Home}>
           <Splash />
+
+          <Event2 />
 
           <Event />
 
