@@ -1,0 +1,66 @@
+@import "../../vars";
+
+.Facebook {
+  @include flex(column, center, center);
+
+  background: white;
+  border: 3px solid $darkgray;
+  margin: 5rem 1rem;
+  min-height: 80vh;
+  padding: 3rem;
+  text-align: left;
+  width: 98%;
+
+  @include min-width(768px) {
+    width: 80%;
+  }
+
+  h1 {
+    @include font("M");
+
+    margin: 3rem 0;
+    text-align: center;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
+  }
+}
+
+.FacebookContainerMobile {
+  @include flex(column, flex-start, center);
+
+  @include min-width(1000px) {
+    display: none;
+  }
+}
+
+.FacebookContainerLarge {
+  display: none;
+
+  @include min-width(1000px) {
+    @include flex(row, center, flex-start);
+  }
+}
+
+.Message {
+  margin-bottom: 3rem;
+  width: 100%;
+
+  p {
+    @include font("M");
+    text-align: center;
+    width: 100%;
+  }
+
+  @include min-width(1000px) {
+    @include flex(column, flex-start, flex-start);
+    width: 30%;
+    margin-right: 2rem;
+
+    p {
+      @include font("L");
+      text-align: left;
+    }
+  }
+}

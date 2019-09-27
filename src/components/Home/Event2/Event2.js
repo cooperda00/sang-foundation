@@ -1,7 +1,7 @@
 //Modules
 import React from "react"
 import Fade from "react-reveal/Fade"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 //Sass
 import styles from "./Event2.module.scss"

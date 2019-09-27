@@ -11,6 +11,7 @@ import Partners from "../components/Home/Partners/Partners"
 import SectionOne from "../components/Home/SectionOne/SectionOne"
 import SEO from "../components/SEO/SEO"
 import Splash from "../components/Home/Splash/Splash"
+import Facebook from "../components/Facebook/Facebook"
 //Sass
 import styles from "./styles/IndexPage.module.scss"
 
@@ -41,14 +42,17 @@ const IndexPage = () => {
 
           <Event2 />
 
-          <Event />
-
           <SectionOne
             setModalImage={setModalImage}
             toggleModal={toggleModal}
             setModalAltText={setModalAltText}
           />
+
+          <Event />
+
           <CTA cards={["donate", "volunteer", "about", "contact"]} />
+
+          <Facebook />
 
           <Partners />
         </main>
