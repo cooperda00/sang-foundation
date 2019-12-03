@@ -76,6 +76,9 @@ const Modal = props => {
                 fluid={selectedImage.image}
                 alt={selectedImage.altText}
                 className={styles.Image}
+                imgStyle={{
+                  objectFit: "contain",
+                }}
               />
             </div>
           )}

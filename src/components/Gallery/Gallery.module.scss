@@ -25,10 +25,11 @@
 .GalleryGrid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-auto-rows: auto;
   justify-items: center;
   grid-gap: 3rem;
   width: 100%;
+  align-items: center;
 
   @include min-width(1000px) {
     grid-template-columns: 1fr 1fr;
@@ -44,13 +45,14 @@
 }
 
 .Card {
-  width: 100%;
   max-width: 500px;
+  width: 100%;
 }
 
 .Image {
   cursor: pointer;
   width: 100%;
+  max-height: 100%;
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px $lightgray;
 }

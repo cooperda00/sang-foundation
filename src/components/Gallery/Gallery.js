@@ -17,7 +17,7 @@ const Gallery = props => {
 
   return (
     <section className={styles.Gallery}>
-      <h1 className={styles.Title}>World Ocean Day Event Gallery</h1>
+      <h1 className={styles.Title}>Event Gallery</h1>
       <div className={styles.GalleryGrid}>
         {data.map((image, index) => {
           return (
@@ -50,7 +50,10 @@ const Gallery = props => {
 
 const query = graphql`
   {
-    allFile(filter: { relativeDirectory: { eq: "WODgallery" } }) {
+    allFile(
+      filter: { relativeDirectory: { eq: "WODgallery" } }
+      sort: { fields: [birthtime], order: DESC }
+    ) {
       edges {
         node {
           name
