@@ -62,6 +62,11 @@ const ContactPage = () => {
               <button className={styles.Submit}>Submit</button>
             </div>
           </form>
+
+          <p className={styles.EmailMessage}>
+            Or email us at{" "}
+            <a href="mailto:info@sangfoundation.org">info@sangfoundation.org</a>
+          </p>
         </section>
       </Fade>
     </Layout>

@@ -79,3 +79,11 @@
 .Submit {
   @include cta-button();
 }
+
+.EmailMessage {
+  @include font("M");
+  margin-bottom: 2rem;
+  a {
+    color: dodgerblue;
+  }
+}
