@@ -1,0 +1,34 @@
+@import "../../../vars";
+
+.Events {
+  @include flex(column, flex-start, center);
+
+  background: white;
+  border: 3px solid $darkgray;
+  margin: 5rem 1rem;
+  min-height: 80vh;
+  padding: 3rem;
+  text-align: left;
+  width: 98%;
+
+  @include min-width(768px) {
+    width: 80%;
+  }
+
+  h1 {
+    @include font("M");
+
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
+  }
+
+  hr {
+    width: 100%;
+    margin-bottom: 5rem;
+    border: 1px solid $tertiary;
+  }
+}
