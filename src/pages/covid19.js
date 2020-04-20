@@ -100,7 +100,7 @@ export const query = graphql`
     donation1: file(relativePath: { eq: "donation_1.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
@@ -108,21 +108,21 @@ export const query = graphql`
     donation2: file(relativePath: { eq: "donation_2.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     donation3: file(relativePath: { eq: "donation_3.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     donation4: file(relativePath: { eq: "donation_4.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

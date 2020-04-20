@@ -86,7 +86,7 @@ const query = graphql`
         node {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -99,7 +99,7 @@ const query = graphql`
         node {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -113,7 +113,7 @@ const query = graphql`
         node {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -124,7 +124,7 @@ const query = graphql`
         node {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
