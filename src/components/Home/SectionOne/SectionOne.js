@@ -98,7 +98,7 @@ const SectionOne = props => {
 
 const query = graphql`
   {
-    youth: file(relativePath: { eq: "youth-compressor.jpg" }) {
+    youth: file(relativePath: { eq: "youth.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid_noBase64
