@@ -24,8 +24,8 @@
 .DonateImage {
   @include flex(column, flex-start, center);
 
-  margin: 8rem 0 3rem 0;
-  max-width: 1000px;
+  margin: 3rem 0;
+  max-width: 60rem;
   padding: 0 2rem;
   position: relative;
   width: 100%;
@@ -33,7 +33,6 @@
   .Img {
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px $lightgray;
-    max-width: 1000px;
     width: 100%;
   }
 }

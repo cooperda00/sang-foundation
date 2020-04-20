@@ -8,15 +8,10 @@ import styles from "./styles/DonatePage.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
-//Images
-import bubble from "../images/speechbubble.png"
 
 const DonatePage = ({ data }) => {
-  const seal = data.seal.childImageSharp.fluid
-  const grinGreen = data.grinGreen.childImageSharp.fixed
-  const ecoBeasts = data.ecoBeasts.childImageSharp.fixed
-  const trashHero = data.trashHero.childImageSharp.fixed
-  const preciousPlastic = data.preciousPlastic.childImageSharp.fixed
+  const donate = data.donate.childImageSharp.fluid
+  const CCCL = data.CCCL.childImageSharp.fixed
 
   return (
     <Layout>
@@ -32,16 +27,9 @@ const DonatePage = ({ data }) => {
           <h1 className={styles.Title}>Donate</h1>
 
           <div className={styles.DonateImage}>
-            <div className={styles.BubbleContainer}>
-              <div className={styles.Bubble}>
-                <img src={bubble} alt="Speech Bubble" />
-                <p>Thank You!</p>
-              </div>
-            </div>
-
             <Img
-              fluid={seal}
-              alt="A distressed seal tangled in ocean plastic"
+              fluid={donate}
+              alt="Mutsumi Adachi distributing supplies to those in need"
               className={styles.Img}
             />
           </div>
@@ -103,76 +91,29 @@ const DonatePage = ({ data }) => {
                 The Sang Foundation is a Thai government registered and
                 certified non profit organization. We have a tax ID issued by
                 the minister of finance for tax redemption. A suggested donation
-                of <strong>฿100 - 500</strong> will go towards sponsoring and
-                supporting the following organisations:
+                of <strong>฿100 - 500</strong> will go towards helping to
+                provide food to those suffering the worst economically by the
+                COVID-19 pandemic as well as sponsoring and supporting the
+                following organisations:
               </p>
             </div>
 
             <div className={styles.Organisations}>
               <div className={styles.Organisation}>
                 <div className={styles.Left}>
-                  <Img fixed={grinGreen} alt="Grin Green Logo" />
-                </div>
-
-                <div className={styles.Right}>
-                  <h3>Grin Green International</h3>
-                  <p>
-                    A student centered social enterprise. We organize beach
-                    cleanups and social events in different public places. The
-                    Sang Foundation funds their merchandise, handles the
-                    financial part of their transactions as well as organizes
-                    all activities with them together as a group.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.Organisation}>
-                <div className={styles.Left}>
-                  <Img fixed={preciousPlastic} alt="Precious Plastic Logo" />
+                  <Img
+                    fixed={CCCL}
+                    alt="Changing Climate, Changing
+                    Lives Logo"
+                  />
                 </div>
                 <div className={styles.Right}>
-                  <h3>Precious plastic </h3>
+                  <h3>Changing Climate, Changing Lives</h3>
                   <p>
-                    Precious Plastic create machines that turn waste plastic
-                    into usable items. In the future we would like to reduce the
-                    cost of these machine and produce more machines for schools
-                    to use. We would also like to build an injection machine to
-                    help local communities recycle their own plastic waste and
-                    generate income by selling the created merchandise. The Sang
-                    Foundation helps to organize events and direct action with
-                    Precious Plastic to bring schools and communities together.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.Organisation}>
-                <div className={styles.Left}>
-                  <Img fixed={ecoBeasts} alt="Eco Beasts" />
-                </div>
-                <div className={styles.Right}>
-                  <h3>Eco Beasts</h3>
-                  <p>
-                    We collaborate to develop meaningful resources and implement
-                    educational programs in schools and the wider Bangkok
-                    community. We also want to bring in specialists to help us
-                    with information and statistics, learning from other
-                    countries' sustainable educational activities.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.Organisation}>
-                <div className={styles.Left}>
-                  <Img fixed={trashHero} alt="Trash Hero Logo" />
-                </div>
-                <div className={styles.Right}>
-                  <h3>Trash Hero Thailand </h3>
-                  <p>
-                    Together we organize different cleanup events, connect with
-                    government municipalities and other parties to reduce waste
-                    and use recycled materials. We also connect with other
-                    sustainability projects such as growing mangroves, planting
-                    trees and organizing student-led events.
+                    The Sang Foundation supports the Changing Climate, Changing
+                    Lives Film Festival through help with accounting and
+                    administration. We work hand in hand to organise and operate
+                    social events.
                   </p>
                 </div>
               </div>
@@ -186,7 +127,7 @@ const DonatePage = ({ data }) => {
 
 export const query = graphql`
   {
-    seal: file(relativePath: { eq: "seal-compressor.jpg" }) {
+    donate: file(relativePath: { eq: "solicit_donations.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -194,33 +135,7 @@ export const query = graphql`
       }
     }
 
-    ecoBeasts: file(relativePath: { eq: "ecobeasts.jpg" }) {
-      childImageSharp {
-        fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed_tracedSVG
-        }
-      }
-    }
-
-    grinGreen: file(relativePath: { eq: "gringreen-compressor.png" }) {
-      childImageSharp {
-        fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed_tracedSVG
-        }
-      }
-    }
-
-    preciousPlastic: file(
-      relativePath: { eq: "preciousplastic-compressor.png" }
-    ) {
-      childImageSharp {
-        fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed_tracedSVG
-        }
-      }
-    }
-
-    trashHero: file(relativePath: { eq: "trashhero-compressor.png" }) {
+    CCCL: file(relativePath: { eq: "CCCL2020.jpg" }) {
       childImageSharp {
         fixed(width: 100, height: 100) {
           ...GatsbyImageSharpFixed_tracedSVG
