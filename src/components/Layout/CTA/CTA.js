@@ -93,7 +93,7 @@ const query = graphql`
       }
     }
     volunteer: allFile(
-      filter: { relativePath: { eq: "volunteer1-compressor.jpeg" } }
+      filter: { relativePath: { eq: "volunteer1-compressor.jpg" } }
     ) {
       edges {
         node {
