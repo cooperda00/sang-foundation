@@ -97,7 +97,7 @@ const Covid19Page = ({ data }) => {
 
 export const query = graphql`
   {
-    donation1: file(relativePath: { eq: "donation_1.jpeg" }) {
+    donation1: file(relativePath: { eq: "donation_1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid_noBase64
@@ -105,21 +105,21 @@ export const query = graphql`
       }
     }
 
-    donation2: file(relativePath: { eq: "donation_2.jpeg" }) {
+    donation2: file(relativePath: { eq: "donation_2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
-    donation3: file(relativePath: { eq: "donation_3.jpeg" }) {
+    donation3: file(relativePath: { eq: "donation_3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
-    donation4: file(relativePath: { eq: "donation_4.jpeg" }) {
+    donation4: file(relativePath: { eq: "donation_4.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid_noBase64
