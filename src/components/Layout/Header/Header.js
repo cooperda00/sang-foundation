@@ -77,6 +77,9 @@ const Header = () => {
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/gallery">Gallery</Link>
+          <Link to="/covid19" className={styles.DonateMini}>
+            COVID-19
+          </Link>
           <Link to="/donate" className={styles.DonateMini}>
             Donate
           </Link>
