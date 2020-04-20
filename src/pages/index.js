@@ -14,6 +14,7 @@ import Splash from "../components/Home/Splash/Splash"
 import Facebook from "../components/Facebook/Facebook"
 import CCCL2020 from "../components/Home/Events/CCCL2020/CCCL2020"
 import EarthDay2020 from "../components/Home/Events/EarthDay2020/EarthDay2020"
+import COVID19 from "../components/Home/Events/COVID19/COVID19"
 //Sass
 import styles from "./styles/IndexPage.module.scss"
 
@@ -42,11 +43,7 @@ const IndexPage = () => {
         <main className={styles.Home}>
           <Splash />
 
-          <Events>
-            <CCCL2020 />
-            <hr />
-            <EarthDay2020 />
-          </Events>
+          <Events />
 
           <SectionOne
             setModalImage={setModalImage}

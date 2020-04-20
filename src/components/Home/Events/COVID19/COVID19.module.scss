@@ -1,0 +1,66 @@
+@import "../../../../vars";
+
+.Container {
+  @include flex(column, center, center);
+
+  background: white;
+  text-align: left;
+  width: 100%;
+
+  h1 {
+    @include font("M");
+
+    margin-top: 3rem;
+    margin-bottom: 0 !important;
+    text-align: center;
+
+    @include min-width(1000px) {
+      @include font("L");
+    }
+  }
+
+  p {
+    @include font("S");
+
+    margin-top: 3rem;
+    max-width: 1200px;
+    width: 100%;
+
+    @include min-width(1000px) {
+      @include font("M");
+    }
+  }
+
+  .OutLink {
+    @include cta-button();
+    margin: 5rem 0;
+  }
+}
+
+.Flyer {
+  width: 100%;
+
+  @include min-width(1000px) {
+    width: 70%;
+  }
+}
+
+.VideoContainer {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.ButtonsContainer {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  margin: 1rem 0;
+
+  a {
+    margin: 1rem 0 !important;
+  }
+
+  @include min-width(480px) {
+    @include flex(row, space-around, center);
+    margin: 3rem 0;
+  }
+}

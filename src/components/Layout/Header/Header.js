@@ -45,6 +45,14 @@ const Header = () => {
         </Link>
 
         <Link
+          to="/covid19"
+          activeStyle={{ fontWeight: "bold" }}
+          className={styles.Donate}
+        >
+          COVID-19
+        </Link>
+
+        <Link
           to="/donate"
           activeStyle={{ fontWeight: "bold" }}
           className={styles.Donate}

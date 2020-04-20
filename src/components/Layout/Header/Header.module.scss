@@ -38,7 +38,7 @@
     }
   }
 
-  @include min-width(650px) {
+  @include min-width(768px) {
     margin-left: 0;
   }
 }
@@ -93,7 +93,7 @@
   display: none;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .NavLinksLeft,
   .NavLinksRight {
     display: none;
