@@ -81,7 +81,7 @@ const CTA = ({ cards }) => {
 
 const query = graphql`
   {
-    youth: allFile(filter: { relativePath: { eq: "youth-compressor.jpg" } }) {
+    youth: allFile(filter: { relativePath: { eq: "youth.jpg" } }) {
       edges {
         node {
           childImageSharp {
@@ -92,9 +92,7 @@ const query = graphql`
         }
       }
     }
-    volunteer: allFile(
-      filter: { relativePath: { eq: "volunteer1-compressor.jpg" } }
-    ) {
+    volunteer: allFile(filter: { relativePath: { eq: "volunteer1.jpg" } }) {
       edges {
         node {
           childImageSharp {
@@ -106,9 +104,7 @@ const query = graphql`
       }
     }
 
-    beach: allFile(
-      filter: { relativePath: { eq: "volunteersbeach-compressor.jpg" } }
-    ) {
+    beach: allFile(filter: { relativePath: { eq: "volunteersbeach.jpg" } }) {
       edges {
         node {
           childImageSharp {
@@ -119,7 +115,7 @@ const query = graphql`
         }
       }
     }
-    bobo: allFile(filter: { relativePath: { eq: "minibobo-compressor.jpg" } }) {
+    bobo: allFile(filter: { relativePath: { eq: "minibobo.jpg" } }) {
       edges {
         node {
           childImageSharp {
