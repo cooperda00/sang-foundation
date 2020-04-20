@@ -86,15 +86,25 @@ const DonatePage = ({ data }) => {
 
           <div className={styles.Copy}>
             <div className={styles.Intro}>
-              <h2>How your money will help</h2>
+              <h2 className={styles.Subtitle}>How your money will help</h2>
               <p>
                 The Sang Foundation is a Thai government registered and
                 certified non profit organization. We have a tax ID issued by
-                the minister of finance for tax redemption. A suggested donation
-                of <strong>฿100 - 500</strong> will go towards helping to
-                provide food to those suffering the worst economically by the
-                COVID-19 pandemic as well as sponsoring and supporting the
-                following organisations:
+                the minister of finance for tax redemption.
+              </p>
+
+              <p>
+                Presently, your donation will go directly towards helping
+                vulnerable people living in the slums of Hua Hin, Cha Am and
+                Pranburi. We buy and prepare packages of rice, canned food,
+                noodles, cooking oil and soap, one per family. We then deliver
+                them to each slum and give the packages personally to make sure
+                that no one goes hungry.
+              </p>
+
+              <p>
+                Normally, your donation will go towards sponsoring and
+                supporting the following organisations:
               </p>
             </div>
 

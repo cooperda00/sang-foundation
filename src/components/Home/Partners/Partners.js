@@ -127,7 +127,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -139,7 +139,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -153,7 +153,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -167,7 +167,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -181,7 +181,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -194,7 +194,7 @@ const query = graphql`
         node {
           childImageSharp {
             fixed(width: 280) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }

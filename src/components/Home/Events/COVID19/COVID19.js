@@ -1,6 +1,5 @@
 //Modules
 import React from "react"
-import Fade from "react-reveal/Fade"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 //Sass
@@ -54,7 +53,7 @@ const query = graphql`
     teamImage: file(relativePath: { eq: "food_team.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

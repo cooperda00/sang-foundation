@@ -1,6 +1,5 @@
 //Modules
 import React from "react"
-
 import { Link } from "gatsby"
 //Sass
 import styles from "./Splash.module.scss"

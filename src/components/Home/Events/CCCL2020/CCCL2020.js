@@ -69,7 +69,7 @@ const query = graphql`
     flyer: file(relativePath: { eq: "CCCL2020.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

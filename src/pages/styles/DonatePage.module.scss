@@ -42,7 +42,7 @@
 
   width: 80%;
 
-  @include min-width(1200px) {
+  @include min-width(1000px) {
     @include flex(row, center, flex-start);
   }
 }
@@ -93,14 +93,24 @@
 .Intro {
   align-self: center;
 
-  h2 {
+  .Subtitle {
     text-align: center;
+  }
+
+  p {
+    @include font("S");
+    margin-bottom: 1rem;
   }
 
   h2,
   p:last-child {
     margin-bottom: 3rem;
-    max-width: 1000px;
+  }
+
+  @include min-width(1000px) {
+    p {
+      @include font("M");
+    }
   }
 }
 
@@ -116,7 +126,7 @@
   margin-bottom: 3rem;
   max-width: 1000px;
   width: 100%;
-
+  text-align: center;
   .Left {
     margin-bottom: 2rem;
   }
@@ -129,6 +139,7 @@
 
   @include min-width(1000px) {
     @include flex(row, flex-start, center);
+    text-align: left;
 
     .Left {
       margin-bottom: 0rem;

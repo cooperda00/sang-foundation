@@ -27,20 +27,6 @@ const EarthDay2020 = () => {
           info.
         </p>
 
-        {/* <div className={styles.VideoContainer}>
-          <div className={styles.Video}>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/3qGRMCJeFAU"
-              frameborder="0"
-              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              title="Changing Climate, Changing Lives 2020"
-            />
-          </div>
-        </div> */}
-
         <a
           href="https://www.facebook.com/patom.organics/"
           target="_blank"
@@ -59,7 +45,7 @@ const query = graphql`
     flyer: file(relativePath: { eq: "patom.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

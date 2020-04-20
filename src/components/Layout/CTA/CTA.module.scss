@@ -16,7 +16,7 @@
     box-shadow: 1px 1px 1px 1px lighten($darkgray, 40%);
     height: 350px;
     margin: 3rem;
-    width: 300px;
+    width: 270px;
 
     button {
       @include cta-button();

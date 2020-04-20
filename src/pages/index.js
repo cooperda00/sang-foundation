@@ -1,6 +1,5 @@
 //Modules
 import React, { useState } from "react"
-import Fade from "react-reveal/Fade"
 //Components
 import CTA from "../components/Layout/CTA/CTA"
 import Event from "../components/Home/Event/Event"
@@ -12,9 +11,6 @@ import SectionOne from "../components/Home/SectionOne/SectionOne"
 import SEO from "../components/SEO/SEO"
 import Splash from "../components/Home/Splash/Splash"
 import Facebook from "../components/Facebook/Facebook"
-import CCCL2020 from "../components/Home/Events/CCCL2020/CCCL2020"
-import EarthDay2020 from "../components/Home/Events/EarthDay2020/EarthDay2020"
-import COVID19 from "../components/Home/Events/COVID19/COVID19"
 //Sass
 import styles from "./styles/IndexPage.module.scss"
 
@@ -39,27 +35,25 @@ const IndexPage = () => {
         />
       )}
 
-      <Fade>
-        <main className={styles.Home}>
-          <Splash />
+      <main className={styles.Home}>
+        <Splash />
 
-          <Events />
+        <Events />
 
-          <SectionOne
-            setModalImage={setModalImage}
-            toggleModal={toggleModal}
-            setModalAltText={setModalAltText}
-          />
+        <SectionOne
+          setModalImage={setModalImage}
+          toggleModal={toggleModal}
+          setModalAltText={setModalAltText}
+        />
 
-          <Event />
+        <Event />
 
-          <CTA cards={["donate", "volunteer", "about", "contact"]} />
+        <CTA cards={["donate", "volunteer", "about", "contact"]} />
 
-          <Facebook />
+        <Facebook />
 
-          <Partners />
-        </main>
-      </Fade>
+        <Partners />
+      </main>
     </Layout>
   )
 }

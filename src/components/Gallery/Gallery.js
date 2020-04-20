@@ -93,7 +93,7 @@ const query = graphql`
           name
           childImageSharp {
             fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -109,7 +109,7 @@ const query = graphql`
           name
           childImageSharp {
             fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
