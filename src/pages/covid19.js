@@ -8,6 +8,7 @@ import styles from "./styles/Covid19Page.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
+import Counter from "../components/Home/Events/COVID19/Counter/Counter"
 
 const Covid19Page = ({ data }) => {
   const donation1 = data.donation1.childImageSharp.fluid
@@ -15,7 +16,6 @@ const Covid19Page = ({ data }) => {
   const donation3 = data.donation3.childImageSharp.fluid
   const donation4 = data.donation4.childImageSharp.fluid
 
-  console.log(data)
   return (
     <Layout>
       <SEO
@@ -50,6 +50,7 @@ const Covid19Page = ({ data }) => {
                 <h2>
                   Help families economically affected the most by COVID-19
                 </h2>
+                <Counter />
                 <p>
                   The beaches of Prachauap Kirikhan and Phetchaburi are usually
                   crowded with tourists and vendors of every kind. The fruit man
@@ -83,6 +84,7 @@ const Covid19Page = ({ data }) => {
                   </a>
                   .
                 </p>
+
                 <Link to="/donate" className={styles.Link}>
                   Donate Now
                 </Link>

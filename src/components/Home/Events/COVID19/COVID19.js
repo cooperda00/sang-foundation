@@ -4,6 +4,8 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 //Sass
 import styles from "./COVID19.module.scss"
+//Components
+import Counter from "./Counter/Counter"
 
 const COVID19 = () => {
   const data = useStaticQuery(query)
@@ -21,6 +23,8 @@ const COVID19 = () => {
         Urgent Action Needed! Help those economically affected by the COVID-19
         Pandemic.
       </h1>
+
+      <Counter />
 
       <p>
         The Sang Foundation is currently operating food deliveries to the

@@ -52,7 +52,7 @@
   @include font("S");
 
   padding: 0 2rem;
-  margin: 3rem;
+  margin: 3rem 3rem 0 3rem;
 
   div {
     @include flex(column, flex-start, center);
@@ -70,7 +70,7 @@
 .Address {
   @include font("S");
 
-  margin: 3rem;
+  margin: 3rem 3rem 0 3rem;
   padding: 0 2rem;
 
   p:first-child {

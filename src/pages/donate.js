@@ -7,6 +7,7 @@ import styles from "./styles/DonatePage.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
+import Counter from "../components/Home/Events/COVID19/Counter/Counter"
 
 const DonatePage = ({ data }) => {
   const donate = data.donate.childImageSharp.fluid
@@ -84,8 +85,10 @@ const DonatePage = ({ data }) => {
         </div>
 
         <div className={styles.Copy}>
+          <Counter />
           <div className={styles.Intro}>
             <h2 className={styles.Subtitle}>How your money will help</h2>
+
             <p>
               The Sang Foundation is a Thai government registered and certified
               non profit organization. We have a tax ID issued by the minister
