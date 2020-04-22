@@ -31,7 +31,7 @@ const Gallery = props => {
 
   return (
     <section className={styles.Gallery}>
-      <h1 className={styles.Title}>COVID-19 Action</h1>
+      <h1 className={styles.Title}>COVID-19 Lockdown Action</h1>
       <div className={styles.GalleryGrid}>
         {covidAction.map((image, index) => {
           return (

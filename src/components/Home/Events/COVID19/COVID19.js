@@ -15,13 +15,13 @@ const COVID19 = () => {
     <section className={styles.Container}>
       <Image
         fluid={image}
-        alt="COVID-19 Fod Bank Team"
+        alt="COVID-19 Food Bank Team"
         className={styles.Flyer}
       />
 
       <h1>
         Urgent Action Needed! Help those economically affected by the COVID-19
-        Pandemic.
+        Lockdown.
       </h1>
 
       <Counter />

@@ -28,7 +28,7 @@ const Covid19Page = ({ data }) => {
       <Fade>
         <main className={styles.Container}>
           <section className={styles.Section}>
-            <h1>Urgent! COVID-19 Charity Drive.</h1>
+            <h1>Urgent! Thailand Lockdown Charity Drive.</h1>
 
             <article className={styles.ContentContainer}>
               <div className={styles.ImagesContainer}>
@@ -48,7 +48,8 @@ const Covid19Page = ({ data }) => {
               </div>
               <div className={styles.TextContainer}>
                 <h2>
-                  Help families economically affected the most by COVID-19
+                  Help families economically affected the most by the COVID-19
+                  Lockdown.
                 </h2>
                 <Counter />
                 <p>
