@@ -22,8 +22,42 @@ const Gallery = props => {
     }
   })
 
+  const covidAction = input.covidAction.edges.map(image => {
+    return {
+      image: image.node.childImageSharp.fluid,
+      altText: image.node.name,
+    }
+  })
+
   return (
     <section className={styles.Gallery}>
+      <h1 className={styles.Title}>COVID-19 Action</h1>
+      <div className={styles.GalleryGrid}>
+        {covidAction.map((image, index) => {
+          return (
+            <div
+              className={styles.Card}
+              key={index}
+              onClick={() => {
+                const dataClone = [...covidAction].filter(
+                  item => item.altText !== image.altText
+                )
+                const newArray = [image, ...dataClone]
+
+                props.setModalImage(newArray)
+                props.toggleModal(true)
+                props.setModalAltText(image.altText)
+              }}
+            >
+              <Img
+                fluid={image.image}
+                alt={image.altText}
+                className={styles.Image}
+              />
+            </div>
+          )
+        })}
+      </div>
       <h1 className={styles.Title}>Trashion Is The New Fashion</h1>
       <div className={styles.GalleryGrid}>
         {trashion.map((image, index) => {
@@ -102,6 +136,21 @@ const query = graphql`
 
     trashion: allFile(
       filter: { relativeDirectory: { eq: "trashion" } }
+      sort: { fields: [birthtime], order: DESC }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 1200) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
+      }
+    }
+    covidAction: allFile(
+      filter: { relativeDirectory: { eq: "COVIDaction" } }
       sort: { fields: [birthtime], order: DESC }
     ) {
       edges {

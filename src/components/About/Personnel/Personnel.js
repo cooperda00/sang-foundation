@@ -9,14 +9,14 @@ import styles from "./Personnel.module.scss"
 const Personnel = () => {
   const data = useStaticQuery(query)
   const mutsumi = data.mutsumi.childImageSharp.fluid
-  const caroline = data.caroline.childImageSharp.fluid
+  const narindr = data.narindr.childImageSharp.fluid
   const victoria = data.victoria.childImageSharp.fluid
   const sandy = data.sandy.childImageSharp.fluid
   const missy = data.missy.childImageSharp.fluid
 
   return (
     <section className={styles.Personnel}>
-      <h2>Founders:</h2>
+      <h2>Committee</h2>
 
       <div className={styles.Founders}>
         <Fade>
@@ -52,42 +52,33 @@ const Personnel = () => {
           <div className={styles.Profile}>
             <div className={styles.ImageName}>
               <Img
-                fluid={caroline}
-                alt="Caroline Link"
+                fluid={narindr}
+                alt="Dr. Narindr Vang"
                 className={styles.Portrait}
                 imgStyle={{ objectPosition: "50% 10%" }}
               />
-              <h3>Caroline Link</h3>
+              <h3>Dr. Narindr Vang</h3>
             </div>
 
             <div className={styles.Copy}>
               <p>
-                Ms. Caroline Link is the daughter of Harald and Assunta Link.
-                Her father is the chairman of B. Grimm, one of Thailand’s oldest
-                business institutions, with a 139-year-old tradition of “doing
-                business with compassion.” Well-groomed to be the
-                fourth-generation successor, Caroline has several roles within
-                B. Grimm. She serves as a board member for B. Grimm Power, B.
-                Grimm Carrier Thailand, and Merck Thailand. She manages
-                corporate communications and public relations strategy for B.
-                Grimm Power. She is also responsible for B. Grimm Social
-                Engagement strategy.
+                Dr. Narindr, trained as a Counseling Psychologist, is a licensed
+                Hypnotherapist and Trainer of both Hypnosis and Energy
+                Pshychology. He has been a certified hyponotist under the
+                National Guild of Hypnotists (NGH) in the US, since 1950.
               </p>
               <p>
-                Caroline shares her family’s long-time love for philanthropic
-                work, and actively engages in various programs and projects,
-                both personal and via B. Grimm. Areas close to her heart are
-                education, environmentalism, and culture. At present, B. Grimm
-                is a multi-business corporation active in the energy,
-                construction and industrial systems, healthcare, lifestyle,
-                transport, and real estate sectors.
+                Dr Narindr has spent his time both overseas and locally, and as
+                such has extensive experience dealing with different cultures,
+                issues and needs. Dr. Vang is a devotee of Jesus, he believes
+                love is the solution to all.
               </p>
             </div>
           </div>
         </Fade>
       </div>
 
-      <h2 className={styles.Title}>Volunteers:</h2>
+      <h2 className={styles.Title}>Volunteers</h2>
 
       <Fade>
         <div className={styles.Profile}>
@@ -186,7 +177,7 @@ const query = graphql`
         }
       }
     }
-    caroline: file(relativePath: { eq: "caroline-compressor.png" }) {
+    narindr: file(relativePath: { eq: "narindr_bio.png" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid_noBase64
