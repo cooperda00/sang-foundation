@@ -30,6 +30,20 @@ const Covid19Page = ({ data }) => {
           <section className={styles.Section}>
             <h1>Urgent! Thailand Lockdown Charity Drive.</h1>
 
+            <div className={styles.VideoContainer}>
+              <div className={styles.Video}>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/TofDIAtxfNg"
+                  frameborder="0"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  title="Sang foundation aid for COVID-19"
+                />
+              </div>
+            </div>
+
             <article className={styles.ContentContainer}>
               <div className={styles.ImagesContainer}>
                 <div className={styles.ImageContainer}>

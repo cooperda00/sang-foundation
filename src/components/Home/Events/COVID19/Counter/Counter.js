@@ -10,12 +10,14 @@ import useInterval from "../../../../../hooks/useInterval"
 const Counter = () => {
   const [counter, setCounter] = useState(0)
 
+  // 154 => 354
+
   useInterval(() => {
-    if (counter < 154) {
+    if (counter < 354) {
       const newValue = counter + 1
       setCounter(newValue)
     }
-  }, 20)
+  }, 15)
 
   return (
     <article className={styles.Counter}>

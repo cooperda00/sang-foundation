@@ -10,6 +10,7 @@ const Personnel = () => {
   const data = useStaticQuery(query)
   const mutsumi = data.mutsumi.childImageSharp.fluid
   const narindr = data.narindr.childImageSharp.fluid
+  const pacharee = data.pacharee.childImageSharp.fluid
   const victoria = data.victoria.childImageSharp.fluid
   const sandy = data.sandy.childImageSharp.fluid
   const missy = data.missy.childImageSharp.fluid
@@ -33,16 +34,19 @@ const Personnel = () => {
 
             <div className={styles.Copy}>
               <p>
-                Mutsumi is the managing partner of Omroom, an alternative
-                healing center promoting holistic health and self-awareness. As
-                an online platform, Omroom offers workshops and courses focusing
-                on yoga, meditation, memory therapy, reiki, Bodytalk, hypnosis
-                and Shamanism.
+                Mutsumi is the founder of the Sang Foundation, which she founded
+                after operating the holistic center Omroom in Bangkok.
               </p>
               <p>
-                Mutsumi travels around the world to offer her memory therapy
-                sessions, and teaches students how to open their intuitive mind
-                to live in a holistic holographic reality.
+                Mutsumi realized that healing an individual cannot adequately
+                shift the paradigm. Humans cannot be happy if other beings are
+                suffering from an imbalance in the natural world and ongoing
+                climate destruction.
+              </p>
+              <p>
+                Only by doing the ground work of helping people and animals as
+                well as educating the young generation on how to live in harmony
+                with Mother Earth, will we find key to our problems.
               </p>
             </div>
           </div>
@@ -68,10 +72,47 @@ const Personnel = () => {
                 National Guild of Hypnotists (NGH) in the US, since 1950.
               </p>
               <p>
-                Dr Narindr has spent his time both overseas and locally, and as
-                such has extensive experience dealing with different cultures,
-                issues and needs. Dr. Vang is a devotee of Jesus, he believes
-                love is the solution to all.
+                Dr Narindr is very keen to study human behavior and how to help
+                people and their families to achieve physical and mental health
+                as well as social balance. Dr. Vang has spent his time both
+                overseas and locally, and as such has extensive experience
+                dealing with different cultures, issues and needs to improve his
+                patients' wellbeing.
+              </p>
+
+              <p>
+                Dr. Vang is a devotee of Jesus, he believes love is the solution
+                to all.
+              </p>
+            </div>
+          </div>
+        </Fade>
+
+        <Fade>
+          <div className={styles.Profile}>
+            <div className={styles.ImageName}>
+              <Img
+                fluid={pacharee}
+                alt="Pacharee Patumanao"
+                className={styles.Portrait}
+                imgStyle={{ objectPosition: "50% 40%" }}
+              />
+              <h3>Pacharee Patumanao</h3>
+            </div>
+
+            <div className={styles.Copy}>
+              <p>
+                Pacharee is an entrepreneur, a public speaker and a creative
+                consultant for many businesses in Thailand.
+              </p>
+              <p>
+                Her company Brand Now Asia always gives back to the community
+                through events or communications.
+              </p>
+
+              <p>
+                She is an accomplished CRM and Communications professional and a
+                consummate networker.
               </p>
             </div>
           </div>
@@ -178,6 +219,13 @@ const query = graphql`
       }
     }
     narindr: file(relativePath: { eq: "narindr_bio.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    pacharee: file(relativePath: { eq: "pacharee_bio.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid_noBase64

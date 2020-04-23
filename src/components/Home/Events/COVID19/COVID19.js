@@ -13,11 +13,25 @@ const COVID19 = () => {
 
   return (
     <section className={styles.Container}>
-      <Image
+      {/* <Image
         fluid={image}
         alt="COVID-19 Food Bank Team"
         className={styles.Flyer}
-      />
+      /> */}
+
+      <div className={styles.VideoContainer}>
+        <div className={styles.Video}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/TofDIAtxfNg"
+            frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            title="Sang foundation aid for COVID-19"
+          />
+        </div>
+      </div>
 
       <h1>
         Urgent Action Needed! Help those economically affected by the COVID-19
