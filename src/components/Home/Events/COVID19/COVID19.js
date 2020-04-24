@@ -1,7 +1,7 @@
 //Modules
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Image from "gatsby-image"
+// import Image from "gatsby-image"
 //Sass
 import styles from "./COVID19.module.scss"
 //Components
