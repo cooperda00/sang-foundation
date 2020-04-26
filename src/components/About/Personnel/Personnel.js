@@ -35,7 +35,16 @@ const Personnel = () => {
             <div className={styles.Copy}>
               <p>
                 Mutsumi is the founder of the Sang Foundation, which she founded
-                after operating the holistic center Omroom in Bangkok.
+                after operating the holistic center{" "}
+                <a
+                  href="https://omroom.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  Omroom
+                </a>{" "}
+                in Bangkok.
               </p>
               <p>
                 Mutsumi realized that healing an individual cannot adequately
@@ -102,17 +111,37 @@ const Personnel = () => {
 
             <div className={styles.Copy}>
               <p>
-                Pacharee is an entrepreneur, a public speaker and a creative
-                consultant for many businesses in Thailand.
-              </p>
-              <p>
-                Her company Brand Now Asia always gives back to the community
-                through events or communications.
+                Pacharee is an international marketing and communications
+                professional with over 20 years’ experience, she delivers
+                winning solutions for some of the world’s most influential
+                brands. She co-founded the boutique marketing and public
+                relations company{" "}
+                <a
+                  href="http://www.brandnow.asia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Brandnow.asia
+                </a>{" "}
+                in 2008, whose clients include Reckitt Benckiser, World Bank,
+                Merck, Pepsi and Adidas.{" "}
               </p>
 
               <p>
-                She is an accomplished CRM and Communications professional and a
-                consummate networker.
+                Pacharee also conceived{" "}
+                <a
+                  href="http://www.bnow.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Bangkok Now (BNOW)
+                </a>{" "}
+                in 2003. The group events includes monthly networking lunch,
+                social nights, fundraiser for charities, speed networking,
+                garage sales, dinner talks and business workshops. The most
+                recent initiative is Entrepreneur Now Awards, a program
+                recognizing enterprising people and teams operating in the
+                kingdom of Thailand.
               </p>
             </div>
           </div>

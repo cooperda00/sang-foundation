@@ -9,15 +9,15 @@ import Donation from "../../../../../images/baht.inline.svg"
 import useInterval from "../../../../../hooks/useInterval"
 
 const Counter = () => {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(1)
   const [donationCounter, setDonationCounter] = useState(629)
 
   // 154 => 354
   // 70674 THB => 215079 ==> 298,629
 
   useInterval(() => {
-    if (counter < 354) {
-      const newValue = counter + 1
+    if (counter < 531) {
+      const newValue = counter + 2
       setCounter(newValue)
     }
   }, 1)
