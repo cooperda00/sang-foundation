@@ -82,9 +82,9 @@ const Covid19Page = ({ data }) => {
                   Many of them are left with stock of their merchandise without
                   any business and those in the service industry barely have any
                   work. Unable to provide for themselves and their families many
-                  of them are going hungry. It is estimated that over a thousand
-                  families are without sufficient food and daily supplies in
-                  only these two provinces.
+                  of them are going hungry. It is estimated that over six
+                  thousand families are without sufficient food and daily
+                  supplies in only these two provinces.
                 </p>
                 <p>
                   This is an urgent and critical matter, and your donation will
@@ -105,6 +105,23 @@ const Covid19Page = ({ data }) => {
                 </Link>
               </div>
             </article>
+
+            <div
+              className={styles.VideoContainer}
+              style={{ marginTop: "3rem" }}
+            >
+              <div className={styles.Video}>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/gtsbo5wJXMQ"
+                  frameborder="0"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  title="Sang Foundation Donation Drive Update 26Apr20"
+                />
+              </div>
+            </div>
           </section>
         </main>
       </Fade>

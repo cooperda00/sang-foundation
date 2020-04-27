@@ -33,6 +33,20 @@ const COVID19 = () => {
         </div>
       </div>
 
+      <div className={styles.VideoContainer} style={{ marginTop: "3rem" }}>
+        <div className={styles.Video}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gtsbo5wJXMQ"
+            frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            title="Sang Foundation Donation Drive Update 26Apr20"
+          />
+        </div>
+      </div>
+
       <h1>
         Urgent Action Needed! Help those economically affected by the COVID-19
         Lockdown.
@@ -47,7 +61,7 @@ const COVID19 = () => {
       </p>
 
       <p>
-        It is estimated that over a thousand families are without sufficient
+        It is estimated that over six thousand families are without sufficient
         food and daily supplies in these two provinces alone. Your donation will
         go directly to feeding and supporting these vulnerable families during
         this difficult time.
