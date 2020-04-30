@@ -10,20 +10,20 @@ import useInterval from "../../../../../hooks/useInterval"
 
 const Counter = () => {
   const [counter, setCounter] = useState(1)
-  const [donationCounter, setDonationCounter] = useState(663)
+  const [donationCounter, setDonationCounter] = useState(8)
 
   // 154 => 354
   // 70674 THB => 215079 ==> 298,629
 
   useInterval(() => {
-    if (counter < 605) {
+    if (counter < 767) {
       const newValue = counter + 2
       setCounter(newValue)
     }
   }, 1)
 
   useInterval(() => {
-    if (donationCounter < 316663) {
+    if (donationCounter < 343008) {
       const newValue = donationCounter + 1000
       setDonationCounter(newValue)
     }
