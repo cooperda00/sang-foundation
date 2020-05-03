@@ -16,7 +16,7 @@ const Counter = () => {
   // 70674 THB => 215079 ==> 298,629
 
   useInterval(() => {
-    if (counter < 767) {
+    if (counter < 867) {
       const newValue = counter + 2
       setCounter(newValue)
     }

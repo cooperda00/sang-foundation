@@ -175,3 +175,22 @@
     z-index: 400;
   }
 }
+
+.Paypal {
+  @include flex(column, flex-start, center);
+  margin: 3rem 0;
+
+  p {
+    @include font("M");
+
+    span {
+      color: dodgerblue;
+    }
+  }
+
+  @include min-width(1000px) {
+    p {
+      @include font("M");
+    }
+  }
+}

@@ -8,6 +8,8 @@ import styles from "./styles/DonatePage.module.scss"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import Counter from "../components/Home/Events/COVID19/Counter/Counter"
+//Icons
+import Paypal from "../images/paypal.inline.svg"
 
 const DonatePage = ({ data }) => {
   const donate = data.donate.childImageSharp.fluid
@@ -82,6 +84,13 @@ const DonatePage = ({ data }) => {
             <p>Wattana 10110</p>
             <p>Bangkok</p>
           </div>
+        </div>
+
+        <div className={styles.Paypal}>
+          <Paypal />
+          <p>
+            Please make PayPal donations to <span>info@sangfoundation.org</span>
+          </p>
         </div>
 
         <div className={styles.Copy}>
