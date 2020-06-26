@@ -13,14 +13,14 @@ const Counter = () => {
   const [donationCounter, setDonationCounter] = useState(947)
 
   useInterval(() => {
-    if (counter < 3743) {
+    if (counter < 4043) {
       const newValue = counter + 2
       setCounter(newValue)
     }
   }, 1)
 
   useInterval(() => {
-    if (donationCounter < 960947) {
+    if (donationCounter < 966947) {
       const newValue = donationCounter + 1000
       setDonationCounter(newValue)
     }
