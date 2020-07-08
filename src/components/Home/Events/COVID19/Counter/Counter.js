@@ -1,43 +1,52 @@
 //Modules
-import React, { useState, useEffect } from "react"
+import React from "react"
 //Sass
 import styles from "./Counter.module.scss"
 //Icons
 import Charity from "../../../../../images/charity_icon.inline.svg"
 import Donation from "../../../../../images/baht.inline.svg"
-//Hooks
-import useInterval from "../../../../../hooks/useInterval"
+import People from "../../../../../images/people.inline.svg"
+import Village from "../../../../../images/village.inline.svg"
+import Slum from "../../../../../images/slum.inline.svg"
+import Cat from "../../../../../images/cat.inline.svg"
 
 const Counter = () => {
-  const [counter, setCounter] = useState(1)
-  const [donationCounter, setDonationCounter] = useState(947)
-
-  useInterval(() => {
-    if (counter < 4043) {
-      const newValue = counter + 2
-      setCounter(newValue)
-    }
-  }, 1)
-
-  useInterval(() => {
-    if (donationCounter < 966947) {
-      const newValue = donationCounter + 1000
-      setDonationCounter(newValue)
-    }
-  }, 1)
-
   return (
     <article className={styles.CounterContainer}>
       <div className={styles.Counter}>
-        <Charity className={styles.Icon} />
-        <p className={styles.Number}>{counter}</p>
-        <p className={styles.Text}>Families fed so far!</p>
+        <Donation className={styles.Icon} />
+        <p className={styles.Number}>฿1,023,945</p>
+        <p className={styles.Text}>Total donation received</p>
       </div>
 
       <div className={styles.Counter}>
-        <Donation className={styles.Icon} />
-        <p className={styles.Number}>฿{donationCounter}</p>
-        <p className={styles.Text}>Total donation received</p>
+        <People className={styles.Icon} />
+        <p className={styles.Number}>26,500</p>
+        <p className={styles.Text}>Total people helped</p>
+      </div>
+
+      <div className={styles.Counter}>
+        <Charity className={styles.Icon} />
+        <p className={styles.Number}>4,353</p>
+        <p className={styles.Text}>Families fed</p>
+      </div>
+
+      <div className={styles.Counter}>
+        <Village className={styles.Icon} />
+        <p className={styles.Number}>28</p>
+        <p className={styles.Text}>Villages</p>
+      </div>
+
+      <div className={styles.Counter}>
+        <Slum className={styles.Icon} />
+        <p className={styles.Number}>13</p>
+        <p className={styles.Text}>Slums</p>
+      </div>
+
+      <div className={styles.Counter}>
+        <Cat className={styles.Icon} />
+        <p className={styles.Number}>600kg</p>
+        <p className={styles.Text}>Dog and cat food donated</p>
       </div>
     </article>
   )

@@ -1,11 +1,13 @@
 @import "../../../../../vars";
 
 .CounterContainer {
-  @include flex(column, center, center);
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem auto;
+  grid-gap: 2rem;
 
-  @include min-width(1000px) {
-    @include flex(row, center, center);
+  @include min-width(800px) {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -13,7 +15,8 @@
   @include flex(column, flex-start, center);
   box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
   padding: 2rem 4rem;
-  margin: 2rem;
+  height: 100%;
+  width: 100%;
 
   .Icon {
   }
