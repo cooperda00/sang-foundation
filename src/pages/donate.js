@@ -4,16 +4,20 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 //Sass
 import styles from "./styles/DonatePage.module.scss"
+import outsideStyles from "./styles/Covid19Page.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
-import Counter from "../components/Home/Events/COVID19/Counter/Counter"
 //Icons
 import Paypal from "../images/paypal.inline.svg"
 
 const DonatePage = ({ data }) => {
-  const donate = data.donate.childImageSharp.fluid
-  const CCCL = data.CCCL.childImageSharp.fixed
+  const mutsumiDelivering = data.mutsumiDelivering.childImageSharp.fluid
+  const volunteerTeam = data.volunteerTeam.childImageSharp.fluid
+  const sideImage1 = data.sideImage1.childImageSharp.fluid
+  const sideImage2 = data.sideImage2.childImageSharp.fluid
+  const sideImage3 = data.sideImage3.childImageSharp.fluid
+  const sideImage4 = data.sideImage4.childImageSharp.fluid
 
   return (
     <Layout>
@@ -22,7 +26,9 @@ const DonatePage = ({ data }) => {
         description={
           "Welcome to the Sang Foundation. Donate now and help us in the fight against plastic waste and go plastic free! "
         }
-        keywords={"plastic, environment, waste, ocean, protect, bobo, donate"}
+        keywords={
+          "plastic, environment, waste, ocean, protect, bobo, donate, COVID, "
+        }
       />
 
       <main className={styles.Donate}>
@@ -30,11 +36,97 @@ const DonatePage = ({ data }) => {
 
         <div className={styles.DonateImage}>
           <Img
-            fluid={donate}
+            fluid={volunteerTeam}
+            alt="The Sang Foundation Volunteering Team"
+            className={styles.Img}
+          />
+
+          <Img
+            fluid={mutsumiDelivering}
             alt="Mutsumi Adachi distributing supplies to those in need"
             className={styles.Img}
           />
         </div>
+
+        <article className={outsideStyles.ContentContainer}>
+          <div className={outsideStyles.ImagesContainer}>
+            <div className={outsideStyles.ImageContainer}>
+              <Img fluid={sideImage1} className={outsideStyles.Image} />
+            </div>
+
+            <div className={outsideStyles.ImageContainer}>
+              <Img fluid={sideImage2} className={outsideStyles.Image} />
+            </div>
+
+            <div className={outsideStyles.ImageContainer}>
+              <Img fluid={sideImage3} className={outsideStyles.Image} />
+            </div>
+
+            <div className={outsideStyles.ImageContainer}>
+              <Img fluid={sideImage4} className={outsideStyles.Image} />
+            </div>
+          </div>
+
+          <div className={outsideStyles.TextContainer}>
+            <h2>
+              Fundraising Effort To Provide Hunger Relief For The People Of Hua
+              Hin
+            </h2>
+
+            <p>
+              The Sang Foundation has launched a fundraising campaign to help
+              people severely affected by COVID 19 in Hua Hin. Since April 2020,
+              The Sang Foundation has delivered food packages, sponsored
+              students to return to school and provided medicine for disabled
+              patients. In total, the Sang Foundation has donated to 40,000+
+              families. The organization is persisting in supporting those in
+              need.
+            </p>
+
+            <p>
+              The third COVID wave has hit local businesses heavily. In Hua Hin
+              and Cha-Am, many people who work in tourism lost their jobs and
+              urgently need support to feed their families. These include
+              hotels, restaurants, bars, golf clubs, spas, transportation, tours
+              and many other tourist focused businesses.
+            </p>
+
+            <p>
+              The Sang Foundation is now raising ฿300,000 to provide food for
+              workers from the hospitality industry who were laid off. This
+              money will be used as follows.
+            </p>
+
+            <ul className={styles.List}>
+              <li>
+                <p>
+                  The budget is ฿30 a meal, and the Sang Foundation produces 300
+                  meals a week.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Drinks, gasoline, and other miscellaneous costs is ฿10,000 per
+                  week.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The current round of fundraising will cover 30 weeks or the
+                  equivalent of 6 months.
+                </p>
+              </li>
+            </ul>
+
+            <p>
+              The Sang Foundation is a Thai government registered and certified
+              non profit organization. We have a tax ID issued by the minister
+              of finance for tax redemption.
+            </p>
+          </div>
+        </article>
 
         <div className={styles.DetailsAddress}>
           <div className={styles.Details}>
@@ -88,57 +180,10 @@ const DonatePage = ({ data }) => {
 
         <div className={styles.Paypal}>
           <Paypal />
+
           <p>
             Please make PayPal donations to <span>info@sangfoundation.org</span>
           </p>
-        </div>
-
-        <div className={styles.Copy}>
-          <Counter />
-          <div className={styles.Intro}>
-            <h2 className={styles.Subtitle}>How your money will help</h2>
-
-            <p>
-              The Sang Foundation is a Thai government registered and certified
-              non profit organization. We have a tax ID issued by the minister
-              of finance for tax redemption.
-            </p>
-
-            <p>
-              Presently, your donation will go directly towards helping
-              vulnerable people living in the slums of Hua Hin, Cha Am and
-              Pranburi. We buy and prepare packages of rice, canned food,
-              noodles, cooking oil and soap, one per family. We then deliver
-              them to each slum and give the packages personally to make sure
-              that no one goes hungry.
-            </p>
-
-            <p>
-              Normally, your donation will go towards sponsoring and supporting
-              the following organisations:
-            </p>
-          </div>
-
-          <div className={styles.Organisations}>
-            <div className={styles.Organisation}>
-              <div className={styles.Left}>
-                <Img
-                  fixed={CCCL}
-                  alt="Changing Climate, Changing
-                    Lives Logo"
-                />
-              </div>
-              <div className={styles.Right}>
-                <h3>Changing Climate, Changing Lives</h3>
-                <p>
-                  The Sang Foundation supports the Changing Climate, Changing
-                  Lives Film Festival through help with accounting and
-                  administration. We work hand in hand to organise and operate
-                  social events.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </Layout>
@@ -147,7 +192,7 @@ const DonatePage = ({ data }) => {
 
 export const query = graphql`
   {
-    donate: file(relativePath: { eq: "solicit_donations.jpeg" }) {
+    sideImage1: file(relativePath: { eq: "example_meal_1.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_noBase64
@@ -155,10 +200,42 @@ export const query = graphql`
       }
     }
 
-    CCCL: file(relativePath: { eq: "CCCL2020.jpg" }) {
+    sideImage2: file(relativePath: { eq: "food_in_truck.jpeg" }) {
       childImageSharp {
-        fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+
+    sideImage3: file(relativePath: { eq: "food_package_1.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+
+    sideImage4: file(relativePath: { eq: "kids_lining_up.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+
+    mutsumiDelivering: file(relativePath: { eq: "solicit_donations.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+
+    volunteerTeam: file(relativePath: { eq: "volunteering_team.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
