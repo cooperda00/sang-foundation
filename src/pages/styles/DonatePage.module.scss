@@ -8,6 +8,7 @@
   margin: 3rem auto;
   min-height: calc(100vh - 100px);
   width: 98%;
+  padding: 0 3rem;
 
   @include min-width(768px) {
     width: 80%;
@@ -22,10 +23,10 @@
 }
 
 .DonateImage {
-  @include flex(column, flex-start, center);
+  @include flex(row, space-around, center);
 
   margin: 3rem 0;
-  max-width: 60rem;
+  // max-width: 60rem;
   padding: 0 2rem;
   position: relative;
   width: 100%;
@@ -33,7 +34,7 @@
   .Img {
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px $lightgray;
-    width: 100%;
+    width: 40%;
   }
 }
 
@@ -86,7 +87,7 @@
   @include flex(column, flex-start, flex-start);
   @include font("S");
 
-  padding: 0 2rem;
+  padding: 0 4rem;
   width: 100%;
 }
 
@@ -194,4 +195,8 @@
       @include font("M");
     }
   }
+}
+
+.List {
+  padding-left: 4rem;
 }
