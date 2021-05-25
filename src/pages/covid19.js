@@ -28,7 +28,7 @@ const Covid19Page = ({ data }) => {
       <Fade>
         <main className={styles.Container}>
           <section className={styles.Section}>
-            <h1>Urgent! Thailand Lockdown Charity Drive.</h1>
+            <h1>2020 Thailand Lockdown Charity Drive.</h1>
 
             <div className={styles.VideoContainer}>
               <div className={styles.Video}>
@@ -62,10 +62,25 @@ const Covid19Page = ({ data }) => {
               </div>
               <div className={styles.TextContainer}>
                 <h2>
-                  Help families economically affected the most by the COVID-19
-                  Lockdown.
+                  2020's donation drive to help families economically affected
+                  by the first COVID-19 Lockdown.
                 </h2>
-                <Counter />
+
+                <Counter
+                  baht="฿1,023,945"
+                  people="26,500"
+                  families="4,353"
+                  villages="28"
+                  slums="13"
+                  petFood="600kg"
+                />
+
+                <p className={styles.Italic}>
+                  The following relates to the donation drive conducted from
+                  April 2020 to January 2021. For our current fundraiser, please
+                  head to the <Link to="/donate">donation page</Link>.
+                </p>
+
                 <p>
                   The beaches of Prachauap Kirikhan and Phetchaburi are usually
                   crowded with tourists and vendors of every kind. The fruit man
@@ -100,9 +115,12 @@ const Covid19Page = ({ data }) => {
                   .
                 </p>
 
-                <Link to="/donate" className={styles.Link}>
+                {/* <Link
+                  to="/donate"
+                  className={styles.Link}
+                >
                   Donate Now
-                </Link>
+                </Link> */}
               </div>
             </article>
 

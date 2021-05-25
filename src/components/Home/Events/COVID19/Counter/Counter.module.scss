@@ -6,7 +6,7 @@
   margin: 2rem auto;
   grid-gap: 2rem;
 
-  @include min-width(800px) {
+  @include min-width(1000px) {
     grid-template-columns: 1fr 1fr;
   }
 }
