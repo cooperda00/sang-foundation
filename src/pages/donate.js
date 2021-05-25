@@ -8,6 +8,7 @@ import outsideStyles from "./styles/Covid19Page.module.scss"
 //Components
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
+import Counter from "../components/Home/Events/COVID19/Counter/Counter"
 //Icons
 import Paypal from "../images/paypal.inline.svg"
 
@@ -18,6 +19,7 @@ const DonatePage = ({ data }) => {
   const sideImage2 = data.sideImage2.childImageSharp.fluid
   const sideImage3 = data.sideImage3.childImageSharp.fluid
   const sideImage4 = data.sideImage4.childImageSharp.fluid
+  const sideImage5 = data.sideImage5.childImageSharp.fluid
 
   return (
     <Layout>
@@ -32,7 +34,10 @@ const DonatePage = ({ data }) => {
       />
 
       <main className={styles.Donate}>
-        <h1 className={styles.Title}>Donate</h1>
+        <h1 className={styles.Title}>
+          2021 Donation Drive For Those Economically Affect By The COVID 3rd
+          Wave
+        </h1>
 
         <div className={styles.DonateImage}>
           <Img
@@ -44,26 +49,50 @@ const DonatePage = ({ data }) => {
           <Img
             fluid={mutsumiDelivering}
             alt="Mutsumi Adachi distributing supplies to those in need"
-            className={styles.Img}
+            className={`${styles.Img} ${styles.HideImg}`}
           />
         </div>
 
         <article className={outsideStyles.ContentContainer}>
           <div className={outsideStyles.ImagesContainer}>
             <div className={outsideStyles.ImageContainer}>
-              <Img fluid={sideImage1} className={outsideStyles.Image} />
+              <Img
+                fluid={sideImage1}
+                className={outsideStyles.Image}
+                alt="A sample meal"
+              />
             </div>
 
             <div className={outsideStyles.ImageContainer}>
-              <Img fluid={sideImage2} className={outsideStyles.Image} />
+              <Img
+                fluid={sideImage2}
+                className={outsideStyles.Image}
+                alt="Truck loaded with supplies"
+              />
             </div>
 
             <div className={outsideStyles.ImageContainer}>
-              <Img fluid={sideImage3} className={outsideStyles.Image} />
+              <Img
+                fluid={sideImage3}
+                className={outsideStyles.Image}
+                alt="A food package"
+              />
             </div>
 
             <div className={outsideStyles.ImageContainer}>
-              <Img fluid={sideImage4} className={outsideStyles.Image} />
+              <Img
+                fluid={sideImage4}
+                className={outsideStyles.Image}
+                alt="Children queuing to recive support"
+              />
+            </div>
+
+            <div className={outsideStyles.ImageContainer}>
+              <Img
+                fluid={sideImage5}
+                className={outsideStyles.Image}
+                alt="Disabled child in need"
+              />
             </div>
           </div>
 
@@ -72,6 +101,8 @@ const DonatePage = ({ data }) => {
               Fundraising Effort To Provide Hunger Relief For The People Of Hua
               Hin
             </h2>
+
+            <Counter baht="฿45,000" families="600" villages="5" />
 
             <p>
               The Sang Foundation has launched a fundraising campaign to help
@@ -92,9 +123,14 @@ const DonatePage = ({ data }) => {
             </p>
 
             <p>
-              The Sang Foundation is now raising ฿300,000 to provide food for
-              workers from the hospitality industry who were laid off. This
-              money will be used as follows.
+              As of April 2021, The Sang Foundation is now raising an additional
+              ฿900,000 to provide food for workers from the hospitality industry
+              who were laid off. Those coming to receive the meals formerly
+              worked as caddies, housekeepers or hotel staff and are no longer
+              receiving regular income. The Sang Foundation has also received
+              rescue food support from local supermarkets, and the SOS food
+              rescue team has helped the Sang Foundation to distribute the
+              support packages.
             </p>
 
             <ul className={styles.List}>
@@ -120,7 +156,7 @@ const DonatePage = ({ data }) => {
               </li>
             </ul>
 
-            <p>
+            <p className={outsideStyles.Italic}>
               The Sang Foundation is a Thai government registered and certified
               non profit organization. We have a tax ID issued by the minister
               of finance for tax redemption.
@@ -217,6 +253,14 @@ export const query = graphql`
     }
 
     sideImage4: file(relativePath: { eq: "kids_lining_up.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+
+    sideImage5: file(relativePath: { eq: "disabled_person.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_noBase64

@@ -6,7 +6,7 @@
   margin: 2rem auto;
   grid-gap: 2rem;
 
-  @include min-width(800px) {
+  @include min-width(1000px) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -17,9 +17,6 @@
   padding: 2rem 4rem;
   height: 100%;
   width: 100%;
-
-  .Icon {
-  }
 
   .Number {
     @include font("XL");

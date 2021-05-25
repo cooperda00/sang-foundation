@@ -16,10 +16,14 @@
 }
 
 .Title {
-  @include font("XL");
+  @include font("L");
 
   padding-top: 3rem;
   text-align: center;
+
+  @include min-width(1000px) {
+    @include font("XL");
+  }
 }
 
 .DonateImage {
@@ -34,7 +38,21 @@
   .Img {
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px $lightgray;
-    width: 40%;
+    width: 100%;
+  }
+
+  .HideImg {
+    display: none;
+  }
+
+  @include min-width(1000px) {
+    .Img {
+      width: 40%;
+    }
+
+    .HideImg {
+      display: block;
+    }
   }
 }
 
