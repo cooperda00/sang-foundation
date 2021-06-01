@@ -10,7 +10,16 @@ import Village from "../../../../../images/village.inline.svg"
 import Slum from "../../../../../images/slum.inline.svg"
 import Cat from "../../../../../images/cat.inline.svg"
 
-const Counter = ({ baht, people, families, villages, slums, petFood }) => {
+const Counter = ({
+  baht,
+  people,
+  families,
+  villages,
+  slums,
+  petFood,
+  meals,
+  communities,
+}) => {
   return (
     <article className={styles.CounterContainer}>
       {baht && (
@@ -37,11 +46,27 @@ const Counter = ({ baht, people, families, villages, slums, petFood }) => {
         </div>
       )}
 
+      {meals && (
+        <div className={styles.Counter}>
+          <Charity className={styles.Icon} />
+          <p className={styles.Number}>{meals}</p>
+          <p className={styles.Text}>Meals cooked</p>
+        </div>
+      )}
+
       {villages && (
         <div className={styles.Counter}>
           <Village className={styles.Icon} />
           <p className={styles.Number}>{villages}</p>
           <p className={styles.Text}>Villages</p>
+        </div>
+      )}
+
+      {communities && (
+        <div className={styles.Counter}>
+          <Village className={styles.Icon} />
+          <p className={styles.Number}>{communities}</p>
+          <p className={styles.Text}>Communities</p>
         </div>
       )}
 
