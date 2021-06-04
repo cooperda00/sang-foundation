@@ -15,6 +15,7 @@ const Counter = ({
   people,
   families,
   villages,
+  houses,
   slums,
   petFood,
   meals,
@@ -67,6 +68,14 @@ const Counter = ({
           <Village className={styles.Icon} />
           <p className={styles.Number}>{communities}</p>
           <p className={styles.Text}>Communities</p>
+        </div>
+      )}
+
+      {houses && (
+        <div className={styles.Counter}>
+          <Village className={styles.Icon} />
+          <p className={styles.Number}>{houses}</p>
+          <p className={styles.Text}>Individual Houses</p>
         </div>
       )}
 
