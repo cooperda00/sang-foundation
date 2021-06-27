@@ -20,6 +20,7 @@ const Counter = ({
   petFood,
   meals,
   communities,
+  remaining,
 }) => {
   return (
     <article className={styles.CounterContainer}>
@@ -28,6 +29,14 @@ const Counter = ({
           <Donation className={styles.Icon} />
           <p className={styles.Number}>{baht}</p>
           <p className={styles.Text}>Total donation received</p>
+        </div>
+      )}
+
+      {remaining && (
+        <div className={styles.Counter}>
+          <Donation className={styles.Icon} />
+          <p className={styles.Number}>{remaining}</p>
+          <p className={styles.Text}>Remaining</p>
         </div>
       )}
 

@@ -102,7 +102,13 @@ const DonatePage = ({ data }) => {
               Hin
             </h2>
 
-            <Counter baht="฿78,000" meals="1200" communities="16" houses="5" />
+            <Counter
+              baht="฿123,315"
+              remaining="฿776,685"
+              meals="1500"
+              communities="17"
+              houses="7"
+            />
 
             <p>
               The Sang Foundation has launched a fundraising campaign to help
