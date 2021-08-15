@@ -103,10 +103,10 @@ const DonatePage = ({ data }) => {
             </h2>
 
             <Counter
-              baht="฿143,315"
+              baht="฿177,029"
               remaining="฿756,685"
-              meals="1800"
-              communities="18"
+              meals="3900"
+              communities="26"
               houses="7"
             />
 
